@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="God's Time Travel And Tours offers flight booking assistance, visa guidance, passport information and travel planning services.">
+
+    <title>God's Time Travel And Tours | Your Journey, Our Priority</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #17243a;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #071c38;
+            color: white;
+            padding: 22px 15px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            color: #d4e2f5;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        nav {
+            background: #102d53;
+            padding: 13px 8px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffc857;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #071c38, #087eaa);
+            color: white;
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .hero .welcome {
+            color: #ffd166;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 39px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            font-size: 17px;
+            color: #edf5ff;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffc857;
+            color: #10213a;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+            border: none;
+        }
+
+        .button:hover {
+            background: #ffdb88;
+        }
+
+        .button-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 22px;
+        }
+
+        h2 {
+            color: #0a2b50;
+            text-align: center;
+            font-size: 29px;
+            margin-bottom: 22px;
+        }
+
+        .intro {
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .intro p {
+            color: #536176;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 23px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(12, 39, 70, 0.07);
+            border-bottom: 4px solid #087eaa;
+        }
+
+        .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #0a4774;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #596579;
+            font-size: 15px;
+        }
+
+        .steps {
+            background: #e8f2fa;
+            max-width: none;
+        }
+
+        .steps-inner {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .step-list {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .step-list p {
+            margin: 13px 0;
+        }
+
+        .notice {
+            background: #fff7e5;
+            border-left: 5px solid #e8aa28;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+            color: #59451c;
+        }
+
+        .contact {
+            max-width: none;
+            background: #071c38;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-inner {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a:not(.button) {
+            color: #ffd166;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact .button {
+            margin-top: 22px;
+        }
+
+        footer {
+            background: #041226;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 24px 15px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 65px 18px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            section {
+                padding: 45px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">✈ GOD'S TIME TRAVEL AND TOURS</div>
+        <p>Your Journey, Our Priority</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#travel">Travel Guide</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <div class="hero" id="home">
+            <p class="welcome">Explore the world with confidence</p>
+
+            <h1>Your Journey Begins Here</h1>
+
+            <p>
+                Planning an international trip? Let God's Time Travel And
+                Tours help you navigate flight enquiries, visa requirements,
+                passport information and travel preparation.
+            </p>
+
+            <a class="button" href="#services">Explore Our Services</a>
+
+            <a class="button button-outline"
+               href="https://wa.me/233241226239">
+                Chat With Us
+            </a>
+        </div>
+
+        <section id="about">
+            <h2>Welcome to God's Time Travel And Tours</h2>
+
+            <div class="intro">
+                <p>
+                    We aim to make travel planning simpler by helping
+                    travellers understand their options and prepare for
+                    their journeys. Whether you are travelling for tourism,
+                    education, business or a family visit, we are here to
+                    provide travel information and assistance.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Our goal is to offer friendly guidance and help you
+                    understand the steps involved in preparing for travel.
+                </p>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+
+            <p style="text-align:center; color:#596579;">
+                Discover how we can assist you with your travel plans.
+            </p>
+
+            <div class="services">
+
+                <div class="card">
+                    <div class="icon">✈️</div>
+
+                    <h3>Flight Booking</h3>
+
+                    <p>
+                        Get assistance with flight enquiries, available
+                        routes, travel dates, fare information and booking
+                        arrangements.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🌍</div>
+
+                    <h3>Visa Assistance</h3>
+
+                    <p>
+                        Get guidance on visa application requirements,
+                        supporting documents, application procedures and
+                        official embassy information.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🛂</div>
+
+                    <h3>Passport Information</h3>
+
+                    <p>
+                        Learn about passport application requirements,
+                        relevant documentation and official passport
+                        application procedures.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🧳</div>
+
+                    <h3>Travel Planning</h3>
+
+                    <p>
+                        Prepare for your journey with information about
+                        destinations, travel documents and other
+                        pre-departure requirements.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="steps" id="travel">
+            <div class="steps-inner">
+
+                <h2>How to Get Started</h2>
+
+                <div class="step-list">
+
+                    <p>
+                        <strong>Step 1:</strong>
+                        Contact us with your destination and intended
+                        travel dates.
+                    </p>
+
+                    <p>
+                        <strong>Step 2:</strong>
+                        Tell us which service you need, such as flight
+                        booking assistance or visa guidance.
+                    </p>
+
+                    <p>
+                        <strong>Step 3:</strong>
+                        We will discuss the relevant requirements and
+                        possible next steps with you.
+                    </p>
+
+                    <p>
+                        <strong>Step 4:</strong>
+                        Verify all official requirements and confirm
+                        arrangements before making payments.
+                    </p>
+
+                </div>
+
+                <div class="notice">
+                    <strong>Important travel information:</strong>
+                    Visa approvals and passport decisions are made by
+                    the relevant government authorities. Always verify
+                    requirements through official sources.
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Ready to Plan Your Next Trip?</h2>
+
+            <div class="intro">
+                <p>
+                    Tell us about your travel plans. Contact God's Time
+                    Travel And Tours to discuss the assistance you need.
+                </p>
+
+                <a class="button"
+                   href="https://wa.me/233241226239">
+                    Contact Us on WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact-inner">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Have a question about your next journey?
+                    We would be happy to hear from you.
+                </p>
+
+                <p>
+                    📱 <strong>WhatsApp / Phone:</strong>
+                    <a href="https://wa.me/233241226239">
+                        024 122 6239
+                    </a>
+                </p>
+
+                <p>
+                    📧 <strong>Email:</strong>
+                    <a href="mailto:godstimetravelandtour@gmail.com">
+                        godstimetravelandtour@gmail.com
+                    </a>
+                </p>
+
+                <a class="button"
+                   href="https://wa.me/233241226239">
+                    Message Us Now
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 God's Time Travel And Tours.
+            All rights reserved.
+        </p>
+
+        <p>
+            Travel responsibly and verify official travel requirements.
+        </p>
+    </footer>
+
+</body>
+</html>
