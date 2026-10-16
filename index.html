@@ -424,6 +424,116 @@
 
             </div>
         </section>
+        <!-- FLIGHT BOOKING REQUEST FORM -->
+<section id="flight-booking">
+    <h2>Flight Booking Request</h2>
+    <p>Tell us your travel plans, and our team will contact you.</p>
+
+    <form action="https://formsubmit.co/godstimetravelandtour@gmail.com"
+          method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New Flight Booking Request">
+
+        <input type="hidden" name="_template"
+               value="table">
+
+        <label>Full Name</label>
+        <input type="text" name="Full Name"
+               placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="Email"
+               placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="Phone"
+               placeholder="Enter your phone number" required>
+
+        <label>Departure City</label>
+        <input type="text" name="Departure City"
+               placeholder="e.g. Accra (ACC)" required>
+
+        <label>Destination</label>
+        <input type="text" name="Destination"
+               placeholder="Where do you want to travel?" required>
+
+        <label>Departure Date</label>
+        <input type="date" name="Departure Date" required>
+
+        <label>Number of Passengers</label>
+        <input type="number" name="Passengers"
+               min="1" value="1" required>
+
+        <button type="submit">Request Flight Options</button>
+    </form>
+</section>
+
+
+<!-- VISA ASSISTANCE REQUEST FORM -->
+<section id="visa-assistance">
+    <h2>Visa Assistance Request</h2>
+    <p>Tell us where you plan to travel and what assistance you need.</p>
+
+    <form action="https://formsubmit.co/godstimetravelandtour@gmail.com"
+          method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New Visa Assistance Request">
+
+        <input type="hidden" name="_template"
+               value="table">
+
+        <label>Full Name</label>
+        <input type="text" name="Full Name"
+               placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="Email"
+               placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="Phone"
+               placeholder="Enter your phone number" required>
+
+        <label>Destination Country</label>
+        <select name="Destination Country" required>
+            <option value="">Select country</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Canada</option>
+            <option>United Arab Emirates</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>Australia</option>
+            <option>South Africa</option>
+            <option>Other</option>
+        </select>
+
+        <label>Visa Type</label>
+        <select name="Visa Type" required>
+            <option value="">Select visa type</option>
+            <option>Tourist</option>
+            <option>Student</option>
+            <option>Business</option>
+            <option>Work</option>
+            <option>Transit</option>
+            <option>Other</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="Message" rows="5"
+                  placeholder="Tell us what assistance you need"
+                  required></textarea>
+
+        <button type="submit">Submit Visa Request</button>
+    </form>
+
+    <p>
+        Submitting this form requests assistance only.
+        Visa decisions are made by the relevant government authorities.
+    </p>
+</section>
 
         <section>
             <h2>Ready to Plan Your Next Trip?</h2>
