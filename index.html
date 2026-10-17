@@ -3,1956 +3,982 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>God's Time Travel and Tours</title>
-
-<meta name="description" content="Flight booking assistance, visa guidance, passport assistance and tour packages from God's Time Travel and Tours.">
-
-<meta name="theme-color" content="#071b36">
-
+<meta name="description" content="Explore 40 countries, discover destinations, compare airlines and plan your next journey with God's Time Travel and Tours.">
+<title>God's Time Travel and Tours | Explore the World</title>
 <style>
 :root {
-    --navy: #071b36;
-    --blue: #123d70;
-    --gold: #e8b44c;
-    --light: #f3f6fb;
-    --white: #ffffff;
-    --text: #182538;
-    --muted: #64748b;
-    --border: #dce4ef;
-    --green: #16834f;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--light);
-    color: var(--text);
-    line-height: 1.6;
-}
-
-button, input, select, textarea {
-    font: inherit;
-}
-
-button, a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-.container {
-    width: min(1100px, 92%);
-    margin: auto;
-}
-
-header {
-    background: var(--navy);
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar {
-    min-height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    text-decoration: none;
-    color: var(--gold);
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.logo small {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: white;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-}
-
-.hero {
-    padding: 85px 0;
-    color: white;
-    background:
-        linear-gradient(115deg, #071b36f5, #123d70df),
-        url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
-}
-
-.eyebrow {
-    color: var(--gold);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    font-size: clamp(35px, 6vw, 58px);
-    line-height: 1.12;
-    max-width: 750px;
-    margin: 18px 0;
-}
-
-.hero p {
-    max-width: 680px;
-    color: #e5edf7;
-    font-size: 17px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 19px;
-    border: none;
-    border-radius: 9px;
-    font-weight: 800;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.gold {
-    background: var(--gold);
-    color: var(--navy);
-}
-
-.blue {
-    background: var(--blue);
-    color: white;
-}
-
-.outline {
-    border: 1px solid var(--border);
-    background: white;
-    color: var(--navy);
-}
-
-.hero .btn {
-    margin: 12px 8px 0 0;
-}
-
-section {
-    padding: 60px 0;
-}
-
-.section-heading {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 32px;
-}
-
-.section-heading h2 {
-    color: var(--navy);
-    font-size: clamp(26px, 4vw, 36px);
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    color: var(--muted);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-}
-
-.card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-}
-
-.card-body {
-    padding: 22px;
-}
-
-.card h3 {
-    color: var(--navy);
-    margin-top: 8px;
-}
-
-.card p, .card li {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.tag {
-    display: inline-block;
-    background: #fff3d4;
-    color: #735000;
-    padding: 5px 9px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.destination-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
-}
-
-.destination {
-    position: relative;
-    border: 3px solid transparent;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    background: white;
-}
-
-.destination img {
-    width: 100%;
-    height: 175px;
-    object-fit: cover;
-    display: block;
-}
-
-.destination-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 10px 12px;
-    background: linear-gradient(transparent, #071b36f0);
-    color: white;
-    font-weight: bold;
-}
-
-.destination.selected {
-    border-color: var(--gold);
-}
-
-.destination.selected::after {
-    content: "✓ Selected";
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 5px 8px;
-    border-radius: 20px;
-    background: var(--gold);
-    color: var(--navy);
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.application-section {
-    background: #eaf0f8;
-}
-
-.form-card {
-    max-width: 780px;
-    margin: auto;
-    background: white;
-    padding: clamp(20px, 4vw, 36px);
-    border-radius: 16px;
-    box-shadow: 0 10px 35px #071b3610;
-}
-
-.progress-track {
-    height: 7px;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #e8edf4;
-    margin: 12px 0;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 20%;
-    background: var(--gold);
-    transition: width 0.2s;
-}
-
-.step-caption {
-    font-size: 13px;
-    color: var(--muted);
-}
-
-.form-step {
-    display: none;
-}
-
-.form-step.active {
-    display: block;
-}
-
-.form-step h3 {
-    color: var(--navy);
-    font-size: 23px;
-    margin-top: 25px;
-}
-
-.field {
-    margin: 18px 0;
-}
-
-.field label {
-    display: block;
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 7px;
-}
-
-.field input,
-.field select,
-.field textarea {
-    display: block;
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #cfd9e6;
-    border-radius: 9px;
-    background: white;
-    color: var(--text);
-}
-
-.field textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-    outline: 2px solid #123d7020;
-    border-color: var(--blue);
-}
-
-.hint {
-    display: block;
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 6px;
-}
-
-.notice {
-    background: #fff7e5;
-    border: 1px solid #efd69b;
-    color: #63490e;
-    padding: 14px;
-    border-radius: 10px;
-    font-size: 13px;
-    margin: 16px 0;
-}
-
-.info {
-    background: #edf7f1;
-    border: 1px solid #c9e7d5;
-    color: #205c3f;
-    padding: 14px;
-    border-radius: 10px;
-    font-size: 13px;
-    margin: 16px 0;
-}
-
-.packages {
-    display: grid;
-    gap: 12px;
-}
-
-.package {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 15px;
-    cursor: pointer;
-}
-
-.package input {
-    margin-top: 6px;
-}
-
-.package strong {
-    color: var(--navy);
-}
-
-.package.selected {
-    border-color: var(--gold);
-    background: #fffbf0;
-}
-
-.price {
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--navy);
-}
-
-.preview {
-    display: none;
-    max-width: 180px;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    margin-top: 12px;
-}
-
-.file-name {
-    font-size: 12px;
-    color: var(--muted);
-    overflow-wrap: anywhere;
-}
-
-.actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-.actions button,
-.actions a {
-    width: 100%;
-}
-
-.review-box {
-    background: #f7f9fc;
-    border: 1px solid var(--border);
-    padding: 15px;
-    border-radius: 10px;
-    overflow-wrap: anywhere;
-}
-
-.review-row {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.review-row:last-child {
-    border-bottom: none;
-}
-
-.review-row strong {
-    display: block;
-    color: var(--muted);
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-.contact-box {
-    background: var(--navy);
-    color: white;
-    padding: 30px;
-    text-align: center;
-    border-radius: 16px;
-}
-
-.contact-box h2 {
-    color: var(--gold);
-}
-
-.contact-box a {
-    color: white;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-.contact-box a:hover {
-    color: var(--gold);
-}
-
-.faq details {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-}
-
-.faq summary {
-    font-weight: bold;
-    color: var(--navy);
-    cursor: pointer;
-}
-
-.faq details p {
-    color: var(--muted);
-}
-
-footer {
-    background: #041226;
-    color: #cbd5e1;
-    padding: 24px 0;
-    text-align: center;
-    font-size: 12px;
-}
-
-.whatsapp-float {
-    position: fixed;
-    right: 14px;
-    bottom: 14px;
-    z-index: 100;
-    padding: 13px 16px;
-    background: var(--green);
-    color: white;
-    border-radius: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 5px 20px #0003;
-}
-
-@media(max-width:700px) {
-    .navbar {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 14px 0;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .hero {
-        padding: 60px 0;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .destination-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    section {
-        padding: 45px 0;
-    }
-}
-
-@media(max-width:420px) {
-    .destination-grid {
-        grid-template-columns: 1fr;
-    }
+  --navy:#071a33;
+  --blue:#123d70;
+  --gold:#d7a943;
+  --cream:#f6f7fb;
+  --white:#fff;
+  --text:#243047;
+  --muted:#64748b;
+  --border:#e1e7ef;
+  --green:#147d53;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+img{max-width:100%;display:block}
+a{color:inherit}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 2px 15px #0002}
+.nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:17px;color:white;text-decoration:none}
+.brand span{color:var(--gold)}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:13px;color:#fff}
+nav a:hover{color:var(--gold)}
+.hero{min-height:460px;color:white;padding:65px 20px;display:flex;align-items:center;background:linear-gradient(90deg,#06172ee8,#071a3350),url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-inner{max-width:1100px;margin:auto;width:100%}
+.hero h1{font-size:clamp(32px,6vw,58px);line-height:1.08;max-width:760px;margin:10px 0}
+.hero p{max-width:650px;font-size:17px}
+.eyebrow{color:var(--gold);font-weight:bold;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.btn{border:0;border-radius:8px;padding:12px 17px;font-weight:bold;display:inline-block;text-decoration:none}
+.btn-gold{background:var(--gold);color:#13233b}
+.btn-blue{background:var(--blue);color:white}
+.btn-light{background:white;color:var(--navy);border:1px solid var(--border)}
+.container{max-width:1200px;margin:auto;padding:35px 20px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+h2{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px;color:var(--navy)}
+h3{margin:0 0 8px;color:var(--navy)}
+.muted{color:var(--muted)}
+.small{font-size:12px;color:var(--muted)}
+.searchbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.searchbar input,.searchbar select{flex:1;min-width:180px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:8px;background:white;color:#18253b}
+label{font-size:13px;font-weight:bold;display:block;margin-bottom:6px}
+.field{margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.card{background:white;border:1px solid var(--border);border-radius:13px;overflow:hidden;box-shadow:0 4px 14px #0b25450a}
+.card img{width:100%;height:165px;object-fit:cover}
+.card-body{padding:15px}
+.card h3{font-size:17px}
+.card p{font-size:13px;color:var(--muted)}
+.card .btn{font-size:12px;padding:9px 12px}
+.tag{display:inline-block;background:#eaf1fa;color:#164777;border-radius:30px;padding:4px 9px;font-size:11px;font-weight:bold;margin:3px 3px 3px 0}
+.gold-tag{background:#fff2d1;color:#775515}
+.info-band{background:#eaf0f8;border-radius:14px;padding:20px;margin:20px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:white;border:1px solid var(--border);border-radius:12px;padding:20px}
+.list{padding-left:20px}
+.list li{margin-bottom:7px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.stat{background:#f0f5fb;border-radius:9px;padding:13px}
+.stat b{display:block;color:var(--navy)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:9px;cursor:pointer;transition:transform .2s}
+.gallery img:hover{transform:scale(1.02)}
+.hidden{display:none!important}
+#countryDetail{background:white;border-radius:15px;padding:24px;border:1px solid var(--border)}
+.detail-hero{width:100%;height:320px;object-fit:cover;border-radius:12px;margin:18px 0}
+.airline-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.airline{padding:14px;background:#f5f8fc;border-radius:9px;border:1px solid var(--border)}
+.airline p{font-size:13px;margin:5px 0}
+.aircraft-card img{height:190px;object-fit:cover;width:100%}
+form{max-width:850px;margin:auto;background:white;padding:25px;border-radius:14px;border:1px solid var(--border)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form h3{margin:18px 0 12px;border-bottom:1px solid var(--border);padding-bottom:8px}
+.notice{background:#fff6df;padding:13px;border-radius:8px;font-size:13px;margin:15px 0}
+.success{background:#e7f7ee;color:#145a36;padding:12px;border-radius:8px}
+footer{background:var(--navy);color:white;padding:30px 20px;text-align:center;margin-top:35px}
+footer a{color:var(--gold)}
+#lightbox{position:fixed;inset:0;background:#000e;display:none;align-items:center;justify-content:center;padding:20px;z-index:99}
+#lightbox img{max-height:85vh;max-width:95vw;border-radius:10px}
+#lightbox button{position:absolute;top:20px;right:20px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.airline-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ .container{padding:26px 14px}.hero{padding:45px 18px;min-height:390px}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .card img{height:125px}.card-body{padding:11px}.card h3{font-size:15px}
+ .split,.form-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery img{height:135px}
+ .airline-list{grid-template-columns:1fr}
+ .detail-hero{height:210px}
+ nav{gap:10px}
+ nav a{font-size:12px}
+ form{padding:17px}
 }
 </style>
 </head>
-
 <body>
-
 <header>
-    <div class="container navbar">
-        <a class="logo" href="#home">
-            GOD'S TIME TRAVEL
-            <small>AND TOURS</small>
-        </a>
-
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#airlines">Airlines</a>
-            <a href="#apply">Apply</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+  <div class="nav">
+    <a class="brand" href="#home">GOD'S TIME <span>TRAVEL & TOURS</span></a>
+    <nav>
+      <a href="#countries">Countries</a>
+      <a href="#airlines">Airlines</a>
+      <a href="#aircraft">Aircraft</a>
+      <a href="#application">Apply</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
-
-<main>
-
-<!-- HOMEPAGE -->
-
 <section class="hero" id="home">
-    <div class="container">
-        <div class="eyebrow">Your journey starts here</div>
-
-        <h1>Travel With Confidence. Explore More.</h1>
-
-        <p>
-            Plan your next journey with God's Time Travel and Tours.
-            Request flight booking assistance, visa guidance,
-            passport assistance and tour planning in one place.
-        </p>
-
-        <a href="#apply" class="btn gold">Start Application</a>
-        <a href="#services" class="btn outline">Explore Services</a>
-    </div>
+  <div class="hero-inner">
+    <div class="eyebrow">Your journey starts here</div>
+    <h1>Discover the World. Experience More.</h1>
+    <p>Explore destinations across six continents, learn about local attractions, discover airlines and aircraft, and start planning your next journey with God's Time Travel and Tours.</p>
+    <a class="btn btn-gold" href="#countries">Explore 40 Countries</a>
+    <a class="btn btn-light" href="#application">Plan My Trip</a>
+  </div>
 </section>
-
-<!-- SERVICES -->
-
-<section id="services">
-    <div class="container">
-
-        <div class="section-heading">
-            <h2>Our Services</h2>
-            <p>
-                Read the details of each service before applying.
-                We will review your request and explain the next steps.
-            </p>
-        </div>
-
-        <div class="grid">
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80"
-                     alt="Passenger aircraft">
-
-                <div class="card-body">
-                    <span class="tag">FLIGHT SERVICES</span>
-
-                    <h3>Flight Booking Assistance</h3>
-
-                    <p>
-                        Request help finding flight options for your
-                        destination, travel dates and preferred airline.
-                        We can review your enquiry and provide information
-                        about available fares, schedules and baggage
-                        conditions before you decide.
-                    </p>
-
-                    <ul>
-                        <li>Flight quotation requests.</li>
-                        <li>Airline and travel-class preferences.</li>
-                        <li>Departure and return date planning.</li>
-                        <li>Guidance on fare and baggage conditions.</li>
-                    </ul>
-
-                    <p>
-                        <strong>Important:</strong> An enquiry is not
-                        a confirmed ticket. Availability and fares
-                        must be checked before booking.
-                    </p>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1526495124232-a04e1849168c?auto=format&fit=crop&w=1000&q=80"
-                     alt="Travel documents">
-
-                <div class="card-body">
-                    <span class="tag">VISA GUIDANCE</span>
-
-                    <h3>Visa Application Assistance</h3>
-
-                    <p>
-                        Get guidance on understanding the published
-                        requirements for your intended destination
-                        and organising the information required for
-                        a visa application.
-                    </p>
-
-                    <ul>
-                        <li>General document-checklist guidance.</li>
-                        <li>Application preparation assistance.</li>
-                        <li>Guidance on official application procedures.</li>
-                        <li>Appointment information where available.</li>
-                    </ul>
-
-                    <p>
-                        <strong>Important:</strong> Visa approval is
-                        decided by the relevant authorities.
-                        We cannot guarantee approval or control
-                        embassy processing times.
-                    </p>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80"
-                     alt="Documents on a desk">
-
-                <div class="card-body">
-                    <span class="tag">PASSPORT SERVICES</span>
-
-                    <h3>Passport Assistance</h3>
-
-                    <p>
-                        Request guidance on official passport
-                        application and renewal procedures.
-                        We can help you understand which requirements
-                        to check with the appropriate government authority.
-                    </p>
-
-                    <ul>
-                        <li>General application guidance.</li>
-                        <li>Passport renewal procedure information.</li>
-                        <li>Guidance on required supporting documents.</li>
-                        <li>Information about official next steps.</li>
-                    </ul>
-
-                    <p>
-                        <strong>Important:</strong> Passports are
-                        issued by government authorities, not by
-                        our travel company.
-                    </p>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
-                     alt="Mountain travel destination">
-
-                <div class="card-body">
-                    <span class="tag">TOURS AND HOLIDAYS</span>
-
-                    <h3>Tour Packages and Travel Planning</h3>
-
-                    <p>
-                        Tell us where you want to travel, your budget,
-                        preferred dates and number of travellers.
-                        We can review your request and discuss
-                        possible itineraries and travel arrangements.
-                    </p>
-
-                    <ul>
-                        <li>Destination and itinerary enquiries.</li>
-                        <li>Individual and group travel planning.</li>
-                        <li>Requests for accommodation options.</li>
-                        <li>Travel-budget and quotation discussions.</li>
-                    </ul>
-
-                    <p>
-                        Package prices, accommodation and activities
-                        must be confirmed in a written quotation.
-                    </p>
-                </div>
-            </article>
-
-        </div>
+<section class="container" id="countries">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Global destination guide</div>
+      <h2>Explore Countries Around the World</h2>
+      <p class="muted">Choose a country to discover its culture, attractions, airports and airlines.</p>
     </div>
+    <span class="tag gold-tag">40 destinations</span>
+  </div>
+  <div class="searchbar">
+    <input id="countrySearch" type="search" placeholder="Search a country, city or attraction..." aria-label="Search countries">
+    <select id="regionFilter" aria-label="Filter by region">
+      <option value="">All regions</option>
+      <option>Africa</option><option>Europe</option><option>Asia</option>
+      <option>North America</option><option>South America</option><option>Oceania</option>
+    </select>
+  </div>
+  <div id="countryGrid" class="grid"></div>
+  <p id="noCountries" class="muted hidden">No countries found. Try another search.</p>
 </section>
-
-<!-- DESTINATIONS -->
-
-<section id="destinations" style="background:white">
-    <div class="container">
-
-        <div class="section-heading">
-            <h2>Explore Destinations</h2>
-            <p>
-                Tap a destination picture to select it for your application.
-                You can also select a country and enter another city.
-            </p>
-        </div>
-
-        <div class="destination-grid">
-
-            <div class="destination"
-                 data-country="United Kingdom"
-                 data-city="London">
-                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
-                     alt="London, United Kingdom">
-                <div class="destination-label">🇬🇧 United Kingdom — London</div>
-            </div>
-
-            <div class="destination"
-                 data-country="United States"
-                 data-city="New York">
-                <img src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=700&q=80"
-                     alt="New York, United States">
-                <div class="destination-label">🇺🇸 United States — New York</div>
-            </div>
-
-            <div class="destination"
-                 data-country="Canada"
-                 data-city="Toronto">
-                <img src="https://images.unsplash.com/photo-1517090504586-fde19ea6066f?auto=format&fit=crop&w=700&q=80"
-                     alt="Toronto, Canada">
-                <div class="destination-label">🇨🇦 Canada — Toronto</div>
-            </div>
-
-            <div class="destination"
-                 data-country="United Arab Emirates"
-                 data-city="Dubai">
-                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80"
-                     alt="Dubai, United Arab Emirates">
-                <div class="destination-label">🇦🇪 UAE — Dubai</div>
-            </div>
-
-            <div class="destination"
-                 data-country="France"
-                 data-city="Paris">
-                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80"
-                     alt="Paris, France">
-                <div class="destination-label">🇫🇷 France — Paris</div>
-            </div>
-
-            <div class="destination"
-                 data-country="South Africa"
-                 data-city="Cape Town">
-                <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=700&q=80"
-                     alt="Cape Town, South Africa">
-                <div class="destination-label">🇿🇦 South Africa — Cape Town</div>
-            </div>
-
-        </div>
+<section class="container hidden" id="countrySection">
+  <div id="countryDetail"></div>
+</section>
+<section class="container" id="airlines">
+  <div class="eyebrow">Fly your way</div>
+  <h2>Discover International Airlines</h2>
+  <p class="muted">Explore airline backgrounds, common cabin classes and aircraft experiences. Specific services vary by route and aircraft.</p>
+  <div class="searchbar">
+    <input id="airlineSearch" type="search" placeholder="Search airlines or cabin classes..." aria-label="Search airlines">
+  </div>
+  <div class="grid" id="airlineGrid"></div>
+</section>
+<section class="container" id="aircraft">
+  <div class="eyebrow">The passenger experience</div>
+  <h2>Inside and Outside Aircraft</h2>
+  <p class="muted">Learn about aircraft design, seating, cabins and common passenger experiences.</p>
+  <div class="grid" id="aircraftGrid"></div>
+  <div class="info-band">
+    <h3>Cabin classes explained</h3>
+    <div class="split">
+      <div>
+        <p><b>Economy Class</b><br>Usually the most affordable cabin, with standard passenger seating and services determined by the airline and ticket.</p>
+        <p><b>Premium Economy</b><br>Available on selected airlines and aircraft. It may offer extra legroom, a wider seat or additional services.</p>
+      </div>
+      <div>
+        <p><b>Business Class</b><br>May offer larger seats, lie-flat beds on selected aircraft, premium meals and lounge access when eligible.</p>
+        <p><b>First Class</b><br>Offered by selected airlines, with premium seating or suites and additional services on equipped flights.</p>
+      </div>
     </div>
+    <p class="small">Cabin classes, seat layouts, baggage rules and onboard amenities differ. Confirm details for your exact flight before booking.</p>
+  </div>
 </section>
-
-<!-- AIRLINES -->
-
-<section id="airlines">
-    <div class="container">
-
-        <div class="section-heading">
-            <h2>Airline Choices</h2>
-            <p>
-                Choose your preferred airline in the application form.
-                If you have no preference, we can review suitable options.
-            </p>
-        </div>
-
-        <div class="grid">
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1000&q=80"
-                     alt="Commercial passenger aircraft">
-
-                <div class="card-body">
-                    <h3>International Airlines</h3>
-
-                    <p>
-                        Applicants may express a preference for
-                        Emirates, Qatar Airways, Turkish Airlines,
-                        British Airways, KLM, Air France, Lufthansa,
-                        Ethiopian Airlines, Kenya Airways, United Airlines
-                        or Delta Air Lines.
-                    </p>
-
-                    <p>
-                        Routes, schedules, prices and baggage allowances
-                        must be confirmed for each individual enquiry.
-                    </p>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1000&q=80"
-                     alt="Passenger aircraft at an airport">
-
-                <div class="card-body">
-                    <h3>Regional and Local Airlines</h3>
-
-                    <p>
-                        For suitable routes, applicants may request
-                        regional or domestic flight options, including
-                        Africa World Airlines where applicable.
-                    </p>
-
-                    <p>
-                        Selecting an airline does not guarantee that
-                        it operates your route or has seats available.
-                    </p>
-                </div>
-            </article>
-
-        </div>
+<section class="container" id="application">
+  <div class="eyebrow">Start your journey</div>
+  <h2>Travel Application & Enquiry</h2>
+  <p class="muted">Complete this form to prepare a travel enquiry for our team.</p>
+  <form id="travelForm">
+    <h3>1. Choose your service</h3>
+    <div class="field">
+      <label for="service">Travel service *</label>
+      <select id="service" required>
+        <option value="">Select a service</option>
+        <option>Flight Booking Assistance</option>
+        <option>Visa Application Assistance</option>
+        <option>Passport Assistance</option>
+        <option>Tour Packages and Travel Planning</option>
+        <option>Hotel and Accommodation Assistance</option>
+      </select>
     </div>
-</section>
-
-<!-- APPLICATION FORM -->
-
-<section class="application-section" id="apply">
-    <div class="container">
-
-        <div class="section-heading">
-            <h2>Travel Application</h2>
-            <p>
-                Complete the steps below. Required information and
-                payment evidence must be provided before you can
-                prepare your application for submission.
-            </p>
-        </div>
-
-        <div class="form-card">
-
-            <div class="step-caption" id="stepCaption">
-                Step 1 of 5 — Service and priority
-            </div>
-
-            <div class="progress-track">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-
-            <form id="travelForm" novalidate>
-
-                <!-- STEP 1 -->
-
-                <div class="form-step active">
-
-                    <h3>1. Select Your Service</h3>
-
-                    <div class="field">
-                        <label for="service">Service required *</label>
-
-                        <select id="service" required>
-                            <option value="">Choose a service</option>
-                            <option>Flight Booking Assistance</option>
-                            <option>Visa Application Assistance</option>
-                            <option>Passport Assistance</option>
-                            <option>Tour Package / Travel Planning</option>
-                            <option>Travel Consultation</option>
-                        </select>
-                    </div>
-
-                    <div class="notice">
-                        <strong>Application processing priority</strong><br><br>
-
-                        The amount you pay determines the internal
-                        processing priority assigned to your application.
-
-                        Higher-priced packages receive higher priority
-                        within our company's processing queue, subject
-                        to workload, complete documents and availability.
-
-                        This does not control the processing times of
-                        embassies, governments, airlines or other
-                        independent organisations.
-                    </div>
-
-                    <div class="packages">
-
-                        <label class="package">
-                            <input type="radio"
-                                   name="package"
-                                   value="200"
-                                   required>
-
-                            <span>
-                                <strong>Basic Priority</strong><br>
-                                Standard internal processing queue.<br>
-                                <span class="price">GH₵200</span>
-                            </span>
-                        </label>
-
-                        <label class="package">
-                            <input type="radio"
-                                   name="package"
-                                   value="350"
-                                   required>
-
-                            <span>
-                                <strong>Standard Priority</strong><br>
-                                Higher internal priority than Basic.<br>
-                                <span class="price">GH₵350</span>
-                            </span>
-                        </label>
-
-                        <label class="package">
-                            <input type="radio"
-                                   name="package"
-                                   value="500"
-                                   required>
-
-                            <span>
-                                <strong>Priority Processing</strong><br>
-                                Highest internal priority in these packages.<br>
-                                <span class="price">GH₵500</span>
-                            </span>
-                        </label>
-
-                    </div>
-
-                    <span class="hint">
-                        These are proposed company service fees.
-                        They must be approved by the business before
-                        publishing. They are separate from airline fares,
-                        government charges, visa fees and other third-party
-                        costs. The package must describe services the
-                        company can genuinely provide.
-                    </span>
-
-                    <div class="field">
-                        <label for="urgency">When do you need the service? *</label>
-
-                        <select id="urgency" required>
-                            <option value="">Choose timeframe</option>
-                            <option>As soon as possible</option>
-                            <option>Within one month</option>
-                            <option>Within three months</option>
-                            <option>Within six months</option>
-                            <option>More than six months from now</option>
-                            <option>Not sure yet</option>
-                        </select>
-                    </div>
-
-                    <div class="actions">
-                        <button type="button"
-                                class="btn blue"
-                                onclick="nextStep()">
-                            Continue
-                        </button>
-                    </div>
-
-                </div>
-
-                <!-- STEP 2 -->
-
-                <div class="form-step">
-
-                    <h3>2. Applicant Information</h3>
-
-                    <div class="field">
-                        <label for="profilePhoto">Profile picture *</label>
-
-                        <input type="file"
-                               id="profilePhoto"
-                               accept="image/jpeg,image/png,image/webp"
-                               required>
-
-                        <span class="hint">
-                            JPG, PNG or WEBP. Maximum size: 3 MB.
-                            Select a clear picture from your phone.
-                        </span>
-
-                        <img id="profilePreview"
-                             class="preview"
-                             alt="Profile picture preview">
-
-                        <div class="file-name" id="profileName"></div>
-                    </div>
-
-                    <div class="field">
-                        <label for="fullName">Full name *</label>
-                        <input type="text"
-                               id="fullName"
-                               autocomplete="name"
-                               maxlength="100"
-                               required
-                               placeholder="Enter your full name">
-                    </div>
-
-                    <div class="field">
-                        <label for="email">Email address *</label>
-                        <input type="email"
-                               id="email"
-                               autocomplete="email"
-                               maxlength="150"
-                               required
-                               placeholder="you@example.com">
-                    </div>
-
-                    <div class="field">
-                        <label for="phone">Phone / WhatsApp number *</label>
-                        <input type="tel"
-                               id="phone"
-                               autocomplete="tel"
-                               maxlength="30"
-                               required
-                               placeholder="e.g. 0240000000">
-                    </div>
-
-                    <div class="field">
-                        <label for="residence">Country of residence *</label>
-
-                        <select id="residence" required>
-                            <option value="">Choose country</option>
-                            <option>Ghana</option>
-                            <option>Nigeria</option>
-                            <option>United Kingdom</option>
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="actions">
-                        <button type="button"
-                                class="btn outline"
-                                onclick="previousStep()">
-                            Back
-                        </button>
-
-                        <button type="button"
-                                class="btn blue"
-                                onclick="nextStep()">
-                            Continue
-                        </button>
-                    </div>
-
-                </div>
-
-                <!-- STEP 3 -->
-
-                <div class="form-step">
-
-                    <h3>3. Travel Details</h3>
-
-                    <div class="field">
-                        <label for="destinationCountry">
-                            Destination country *
-                        </label>
-
-                        <select id="destinationCountry" required>
-                            <option value="">Choose destination</option>
-                            <option>Ghana</option>
-                            <option>Nigeria</option>
-                            <option>United Kingdom</option>
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>United Arab Emirates</option>
-                            <option>France</option>
-                            <option>Germany</option>
-                            <option>Italy</option>
-                            <option>South Africa</option>
-                            <option>Kenya</option>
-                            <option>China</option>
-                            <option>India</option>
-                            <option>Other / not listed</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="destinationCity">Destination city *</label>
-
-                        <input type="text"
-                               id="destinationCity"
-                               maxlength="100"
-                               required
-                               placeholder="e.g. London, Dubai or Toronto">
-                    </div>
-
-                    <div class="field">
-                        <label for="departure">Departure city / airport</label>
-
-                        <input type="text"
-                               id="departure"
-                               maxlength="100"
-                               placeholder="e.g. Accra, Ghana">
-                    </div>
-
-                    <div class="field">
-                        <label for="airline">Preferred airline</label>
-
-                        <select id="airline">
-                            <option>No preference — recommend an airline</option>
-                            <option>Emirates</option>
-                            <option>Qatar Airways</option>
-                            <option>Turkish Airlines</option>
-                            <option>British Airways</option>
-                            <option>KLM</option>
-                            <option>Air France</option>
-                            <option>Lufthansa</option>
-                            <option>Ethiopian Airlines</option>
-                            <option>Kenya Airways</option>
-                            <option>Africa World Airlines</option>
-                            <option>United Airlines</option>
-                            <option>Delta Air Lines</option>
-                            <option>Other / advise me</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="travelClass">Preferred travel class</label>
-
-                        <select id="travelClass">
-                            <option>Economy</option>
-                            <option>Premium Economy</option>
-                            <option>Business Class</option>
-                            <option>First Class</option>
-                            <option>Not sure</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="travelDate">Departure date</label>
-                        <input type="date" id="travelDate">
-                    </div>
-
-                    <div class="field">
-                        <label for="returnDate">Return date, if applicable</label>
-                        <input type="date" id="returnDate">
-                    </div>
-
-                    <div class="field">
-                        <label for="travellers">Number of travellers</label>
-
-                        <select id="travellers">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6 or more</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="notes">Additional information</label>
-
-                        <textarea id="notes"
-                                  maxlength="1000"
-                                  placeholder="Explain any additional requirements. Do not enter passwords or MoMo PINs."></textarea>
-                    </div>
-
-                    <div class="actions">
-                        <button type="button"
-                                class="btn outline"
-                                onclick="previousStep()">
-                            Back
-                        </button>
-
-                        <button type="button"
-                                class="btn blue"
-                                onclick="nextStep()">
-                            Continue
-                        </button>
-                    </div>
-
-                </div>
-
-                <!-- STEP 4 -->
-
-                <div class="form-step">
-
-                    <h3>4. Payment and Receipt</h3>
-
-                    <div class="notice">
-                        <strong>Before paying:</strong>
-
-                        Your selected package determines your company's
-                        internal processing priority. It does not guarantee
-                        a visa, flight ticket, appointment or decision
-                        from an external authority.
-
-                        The package price is a company service fee,
-                        separate from any government, embassy or airline
-                        charges. Check the applicable terms before payment.
-                    </div>
-
-                    <div class="field">
-                        <label for="feeDisplay">Selected service fee</label>
-
-                        <input type="text"
-                               id="feeDisplay"
-                               readonly
-                               value="Select a package in Step 1">
-                    </div>
-
-                    <div class="field">
-                        <label for="paymentMethod">Payment method *</label>
-
-                        <select id="paymentMethod" required>
-                            <option value="">Choose payment method</option>
-                            <option>Hubtel — online checkout</option>
-                            <option>MTN Mobile Money — manual payment</option>
-                            <option>Telecel Cash — manual payment</option>
-                            <option>AT Money — where available</option>
-                            <option>Bank transfer</option>
-                        </select>
-
-                        <span class="hint">
-                            Hubtel requires an approved checkout link or
-                            secure integration. Alternative payment methods
-                            require confirmed business payment details.
-                            Do not send money to an unverified number.
-                        </span>
-                    </div>
-
-                    <div class="info">
-                        <strong>Payment verification:</strong>
-
-                        Your application remains pending until the business
-                        confirms that payment has been received.
-                        A receipt screenshot or reference number alone
-                        does not prove that funds were received.
-                    </div>
-
-                    <div class="field">
-                        <label for="transactionReference">
-                            Transaction reference or receipt text
-                        </label>
-
-                        <input type="text"
-                               id="transactionReference"
-                               maxlength="150"
-                               placeholder="Enter transaction ID or receipt details">
-                    </div>
-
-                    <div class="field">
-                        <label for="receiptFile">
-                            Upload receipt image or PDF
-                        </label>
-
-                        <input type="file"
-                               id="receiptFile"
-                               accept="image/jpeg,image/png,image/webp,application/pdf">
-
-                        <span class="hint">
-                            JPG, PNG, WEBP or PDF. Maximum size: 5 MB.
-                            Upload the receipt image or PDF, or provide
-                            receipt details in the text field above.
-                        </span>
-
-                        <img id="receiptPreview"
-                             class="preview"
-                             alt="Receipt preview">
-
-                        <div class="file-name" id="receiptName"></div>
-                    </div>
-
-                    <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:18px 0">
-                        <input type="checkbox"
-                               id="paymentAcknowledgement"
-                               required
-                               style="margin-top:5px">
-
-                        <span>
-                            I understand the selected fee, the processing
-                            priority terms and the payment verification
-                            requirements. *
-                        </span>
-                    </label>
-
-                    <div class="notice">
-                        <strong>Important technical limitation:</strong>
-
-                        On this GitHub Pages version, the selected receipt
-                        is not automatically uploaded to a secure server.
-                        You must attach the file manually after WhatsApp
-                        opens. Secure automatic uploads and payment
-                        verification require a backend.
-                    </div>
-
-                    <div class="actions">
-                        <button type="button"
-                                class="btn outline"
-                                onclick="previousStep()">
-                            Back
-                        </button>
-
-                        <button type="button"
-                                class="btn blue"
-                                onclick="showReview()">
-                            Review Application
-                        </button>
-                    </div>
-
-                </div>
-
-                <!-- STEP 5 -->
-
-                <div class="form-step">
-
-                    <h3>5. Review Your Application</h3>
-
-                    <p>
-                        Check your details carefully before preparing
-                        your application message.
-                    </p>
-
-                    <div class="review-box" id="reviewBox"></div>
-
-                    <div class="notice">
-                        <strong>Before submission:</strong>
-
-                        WhatsApp will open with your application details.
-                        You must attach your profile picture and payment
-                        receipt manually, then press Send.
-
-                        This website does not create a database record,
-                        automatically verify payment or issue an official
-                        application reference number.
-                    </div>
-
-                    <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:18px 0">
-                        <input type="checkbox"
-                               id="privacyConsent"
-                               required
-                               style="margin-top:5px">
-
-                        <span>
-                            I agree that God's Time Travel and Tours may
-                            use my submitted information to respond to
-                            my travel enquiry. *
-                        </span>
-                    </label>
-
-                    <div class="actions">
-                        <button type="button"
-                                class="btn outline"
-                                onclick="previousStep()">
-                            Edit Application
-                        </button>
-
-                        <button type="submit"
-                                class="btn blue">
-                            Prepare Application in WhatsApp
-                        </button>
-
-                        <a class="btn outline"
-                           id="emailFallback"
-                           href="mailto:godstimetravelandtour12@gmail.com">
-                            Prepare Email Instead
-                        </a>
-                    </div>
-
-                </div>
-
-            </form>
-        </div>
+    <div class="field">
+      <label for="package">Company service package *</label>
+      <select id="package" required>
+        <option value="">Select a package</option>
+        <option value="GH₵200 - Basic Priority">GH₵200 — Basic Priority</option>
+        <option value="GH₵350 - Standard Priority">GH₵350 — Standard Priority</option>
+        <option value="GH₵500 - Priority Processing">GH₵500 — Priority Processing</option>
+      </select>
+      <p class="small">These are proposed company service-package amounts, not airline ticket prices, visa fees or government charges. Any processing-priority difference applies only to the company's internal work queue. It cannot speed up embassy, government or airline decisions and does not guarantee an outcome.</p>
     </div>
-</section>
-
-<!-- FAQ -->
-
-<section class="faq">
-    <div class="container">
-
-        <div class="section-heading">
-            <h2>Frequently Asked Questions</h2>
-            <p>Important information for applicants.</p>
-        </div>
-
-        <details>
-            <summary>Does paying GH₵500 guarantee a visa?</summary>
-            <p>
-                No. The amount determines the internal processing
-                priority offered by the company. Visa decisions are
-                made by the relevant authorities.
-            </p>
-        </details>
-
-        <details>
-            <summary>Does submitting a receipt confirm payment?</summary>
-            <p>
-                No. The company must verify that the payment was
-                received before marking the application as paid.
-            </p>
-        </details>
-
-        <details>
-            <summary>Are the package fees government charges?</summary>
-            <p>
-                No. The displayed prices are proposed company service
-                fees. Airline fares, government fees, embassy charges
-                and other third-party costs are separate.
-            </p>
-        </details>
-
-        <details>
-            <summary>Can I select an airline and destination?</summary>
-            <p>
-                Yes. You can select a destination and express an
-                airline preference. Routes, schedules and fares
-                must be confirmed before booking.
-            </p>
-        </details>
-
+    <h3>2. Applicant information</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label for="fullName">Full name as on passport *</label>
+        <input id="fullName" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">Email address *</label>
+        <input id="email" type="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="phone">Phone number *</label>
+        <input id="phone" type="tel" required autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="nationality">Nationality *</label>
+        <input id="nationality" required value="Ghanaian">
+      </div>
+      <div class="field">
+        <label for="profilePhoto">Profile photograph (JPG, PNG or WEBP)</label>
+        <input id="profilePhoto" type="file" accept="image/jpeg,image/png,image/webp">
+      </div>
+      <div class="field">
+        <label for="passportStatus">Passport status</label>
+        <select id="passportStatus">
+          <option>Already have a valid passport</option>
+          <option>Passport application in progress</option>
+          <option>Need passport assistance</option>
+        </select>
+      </div>
     </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-    <div class="container">
-
-        <div class="contact-box">
-            <h2>Ready to Plan Your Next Trip?</h2>
-
-            <p>
-                Contact God's Time Travel and Tours for questions
-                about services, application fees and payment verification.
-            </p>
-
-            <div class="contact-links">
-                <a href="https://wa.me/233241226239"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    WhatsApp: 0241226239
-                </a>
-
-                <a href="tel:+233241226239">
-                    Call: 0241226239
-                </a>
-
-                <a href="mailto:godstimetravelandtour12@gmail.com">
-                    godstimetravelandtour12@gmail.com
-                </a>
-            </div>
-        </div>
-
+    <h3>3. Destination and flight preferences</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label for="destination">Destination country *</label>
+        <input id="destination" required placeholder="Choose a country above or type here">
+      </div>
+      <div class="field">
+        <label for="city">Destination city</label>
+        <input id="city" placeholder="e.g. London">
+      </div>
+      <div class="field">
+        <label for="departure">Departure city/country</label>
+        <input id="departure" placeholder="e.g. Accra, Ghana">
+      </div>
+      <div class="field">
+        <label for="airlineChoice">Preferred airline</label>
+        <select id="airlineChoice">
+          <option>No preference</option>
+          <option>Emirates</option><option>Qatar Airways</option>
+          <option>Turkish Airlines</option><option>British Airways</option>
+          <option>KLM</option><option>Air France</option><option>Lufthansa</option>
+          <option>Ethiopian Airlines</option><option>Kenya Airways</option>
+          <option>Africa World Airlines</option><option>United Airlines</option>
+          <option>Delta Air Lines</option><option>Singapore Airlines</option>
+          <option>Other / please advise</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="cabin">Preferred cabin class</label>
+        <select id="cabin">
+          <option>No preference</option><option>Economy Class</option>
+          <option>Premium Economy</option><option>Business Class</option>
+          <option>First Class</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="travelDate">Preferred departure date</label>
+        <input id="travelDate" type="date">
+      </div>
+      <div class="field">
+        <label for="travellers">Number of travellers</label>
+        <input id="travellers" type="number" min="1" max="30" value="1">
+      </div>
+      <div class="field">
+        <label for="tripType">Trip type</label>
+        <select id="tripType"><option>One way</option><option>Return trip</option><option>Multi-city</option></select>
+      </div>
     </div>
+    <div class="field">
+      <label for="notes">Additional details or questions</label>
+      <textarea id="notes" rows="4" placeholder="Tell us about your travel plans, attractions, accommodation or special requirements. Do not enter passwords, PINs or sensitive payment credentials."></textarea>
+    </div>
+    <h3>4. Payment enquiry</h3>
+    <div class="field">
+      <label for="paymentMethod">Preferred payment method</label>
+      <select id="paymentMethod">
+        <option>Hubtel — checkout to be confirmed by the company</option>
+        <option>MTN Mobile Money</option>
+        <option>Telecel Cash</option>
+        <option>AT Money</option>
+        <option>Bank transfer</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="paymentReference">Payment reference (if already paid)</label>
+      <input id="paymentReference" placeholder="Enter reference, not your PIN or password">
+    </div>
+    <div class="field">
+      <label for="receipt">Payment receipt (optional at enquiry stage)</label>
+      <input id="receipt" type="file" accept="image/*,.pdf">
+    </div>
+    <div class="notice">
+      <b>Before paying:</b> Contact the company to confirm the exact service, amount, official payment destination and any applicable government or airline fees. Do not pay an unverified account. Selecting Hubtel here does not initiate an online payment.
+    </div>
+    <div class="field">
+      <label><input id="consent" type="checkbox" required style="width:auto"> I confirm the information is accurate and consent to the company contacting me about this enquiry. *</label>
+    </div>
+    <button class="btn btn-blue" type="submit">Prepare Travel Enquiry</button>
+    <p class="small">This static website prepares a WhatsApp enquiry. It does not automatically book flights, collect payment, verify receipts or securely store submitted applications.</p>
+    <div id="formMessage" class="hidden" role="status"></div>
+  </form>
 </section>
-
-</main>
-
-<a class="whatsapp-float"
-   href="https://wa.me/233241226239"
-   target="_blank"
-   rel="noopener noreferrer">
-    WhatsApp Support
-</a>
-
+<section class="container" id="contact">
+  <div class="panel">
+    <div class="eyebrow">Contact our team</div>
+    <h2>God's Time Travel and Tours</h2>
+    <p>Contact us to discuss destination information, travel planning, flights and service availability.</p>
+    <p><b>Email:</b> <a href="mailto:godstimetravelandtour12@gmail.com">godstimetravelandtour12@gmail.com</a></p>
+    <p><b>Phone / WhatsApp:</b> <a href="https://wa.me/233241226239">0241226239</a></p>
+    <p class="small">We provide travel assistance and enquiries. A visa, flight ticket, hotel reservation or other service is not confirmed until the relevant provider has confirmed it.</p>
+  </div>
+</section>
 <footer>
-    <div class="container">
-        <p>
-            &copy; <span id="year"></span>
-            God's Time Travel and Tours. All rights reserved.
-        </p>
-
-        <p>
-            Travel assistance only. Service availability and external
-            decisions must be confirmed.
-        </p>
-    </div>
+  <b>GOD'S TIME TRAVEL AND TOURS</b>
+  <p>Discover destinations. Explore experiences. Plan responsibly.</p>
+  <p class="small" style="color:#dbe5f1">Destination and airline information is general guidance and may change. Confirm current requirements and availability with official providers.</p>
 </footer>
-
+<div id="lightbox" role="dialog" aria-label="Photograph viewer" onclick="closeLightbox()">
+  <button class="btn btn-gold" type="button" onclick="closeLightbox()">Close ✕</button>
+  <img id="lightboxImage" src="" alt="Enlarged travel photograph">
+</div>
 <script>
-const form = document.getElementById("travelForm");
-const steps = [...document.querySelectorAll(".form-step")];
-
-let currentStep = 0;
-
-const stepNames = [
-    "Service and priority",
-    "Applicant information",
-    "Travel details",
-    "Payment and receipt",
-    "Review and submit"
+const photo = (id) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1000&q=80`;
+/*
+  Photo URLs below are illustrative travel photography.
+  Replace or supplement them with verified, appropriately licensed
+  photographs of each specific destination before publication.
+*/
+const photos = [
+  photo("photo-1500530855697-b586d89ba3ee"),
+  photo("photo-1501785888041-af3ef285b470"),
+  photo("photo-1470770841072-f978cf4d019e"),
+  photo("photo-1500534623283-312aede485b7"),
+  photo("photo-1507525428034-b723cf961d3e"),
+  photo("photo-1518837695005-2083093ee35b"),
+  photo("photo-1464822759023-fed622ff2c3b"),
+  photo("photo-1472396961693-142e6e269027"),
+  photo("photo-1490750967868-88aa4486c946"),
+  photo("photo-1470252649378-9c29740c9fa8"),
+  photo("photo-1480714378408-67cf0d13bc1b"),
+  photo("photo-1519501025264-65ba15a82390"),
+  photo("photo-1511818966892-d7d671e672a2"),
+  photo("photo-1494783367193-149034c05e8f"),
+  photo("photo-1523906834658-6e24ef2386f9"),
+  photo("photo-1502602898657-3e91760cbb34"),
+  photo("photo-1513635269975-59663e0ac1ad"),
+  photo("photo-1533105079780-92b9be482077"),
+  photo("photo-1530789253388-582c481c54b0"),
+  photo("photo-1506929562872-bb421503ef21"),
+  photo("photo-1516483638261-f4dbaf036963"),
+  photo("photo-1528181304800-259b08848526"),
+  photo("photo-1526778548025-fa2f459cd5c1"),
+  photo("photo-1548013146-72479768bada")
 ];
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-function updateStep() {
-    steps.forEach((step, index) => {
-        step.classList.toggle("active", index === currentStep);
-    });
-
-    document.getElementById("stepCaption").textContent =
-        `Step ${currentStep + 1} of ${steps.length} — ${stepNames[currentStep]}`;
-
-    document.getElementById("progressFill").style.width =
-        `${((currentStep + 1) / steps.length) * 100}%`;
-
-    if (currentStep === 3) {
-        updateFee();
-    }
-
-    document.getElementById("apply").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+const countries = [
+{
+name:"Ghana",region:"Africa",capital:"Accra",currency:"Ghanaian cedi (GHS)",languages:"English and Ghanaian languages",
+overview:"Ghana is a West African country known for its welcoming communities, historic coastal forts, colourful festivals, rich culture and varied landscapes.",
+attractions:["Cape Coast Castle","Kakum National Park","Mole National Park","Lake Volta","Kumasi cultural attractions","Labadi Beach"],
+cities:["Accra","Kumasi","Cape Coast","Tamale"],
+airports:["Kotoka International Airport (ACC)"],
+airlines:["Africa World Airlines","PassionAir","Ethiopian Airlines","Emirates","Qatar Airways","British Airways"],
+best:"The drier months are often convenient for sightseeing, although conditions vary by region.",
+tip:"Explore coastal history, local markets, traditional food and national parks. Check current park access and transport before travelling."
+},
+{
+name:"Nigeria",region:"Africa",capital:"Abuja",currency:"Nigerian naira (NGN)",languages:"English and many regional languages",
+overview:"Nigeria has energetic cities, diverse cultures, music, cuisine, coastal areas and important historical sites.",
+attractions:["Lagos waterfront","Zuma Rock","Olumo Rock","Yankari Game Reserve","Osun-Osogbo Sacred Grove"],
+cities:["Lagos","Abuja","Kano","Port Harcourt"],
+airports:["Murtala Muhammed International Airport","Nnamdi Azikiwe International Airport"],
+airlines:["Air Peace","United Nigeria Airlines","Ibom Air","Qatar Airways","Ethiopian Airlines"],
+best:"Weather varies across the country; plan around regional rainy and dry seasons.",
+tip:"Allow time for city traffic and check local travel advisories and transport arrangements."
+},
+{
+name:"South Africa",region:"Africa",capital:"Pretoria (administrative)",currency:"South African rand (ZAR)",languages:"Multiple official languages, including English",
+overview:"South Africa combines dramatic coastlines, wildlife reserves, mountains, vineyards, history and modern cities.",
+attractions:["Table Mountain","Cape Point","Kruger National Park","Robben Island","Garden Route"],
+cities:["Cape Town","Johannesburg","Durban","Pretoria"],
+airports:["O.R. Tambo International Airport","Cape Town International Airport"],
+airlines:["South African Airways","Airlink","FlySafair","CemAir","British Airways"],
+best:"Season depends on the region and activity; the country has different regional climates.",
+tip:"Use reputable transport providers and follow wildlife-park safety instructions."
+},
+{
+name:"Kenya",region:"Africa",capital:"Nairobi",currency:"Kenyan shilling (KES)",languages:"Swahili and English",
+overview:"Kenya is known for safari destinations, the Great Rift Valley, Indian Ocean beaches and vibrant Nairobi.",
+attractions:["Maasai Mara","Amboseli National Park","Diani Beach","Mount Kenya","Nairobi National Park"],
+cities:["Nairobi","Mombasa","Kisumu","Nakuru"],
+airports:["Jomo Kenyatta International Airport","Moi International Airport"],
+airlines:["Kenya Airways","Jambojet","Safarilink","Ethiopian Airlines","Qatar Airways"],
+best:"Wildlife-viewing conditions depend on location, rainfall and migration patterns.",
+tip:"Use licensed safari operators and check park fees and entry rules in advance."
+},
+{
+name:"Ethiopia",region:"Africa",capital:"Addis Ababa",currency:"Ethiopian birr (ETB)",languages:"Amharic and other Ethiopian languages",
+overview:"Ethiopia features ancient rock-hewn churches, highland scenery, distinctive cuisine and a deep cultural history.",
+attractions:["Lalibela churches","Simien Mountains","Fasil Ghebbi","Danakil Depression","Lake Tana"],
+cities:["Addis Ababa","Lalibela","Gondar","Bahir Dar"],
+airports:["Addis Ababa Bole International Airport"],
+airlines:["Ethiopian Airlines","Ethiopian Airlines domestic services","Kenya Airways","Qatar Airways"],
+best:"Seasonal conditions differ between highlands and lowlands.",
+tip:"Some remote attractions need specialist guides, suitable transport and careful safety planning."
+},
+{
+name:"Rwanda",region:"Africa",capital:"Kigali",currency:"Rwandan franc (RWF)",languages:"Kinyarwanda, English, French and Swahili",
+overview:"Rwanda offers green hills, conservation experiences, lakes and a modern capital with museums and cultural sites.",
+attractions:["Volcanoes National Park","Lake Kivu","Nyungwe Forest","Kigali Genocide Memorial","Akagera National Park"],
+cities:["Kigali","Musanze","Rubavu","Huye"],
+airports:["Kigali International Airport"],
+airlines:["RwandAir","Ethiopian Airlines","Kenya Airways","Qatar Airways"],
+best:"Travel is possible throughout the year, but rain affects hiking and road conditions.",
+tip:"Gorilla trekking requires advance planning, permits and compliance with conservation rules."
+},
+{
+name:"Egypt",region:"Africa",capital:"Cairo",currency:"Egyptian pound (EGP)",languages:"Arabic",
+overview:"Egypt brings together ancient monuments, Nile cruises, desert landscapes and Red Sea resorts.",
+attractions:["Pyramids of Giza","Egyptian Museum","Luxor temples","Abu Simbel","Red Sea reefs"],
+cities:["Cairo","Luxor","Aswan","Alexandria","Hurghada"],
+airports:["Cairo International Airport","Hurghada International Airport"],
+airlines:["EgyptAir","Air Cairo","Emirates","Qatar Airways","Turkish Airlines"],
+best:"Cooler months are often more comfortable for outdoor archaeological sightseeing.",
+tip:"Use reputable guides for historical sites and check local conditions before desert excursions."
+},
+{
+name:"Morocco",region:"Africa",capital:"Rabat",currency:"Moroccan dirham (MAD)",languages:"Arabic and Amazigh; French is also widely used",
+overview:"Morocco offers historic medinas, Atlantic beaches, mountain villages and Sahara Desert experiences.",
+attractions:["Jemaa el-Fnaa","Chefchaouen","Aït Benhaddou","Atlas Mountains","Sahara Desert"],
+cities:["Marrakesh","Casablanca","Rabat","Fes","Agadir"],
+airports:["Casablanca Mohammed V International Airport","Marrakesh Menara Airport"],
+airlines:["Royal Air Maroc","Air Arabia Maroc","Qatar Airways","Air France"],
+best:"Spring and autumn are often comfortable, although desert and mountain climates differ.",
+tip:"Agree tour prices in advance and choose experienced operators for desert trips."
+},
+{
+name:"Tanzania",region:"Africa",capital:"Dodoma",currency:"Tanzanian shilling (TZS)",languages:"Swahili and English",
+overview:"Tanzania is famous for wildlife safaris, Mount Kilimanjaro, Zanzibar and the Indian Ocean.",
+attractions:["Serengeti National Park","Mount Kilimanjaro","Ngorongoro Crater","Zanzibar beaches","Stone Town"],
+cities:["Dar es Salaam","Arusha","Dodoma","Zanzibar City"],
+airports:["Julius Nyerere International Airport","Kilimanjaro International Airport"],
+airlines:["Air Tanzania","Precision Air","Coastal Aviation","Qatar Airways","Ethiopian Airlines"],
+best:"Safari conditions depend on the park, rainfall and animal migration.",
+tip:"Check park permits, conservation fees and island transfer arrangements before booking."
+},
+{
+name:"Côte d’Ivoire",region:"Africa",capital:"Yamoussoukro",currency:"West African CFA franc (XOF)",languages:"French",
+overview:"Côte d’Ivoire features lively Abidjan, Atlantic beaches, rainforests, music and rich food traditions.",
+attractions:["Basilica of Our Lady of Peace","Grand-Bassam historic town","Banco National Park","Assinie beaches","Taï National Park"],
+cities:["Abidjan","Yamoussoukro","Grand-Bassam","Bouaké"],
+airports:["Félix-Houphouët-Boigny International Airport"],
+airlines:["Air Côte d’Ivoire","Ethiopian Airlines","Air France","Turkish Airlines"],
+best:"Plan around regional rainfall and road conditions.",
+tip:"French is especially useful for travel arrangements and communication."
+},
+{
+name:"United Kingdom",region:"Europe",capital:"London",currency:"Pound sterling (GBP)",languages:"English",
+overview:"The UK combines historic castles, royal landmarks, museums, countryside, coastal scenery and modern cities.",
+attractions:["Tower Bridge","British Museum","Edinburgh Castle","Lake District","Stonehenge"],
+cities:["London","Manchester","Edinburgh","Birmingham","Cardiff"],
+airports:["Heathrow Airport","Gatwick Airport","Manchester Airport"],
+airlines:["British Airways","Virgin Atlantic","easyJet","Jet2","Ryanair"],
+best:"Late spring and summer generally bring longer daylight hours; rain is possible year-round.",
+tip:"Check the current UK entry requirements for your nationality before travelling."
+},
+{
+name:"France",region:"Europe",capital:"Paris",currency:"Euro (EUR)",languages:"French",
+overview:"France is known for art, architecture, food, vineyards, Alpine scenery and Mediterranean beaches.",
+attractions:["Eiffel Tower","Louvre Museum","Palace of Versailles","French Riviera","Mont-Saint-Michel"],
+cities:["Paris","Nice","Lyon","Marseille","Bordeaux"],
+airports:["Paris Charles de Gaulle Airport","Paris Orly Airport"],
+airlines:["Air France","Transavia France","easyJet","Corsair"],
+best:"Spring and autumn are popular for city sightseeing; mountain and beach seasons differ.",
+tip:"Book popular attractions ahead and use official transport and museum websites."
+},
+{
+name:"Germany",region:"Europe",capital:"Berlin",currency:"Euro (EUR)",languages:"German",
+overview:"Germany offers historic towns, castles, forests, major museums and well-connected transport networks.",
+attractions:["Brandenburg Gate","Neuschwanstein Castle","Cologne Cathedral","Black Forest","Museum Island"],
+cities:["Berlin","Munich","Frankfurt","Hamburg","Cologne"],
+airports:["Frankfurt Airport","Munich Airport","Berlin Brandenburg Airport"],
+airlines:["Lufthansa","Eurowings","Condor","Discover Airlines"],
+best:"Summer suits outdoor trips, while winter offers seasonal markets and snow activities in suitable regions.",
+tip:"Check train connections and reserve accommodation during major events."
+},
+{
+name:"Italy",region:"Europe",capital:"Rome",currency:"Euro (EUR)",languages:"Italian",
+overview:"Italy is famous for Roman history, Renaissance art, regional cuisine, lakes and coastal villages.",
+attractions:["Colosseum","Venice canals","Florence historic centre","Amalfi Coast","Lake Como"],
+cities:["Rome","Milan","Venice","Florence","Naples"],
+airports:["Rome Fiumicino Airport","Milan Malpensa Airport"],
+airlines:["ITA Airways","Neos","Ryanair","easyJet"],
+best:"Spring and autumn are often comfortable for city and cultural trips.",
+tip:"Popular attractions and trains can sell out during busy holiday periods."
+},
+{
+name:"Spain",region:"Europe",capital:"Madrid",currency:"Euro (EUR)",languages:"Spanish and regional languages",
+overview:"Spain offers beaches, architecture, historic cities, festivals and varied food traditions.",
+attractions:["Sagrada Família","Alhambra","Park Güell","Seville historic centre","Canary Islands"],
+cities:["Madrid","Barcelona","Seville","Valencia","Malaga"],
+airports:["Madrid-Barajas Airport","Barcelona-El Prat Airport"],
+airlines:["Iberia","Vueling","Air Europa","Volotea"],
+best:"Spring and autumn are often pleasant for sightseeing; summer can be very hot in inland areas.",
+tip:"Check local festival dates because accommodation prices can rise substantially."
+},
+{
+name:"Portugal",region:"Europe",capital:"Lisbon",currency:"Euro (EUR)",languages:"Portuguese",
+overview:"Portugal combines Atlantic beaches, historic neighbourhoods, scenic islands, wine regions and coastal towns.",
+attractions:["Belém Tower","Douro Valley","Algarve coast","Sintra palaces","Madeira landscapes"],
+cities:["Lisbon","Porto","Faro","Funchal"],
+airports:["Lisbon Airport","Porto Airport"],
+airlines:["TAP Air Portugal","easyJet","Ryanair","Azores Airlines"],
+best:"Spring and early autumn are popular for comfortable sightseeing.",
+tip:"Coastal conditions vary; follow beach flags and local safety instructions."
+},
+{
+name:"Netherlands",region:"Europe",capital:"Amsterdam",currency:"Euro (EUR)",languages:"Dutch",
+overview:"The Netherlands is known for canals, cycling, art museums, historic towns and spring flower displays.",
+attractions:["Amsterdam canals","Rijksmuseum","Keukenhof","Kinderdijk windmills","Rotterdam architecture"],
+cities:["Amsterdam","Rotterdam","The Hague","Utrecht"],
+airports:["Amsterdam Airport Schiphol"],
+airlines:["KLM","Transavia","TUI fly Netherlands","easyJet"],
+best:"Spring is known for flower displays, while summer offers long days for outdoor exploration.",
+tip:"Use marked cycle lanes carefully and book popular museum time slots in advance."
+},
+{
+name:"Switzerland",region:"Europe",capital:"Bern",currency:"Swiss franc (CHF)",languages:"German, French, Italian and Romansh",
+overview:"Switzerland offers Alpine mountains, lakes, scenic railways, villages and outdoor activities.",
+attractions:["Matterhorn","Lake Geneva","Jungfraujoch","Lucerne","Interlaken"],
+cities:["Zurich","Geneva","Bern","Lucerne","Basel"],
+airports:["Zurich Airport","Geneva Airport"],
+airlines:["Swiss International Air Lines","Edelweiss Air","easyJet Switzerland"],
+best:"Summer suits hiking and lakes; winter is popular for snow sports in suitable resorts.",
+tip:"Mountain weather can change quickly. Check lift and railway operating schedules."
+},
+{
+name:"Turkey",region:"Europe",capital:"Ankara",currency:"Turkish lira (TRY)",languages:"Turkish",
+overview:"Turkey bridges Europe and Asia, with historic cities, Mediterranean beaches, ancient ruins and unusual rock landscapes.",
+attractions:["Hagia Sophia","Cappadocia","Pamukkale","Ephesus","Turquoise Coast"],
+cities:["Istanbul","Ankara","Antalya","Izmir","Nevşehir"],
+airports:["Istanbul Airport","Sabiha Gökçen Airport","Antalya Airport"],
+airlines:["Turkish Airlines","Pegasus Airlines","AJet","SunExpress"],
+best:"Spring and autumn are often pleasant for cultural sightseeing.",
+tip:"Use authorised operators for hot-air balloon trips and check local travel guidance."
+},
+{
+name:"Greece",region:"Europe",capital:"Athens",currency:"Euro (EUR)",languages:"Greek",
+overview:"Greece combines ancient archaeological sites, islands, clear-water beaches and Mediterranean food.",
+attractions:["Acropolis","Santorini","Meteora","Delphi","Crete beaches"],
+cities:["Athens","Thessaloniki","Heraklion","Rhodes"],
+airports:["Athens International Airport"],
+airlines:["Aegean Airlines","Sky Express","Olympic Air"],
+best:"Late spring and early autumn often offer warm weather and fewer crowds than peak summer.",
+tip:"Ferry timetables depend on weather and season; allow flexibility when island-hopping."
+},
+{
+name:"United Arab Emirates",region:"Asia",capital:"Abu Dhabi",currency:"UAE dirham (AED)",languages:"Arabic; English is widely used",
+overview:"The UAE is known for modern skylines, luxury shopping, desert landscapes, beaches and cultural attractions.",
+attractions:["Burj Khalifa","Sheikh Zayed Grand Mosque","Palm Jumeirah","Louvre Abu Dhabi","Dubai desert"],
+cities:["Dubai","Abu Dhabi","Sharjah","Al Ain"],
+airports:["Dubai International Airport","Zayed International Airport"],
+airlines:["Emirates","Etihad Airways","flydubai","Air Arabia"],
+best:"The cooler months are generally more comfortable for outdoor activities.",
+tip:"Check local customs, public conduct rules and the conditions for your visa before travel."
+},
+{
+name:"Qatar",region:"Asia",capital:"Doha",currency:"Qatari riyal (QAR)",languages:"Arabic; English is widely used",
+overview:"Qatar features modern architecture, museums, waterfront promenades, desert trips and traditional markets.",
+attractions:["Museum of Islamic Art","Souq Waqif","Katara Cultural Village","The Pearl","Inland Sea"],
+cities:["Doha","Al Wakrah","Al Khor"],
+airports:["Hamad International Airport"],
+airlines:["Qatar Airways","Qatar Executive"],
+best:"The cooler season is better suited to outdoor sightseeing and desert activities.",
+tip:"Respect local customs and confirm dress expectations at cultural and religious sites."
+},
+{
+name:"Saudi Arabia",region:"Asia",capital:"Riyadh",currency:"Saudi riyal (SAR)",languages:"Arabic",
+overview:"Saudi Arabia includes historic settlements, desert scenery, Red Sea coastlines and modern urban attractions.",
+attractions:["AlUla","Edge of the World","Jeddah historic district","Diriyah","Red Sea coast"],
+cities:["Riyadh","Jeddah","Madinah","AlUla"],
+airports:["King Khalid International Airport","King Abdulaziz International Airport"],
+airlines:["Saudia","flynas","flyadeal","Riyadh Air (check current operations)"],
+best:"Cooler months are often more comfortable for outdoor exploration.",
+tip:"Pilgrimage access rules, visas and site restrictions vary. Verify official requirements for your trip."
+},
+{
+name:"China",region:"Asia",capital:"Beijing",currency:"Renminbi / yuan (CNY)",languages:"Mandarin Chinese and regional languages",
+overview:"China offers ancient heritage, mountain scenery, historic cities and major modern urban centres.",
+attractions:["Great Wall","Forbidden City","Terracotta Army","Zhangjiajie landscapes","West Lake"],
+cities:["Beijing","Shanghai","Xi'an","Chengdu","Guangzhou"],
+airports:["Beijing Capital International Airport","Shanghai Pudong International Airport"],
+airlines:["Air China","China Eastern","China Southern","Hainan Airlines"],
+best:"Climate varies widely; choose the season according to the regions on your itinerary.",
+tip:"Confirm visa requirements, local apps and any internet or payment arrangements before arrival."
+},
+{
+name:"Japan",region:"Asia",capital:"Tokyo",currency:"Japanese yen (JPY)",languages:"Japanese",
+overview:"Japan combines historic temples, modern cities, mountain scenery, gardens and distinctive food culture.",
+attractions:["Mount Fuji","Fushimi Inari Shrine","Arashiyama","Shibuya Crossing","Hiroshima Peace Memorial"],
+cities:["Tokyo","Kyoto","Osaka","Sapporo","Hiroshima"],
+airports:["Tokyo Haneda Airport","Narita International Airport"],
+airlines:["Japan Airlines","All Nippon Airways","Peach Aviation","Jetstar Japan"],
+best:"Spring blossoms and autumn colours are popular; weather varies by region.",
+tip:"Learn basic etiquette for public transport, temples, restaurants and accommodation."
+},
+{
+name:"India",region:"Asia",capital:"New Delhi",currency:"Indian rupee (INR)",languages:"Hindi, English and many regional languages",
+overview:"India offers monumental architecture, mountain regions, beaches, wildlife, festivals and diverse regional cuisine.",
+attractions:["Taj Mahal","Jaipur forts","Kerala backwaters","Varanasi ghats","Goa beaches"],
+cities:["New Delhi","Mumbai","Jaipur","Kochi","Bengaluru"],
+airports:["Indira Gandhi International Airport","Mumbai Chhatrapati Shivaji Maharaj International Airport"],
+airlines:["Air India","IndiGo","Akasa Air","Air India Express"],
+best:"Climate varies significantly; choose travel dates around regional heat, monsoon and winter conditions.",
+tip:"Use reputable transport and check any health, entry or regional travel guidance."
+},
+{
+name:"Singapore",region:"Asia",capital:"Singapore",currency:"Singapore dollar (SGD)",languages:"English, Malay, Mandarin and Tamil",
+overview:"Singapore is a modern city-state known for gardens, diverse cuisine, waterfront architecture and efficient public transport.",
+attractions:["Gardens by the Bay","Marina Bay Sands area","Sentosa","Singapore Botanic Gardens","Chinatown"],
+cities:["Singapore"],
+airports:["Singapore Changi Airport"],
+airlines:["Singapore Airlines","Scoot"],
+best:"Travel is possible year-round in a tropical climate, with rainfall in every season.",
+tip:"Follow public rules and check restrictions on bringing goods into the country."
+},
+{
+name:"Malaysia",region:"Asia",capital:"Kuala Lumpur",currency:"Malaysian ringgit (MYR)",languages:"Malay; English is also widely used",
+overview:"Malaysia offers tropical islands, rainforests, modern skylines, historic towns and varied food.",
+attractions:["Petronas Twin Towers","Langkawi","George Town","Mount Kinabalu","Batu Caves"],
+cities:["Kuala Lumpur","Penang","Johor Bahru","Kota Kinabalu"],
+airports:["Kuala Lumpur International Airport"],
+airlines:["Malaysia Airlines","AirAsia","Batik Air Malaysia","Firefly"],
+best:"Weather varies by coast and monsoon season; choose island destinations accordingly.",
+tip:"Check regional weather and boat-transfer arrangements before visiting islands."
+},
+{
+name:"United States",region:"North America",capital:"Washington, D.C.",currency:"US dollar (USD)",languages:"English is predominant; many languages are spoken",
+overview:"The United States includes major cities, national parks, beaches, deserts, mountains and cultural attractions.",
+attractions:["Statue of Liberty","Grand Canyon","Yellowstone","Golden Gate Bridge","Walt Disney World"],
+cities:["New York","Los Angeles","Chicago","Miami","San Francisco"],
+airports:["John F. Kennedy International Airport","Los Angeles International Airport"],
+airlines:["American Airlines","Delta Air Lines","United Airlines","Southwest Airlines","JetBlue"],
+best:"The best season depends on the state, region and activities.",
+tip:"Distances can be large; check domestic transport and entry authorisation requirements."
+},
+{
+name:"Canada",region:"North America",capital:"Ottawa",currency:"Canadian dollar (CAD)",languages:"English and French",
+overview:"Canada is known for lakes, mountains, national parks, vibrant cities and dramatic seasonal scenery.",
+attractions:["Niagara Falls","Banff National Park","CN Tower","Old Quebec","Jasper National Park"],
+cities:["Toronto","Vancouver","Montreal","Ottawa","Calgary"],
+airports:["Toronto Pearson International Airport","Vancouver International Airport"],
+airlines:["Air Canada","WestJet","Porter Airlines","Air Transat"],
+best:"Summer suits many outdoor trips; winter conditions can be severe in several regions.",
+tip:"Pack according to the season and check road conditions for mountain and remote-area journeys."
+},
+{
+name:"Mexico",region:"North America",capital:"Mexico City",currency:"Mexican peso (MXN)",languages:"Spanish and Indigenous languages",
+overview:"Mexico combines archaeological sites, historic cities, beaches, deserts and celebrated food traditions.",
+attractions:["Chichén Itzá","Cancún beaches","Teotihuacán","Copper Canyon","Oaxaca historic centre"],
+cities:["Mexico City","Cancún","Guadalajara","Monterrey"],
+airports:["Mexico City International Airport","Cancún International Airport"],
+airlines:["Aeroméxico","Volaris","Viva Aerobus"],
+best:"Conditions differ between highland cities, tropical coasts and desert regions.",
+tip:"Check local travel advice and use recognised transport and tour operators."
+},
+{
+name:"Jamaica",region:"North America",capital:"Kingston",currency:"Jamaican dollar (JMD)",languages:"English and Jamaican Patois",
+overview:"Jamaica offers Caribbean beaches, waterfalls, music, mountains and distinctive food.",
+attractions:["Dunn's River Falls","Blue Mountains","Seven Mile Beach","Bob Marley Museum","YS Falls"],
+cities:["Kingston","Montego Bay","Ocho Rios","Negril"],
+airports:["Norman Manley International Airport","Sangster International Airport"],
+airlines:["Caribbean Airlines","American Airlines","Delta Air Lines","JetBlue"],
+best:"The island is warm throughout the year; check hurricane-season forecasts.",
+tip:"Use licensed transport and follow local sea and weather safety guidance."
+},
+{
+name:"Brazil",region:"South America",capital:"Brasília",currency:"Brazilian real (BRL)",languages:"Portuguese",
+overview:"Brazil features the Amazon rainforest, major cities, beaches, waterfalls and lively cultural festivals.",
+attractions:["Christ the Redeemer","Iguazu Falls","Amazon rainforest","Copacabana Beach","Lençóis Maranhenses"],
+cities:["Rio de Janeiro","São Paulo","Brasília","Salvador","Manaus"],
+airports:["São Paulo Guarulhos International Airport","Rio de Janeiro Galeão Airport"],
+airlines:["LATAM Brasil","GOL","Azul"],
+best:"Climate varies across this very large country; plan by region.",
+tip:"Choose reputable guides for rainforest trips and confirm transport between distant regions."
+},
+{
+name:"Argentina",region:"South America",capital:"Buenos Aires",currency:"Argentine peso (ARS)",languages:"Spanish",
+overview:"Argentina is known for tango, Patagonia, mountain scenery, glaciers, wine regions and distinctive city culture.",
+attractions:["Iguazu Falls","Perito Moreno Glacier","Mendoza vineyards","Bariloche","Buenos Aires historic areas"],
+cities:["Buenos Aires","Mendoza","Córdoba","Ushuaia"],
+airports:["Ezeiza International Airport","Aeroparque Jorge Newbery"],
+airlines:["Aerolíneas Argentinas","Flybondi","JetSMART Argentina"],
+best:"Seasons are opposite those in the Northern Hemisphere; Patagonia is particularly seasonal.",
+tip:"Distances are large, so check internal flights and travel times carefully."
+},
+{
+name:"Chile",region:"South America",capital:"Santiago",currency:"Chilean peso (CLP)",languages:"Spanish",
+overview:"Chile stretches from desert landscapes to glaciers, mountains, vineyards and Pacific coastal towns.",
+attractions:["Atacama Desert","Torres del Paine","Easter Island","Valparaíso","Lake District"],
+cities:["Santiago","Valparaíso","Puerto Montt","Punta Arenas"],
+airports:["Arturo Merino Benítez International Airport"],
+airlines:["LATAM Airlines","Sky Airline","JetSMART Chile"],
+best:"The country spans multiple climates; select travel dates according to the region.",
+tip:"Mountain and remote-area travel may require specialist preparation and weather checks."
+},
+{
+name:"Colombia",region:"South America",capital:"Bogotá",currency:"Colombian peso (COP)",languages:"Spanish",
+overview:"Colombia offers Caribbean beaches, Andean landscapes, coffee regions, historic towns and diverse wildlife.",
+attractions:["Cartagena old town","Coffee Cultural Landscape","Tayrona National Park","Medellín","Cocora Valley"],
+cities:["Bogotá","Medellín","Cartagena","Cali"],
+airports:["El Dorado International Airport","José María Córdova International Airport"],
+airlines:["Avianca","LATAM Colombia","Wingo","JetSMART"],
+best:"Climate depends on altitude and region rather than a single national season.",
+tip:"Check current local guidance and use trusted transport, particularly at night."
+},
+{
+name:"Australia",region:"Oceania",capital:"Canberra",currency:"Australian dollar (AUD)",languages:"English is predominant",
+overview:"Australia features famous coastlines, coral reefs, outback landscapes, wildlife and multicultural cities.",
+attractions:["Sydney Opera House","Great Barrier Reef","Uluru","Great Ocean Road","Daintree Rainforest"],
+cities:["Sydney","Melbourne","Brisbane","Perth","Cairns"],
+airports:["Sydney Airport","Melbourne Airport"],
+airlines:["Qantas","Virgin Australia","Jetstar","Rex (check current operations)"],
+best:"Seasons are opposite those in Europe and North America; tropical northern Australia has wet and dry seasons.",
+tip:"Respect wildlife rules and check distances, heat and driving conditions before road trips."
+},
+{
+name:"New Zealand",region:"Oceania",capital:"Wellington",currency:"New Zealand dollar (NZD)",languages:"English, Māori and New Zealand Sign Language",
+overview:"New Zealand offers mountains, fjords, lakes, coastlines and outdoor adventures across its two main islands.",
+attractions:["Milford Sound","Hobbiton","Lake Tekapo","Tongariro National Park","Queenstown"],
+cities:["Auckland","Wellington","Christchurch","Queenstown"],
+airports:["Auckland Airport","Christchurch Airport"],
+airlines:["Air New Zealand","Jetstar"],
+best:"Summer is popular for outdoor activities, but weather varies by region and season.",
+tip:"Check hiking forecasts, road conditions and biosecurity rules."
+},
+{
+name:"Fiji",region:"Oceania",capital:"Suva",currency:"Fijian dollar (FJD)",languages:"English, iTaukei and Fiji Hindi",
+overview:"Fiji is a Pacific island destination with coral reefs, tropical beaches, villages and water activities.",
+attractions:["Mamanuca Islands","Yasawa Islands","Garden of the Sleeping Giant","Coral Coast","Bouma National Heritage Park"],
+cities:["Suva","Nadi","Lautoka"],
+airports:["Nadi International Airport"],
+airlines:["Fiji Airways","Fiji Link"],
+best:"The drier season is often popular for beach activities; tropical storms are possible in the wet season.",
+tip:"Use licensed boat operators and respect village customs."
+},
+{
+name:"Papua New Guinea",region:"Oceania",capital:"Port Moresby",currency:"Papua New Guinean kina (PGK)",languages:"English, Tok Pisin, Hiri Motu and many local languages",
+overview:"Papua New Guinea has remarkable biodiversity, rugged mountains, traditional cultures and remote island scenery.",
+attractions:["Kokoda Track","Tufi fjords","Highlands cultural festivals","Kimbe Bay","Varirata National Park"],
+cities:["Port Moresby","Lae","Mount Hagen","Madang"],
+airports:["Jacksons International Airport"],
+airlines:["Air Niugini","PNG Air"],
+best:"Conditions vary by altitude and region; rainfall can affect remote travel.",
+tip:"Arrange trips through experienced local operators and check current safety guidance."
 }
-
-function validateStep() {
-    const active = steps[currentStep];
-
-    for (const field of active.querySelectorAll(
-        "input, select, textarea"
-    )) {
-        if (field.type === "file" && field.files.length) {
-            if (!validateFile(field)) {
-                return false;
-            }
-        }
-
-        if (!field.checkValidity()) {
-            field.reportValidity();
-            field.focus();
-            return false;
-        }
-    }
-
-    if (currentStep === 0 && !getFee()) {
-        alert("Please select an application package.");
-        return false;
-    }
-
-    if (currentStep === 2) {
-        const departure =
-            document.getElementById("travelDate").value;
-
-        const returning =
-            document.getElementById("returnDate").value;
-
-        if (departure && returning && returning < departure) {
-            alert("The return date cannot be earlier than the departure date.");
-            return false;
-        }
-    }
-
-    if (currentStep === 3) {
-        const reference =
-            document.getElementById("transactionReference").value.trim();
-
-        const receipt =
-            document.getElementById("receiptFile").files[0];
-
-        if (!reference && !receipt) {
-            alert("Enter receipt details or upload a receipt image/PDF.");
-            return false;
-        }
-    }
-
-    return true;
+];
+const airlineData = [
+{name:"Emirates",base:"United Arab Emirates",description:"International airline based in Dubai with Economy, Premium Economy on selected aircraft, Business and First Class on selected services.",image:photos[11]},
+{name:"Qatar Airways",base:"Qatar",description:"International airline based in Doha, known for a range of cabin products including Qsuite on selected aircraft and routes.",image:photos[12]},
+{name:"Turkish Airlines",base:"Turkey",description:"Connects Istanbul with many international destinations. Cabin options and aircraft depend on the route.",image:photos[14]},
+{name:"British Airways",base:"United Kingdom",description:"UK airline offering short- and long-haul services with cabin products varying by aircraft and route.",image:photos[15]},
+{name:"KLM",base:"Netherlands",description:"Dutch international airline based at Amsterdam Schiphol, with several cabin products across its network.",image:photos[16]},
+{name:"Air France",base:"France",description:"French international carrier with cabin products and services that vary by route and aircraft.",image:photos[17]},
+{name:"Lufthansa",base:"Germany",description:"German airline serving a broad international network with multiple cabin classes on selected routes.",image:photos[18]},
+{name:"Ethiopian Airlines",base:"Ethiopia",description:"Major African carrier based in Addis Ababa, serving destinations across Africa and beyond.",image:photos[19]},
+{name:"Kenya Airways",base:"Kenya",description:"Kenyan international airline connecting Nairobi with African and international destinations.",image:photos[20]},
+{name:"Africa World Airlines",base:"Ghana",description:"Ghanaian airline serving selected West African routes. Check its current route schedule before booking.",image:photos[21]},
+{name:"Singapore Airlines",base:"Singapore",description:"International carrier with Economy, Premium Economy, Business and First/Suites on selected aircraft.",image:photos[22]},
+{name:"Air Canada",base:"Canada",description:"Canadian airline with domestic and international services. Cabin options vary by route.",image:photos[23]},
+{name:"Delta Air Lines",base:"United States",description:"US airline offering multiple cabin products, including premium cabins on selected services.",image:photos[10]},
+{name:"American Airlines",base:"United States",description:"US carrier serving domestic and international routes with aircraft-dependent cabin layouts.",image:photos[9]},
+{name:"United Airlines",base:"United States",description:"US international airline with several cabin options depending on aircraft and itinerary.",image:photos[8]},
+{name:"Air India",base:"India",description:"Indian carrier operating domestic and international services. Aircraft and cabin offerings vary.",image:photos[7]},
+{name:"Japan Airlines",base:"Japan",description:"Japanese carrier offering domestic and international services with multiple cabin products on selected routes.",image:photos[6]},
+{name:"Qantas",base:"Australia",description:"Australian carrier connecting cities across Australia and selected international destinations.",image:photos[5]},
+{name:"Air New Zealand",base:"New Zealand",description:"New Zealand's international carrier, with onboard products depending on aircraft and route.",image:photos[4]},
+{name:"LATAM Airlines",base:"South America",description:"Major South American airline group with route and cabin options that vary by country and flight.",image:photos[3]},
+{name:"Air Arabia",base:"United Arab Emirates",description:"Low-cost airline group operating selected regional and international routes.",image:photos[2]},
+{name:"AirAsia",base:"Malaysia / Asia",description:"Low-cost airline group operating routes across parts of Asia. Confirm the operating company and route.",image:photos[1]},
+{name:name="Air Côte d’Ivoire",base:"Côte d’Ivoire",description:"Côte d’Ivoire's airline serving selected regional routes. Check current flight schedules.",image:photos[0]},
+{name:"Avianca",base:"Colombia",description:"Latin American airline with domestic and international services and route-dependent cabin products.",image:photos[13]}
+];
+const aircraftData = [
+{name:"Airbus A380",kind:"Wide-body double-deck aircraft",description:"A large passenger aircraft with two full-length passenger decks. Cabin layouts differ by airline.",image:photos[11]},
+{name:"Airbus A350",kind:"Modern wide-body aircraft",description:"A long-haul aircraft used by several airlines. Seating, entertainment and cabin classes vary.",image:photos[12]},
+{name:"Airbus A330",kind:"Wide-body passenger aircraft",description:"Used on regional and long-distance routes. Cabin configuration depends on the operator.",image:photos[13]},
+{name:"Boeing 787 Dreamliner",kind:"Long-haul aircraft",description:"A wide-body aircraft used by many international airlines, with airline-specific cabin designs.",image:photos[14]},
+{name:"Boeing 777",kind:"Wide-body aircraft",description:"A twin-engine wide-body aircraft used on many international routes with different cabin layouts.",image:photos[15]},
+{name:"Boeing 737",kind:"Narrow-body aircraft",description:"Common on short- and medium-haul routes, with seating arrangements set by each airline.",image:photos[16]}
+];
+function safe(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
 }
-
-function nextStep() {
-    if (!validateStep()) return;
-
-    if (currentStep < steps.length - 1) {
-        currentStep++;
-        updateStep();
-    }
+function renderCountries(){
+  const query=document.getElementById("countrySearch").value.trim().toLowerCase();
+  const region=document.getElementById("regionFilter").value;
+  const filtered=countries.filter(c=>
+    (!region || c.region===region) &&
+    (c.name+" "+c.capital+" "+c.attractions.join(" ")+" "+c.cities.join(" "))
+      .toLowerCase().includes(query)
+  );
+  document.getElementById("countryGrid").innerHTML=filtered.map(c=>{
+    const idx=countries.indexOf(c);
+    const img=photos[idx%photos.length];
+    return `<article class="card">
+      <img loading="lazy" src="${img}" alt="Illustrative scenery for ${safe(c.name)}">
+      <div class="card-body">
+        <span class="tag">${safe(c.region)}</span>
+        <h3>${safe(c.name)}</h3>
+        <p>${safe(c.capital)} · ${safe(c.currency)}</p>
+        <p>${safe(c.overview.slice(0,115))}…</p>
+        <button class="btn btn-blue" onclick="showCountry('${safe(c.name).replace(/'/g,"\\'")}')">Explore country</button>
+      </div>
+    </article>`;
+  }).join("");
+  document.getElementById("noCountries").classList.toggle("hidden",filtered.length>0);
 }
-
-function previousStep() {
-    if (currentStep > 0) {
-        currentStep--;
-        updateStep();
-    }
+function showCountry(name){
+  const c=countries.find(x=>x.name===name);
+  if(!c)return;
+  const idx=countries.indexOf(c);
+  const gallery=Array.from({length:12},(_,i)=>photos[(idx+i)%photos.length]);
+  document.getElementById("countrySection").classList.remove("hidden");
+  document.getElementById("countryDetail").innerHTML=`
+    <button class="btn btn-light" onclick="document.getElementById('countrySection').classList.add('hidden')">← Back to countries</button>
+    <div class="eyebrow">${safe(c.region)} travel guide</div>
+    <h2>${safe(c.name)}</h2>
+    <p>${safe(c.overview)}</p>
+    <img class="detail-hero" src="${photos[idx%photos.length]}" alt="Illustrative travel scenery in ${safe(c.name)}">
+    <div class="stats">
+      <div class="stat"><span class="small">Capital</span><b>${safe(c.capital)}</b></div>
+      <div class="stat"><span class="small">Currency</span><b>${safe(c.currency)}</b></div>
+      <div class="stat"><span class="small">Languages</span><b>${safe(c.languages)}</b></div>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <h3>Popular attractions</h3>
+        <ul class="list">${c.attractions.map(x=>`<li>${safe(x)}</li>`).join("")}</ul>
+      </div>
+      <div class="panel">
+        <h3>Cities to explore</h3>
+        <ul class="list">${c.cities.map(x=>`<li>${safe(x)}</li>`).join("")}</ul>
+        <h3>Major airports</h3>
+        <ul class="list">${c.airports.map(x=>`<li>${safe(x)}</li>`).join("")}</ul>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:18px">
+      <h3>Airlines associated with this destination</h3>
+      <p class="muted">These are airlines associated with the country or common travel connections, not a guarantee that every airline operates every route.</p>
+      <div class="airline-list">${c.airlines.map(a=>`<div class="airline"><b>${safe(a)}</b><p>Check current destinations, schedules, baggage rules and cabin options with the airline.</p></div>`).join("")}</div>
+    </div>
+    <div class="split" style="margin-top:18px">
+      <div class="panel"><h3>When to visit</h3><p>${safe(c.best)}</p></div>
+      <div class="panel"><h3>Travel tips</h3><p>${safe(c.tip)}</p></div>
+    </div>
+    <div class="panel" style="margin-top:18px">
+      <h3>Scenery and destination gallery</h3>
+      <p class="small">These are illustrative travel photographs. They are not all verified photographs of this particular country. Replace them with country-specific, licensed images before publication.</p>
+      <div class="gallery">${gallery.map((p,i)=>`<img loading="lazy" src="${p}" alt="Travel scenery photograph ${i+1}" onclick="openLightbox('${p}')">`).join("")}</div>
+    </div>
+    <div class="info-band">
+      <h3>Plan a trip to ${safe(c.name)}</h3>
+      <p>Ask our team about flight options, travel planning, accommodation and visa assistance. Entry rules and processing times must be verified for your nationality and circumstances.</p>
+      <button class="btn btn-blue" onclick="selectDestination('${safe(c.name).replace(/'/g,"\\'")}')">Plan My Trip to ${safe(c.name)}</button>
+    </div>`;
+  document.getElementById("countrySection").scrollIntoView({behavior:"smooth"});
 }
-
-function getFee() {
-    const selected = document.querySelector(
-        'input[name="package"]:checked'
-    );
-
-    return selected ? selected.value : "";
+function selectDestination(name){
+  document.getElementById("destination").value=name;
+  document.getElementById("application").scrollIntoView({behavior:"smooth"});
 }
-
-function updateFee() {
-    const fee = getFee();
-
-    document.getElementById("feeDisplay").value =
-        fee ? "GH₵" + Number(fee).toFixed(2) :
-        "Select a package in Step 1";
+function renderAirlines(){
+  const q=document.getElementById("airlineSearch").value.trim().toLowerCase();
+  const list=airlineData.filter(a=>(a.name+" "+a.base+" "+a.description).toLowerCase().includes(q));
+  document.getElementById("airlineGrid").innerHTML=list.map(a=>`
+    <article class="card">
+      <img loading="lazy" src="${a.image}" alt="Illustrative aviation photograph related to ${safe(a.name)}">
+      <div class="card-body">
+        <span class="tag">${safe(a.base)}</span>
+        <h3>${safe(a.name)}</h3>
+        <p>${safe(a.description)}</p>
+        <button class="btn btn-blue" onclick="chooseAirline('${safe(a.name).replace(/'/g,"\\'")}')">Ask about flights</button>
+      </div>
+    </article>`).join("");
 }
-
-document.querySelectorAll('input[name="package"]').forEach(input => {
-    input.addEventListener("change", () => {
-        document.querySelectorAll(".package").forEach(packageLabel => {
-            packageLabel.classList.remove("selected");
-        });
-
-        input.closest(".package").classList.add("selected");
-
-        updateFee();
-    });
+function chooseAirline(name){
+  document.getElementById("airlineChoice").value=name;
+  document.getElementById("application").scrollIntoView({behavior:"smooth"});
+}
+function renderAircraft(){
+  document.getElementById("aircraftGrid").innerHTML=aircraftData.map(a=>`
+    <article class="card aircraft-card">
+      <img loading="lazy" src="${a.image}" alt="Illustrative aviation scenery for ${safe(a.name)}">
+      <div class="card-body">
+        <span class="tag">${safe(a.kind)}</span>
+        <h3>${safe(a.name)}</h3>
+        <p>${safe(a.description)}</p>
+      </div>
+    </article>`).join("");
+}
+function openLightbox(src){
+  document.getElementById("lightboxImage").src=src;
+  document.getElementById("lightbox").style.display="flex";
+}
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
+document.getElementById("countrySearch").addEventListener("input",renderCountries);
+document.getElementById("regionFilter").addEventListener("change",renderCountries);
+document.getElementById("airlineSearch").addEventListener("input",renderAirlines);
+document.getElementById("travelForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!document.getElementById("consent").checked){
+    alert("Please confirm the consent checkbox.");
+    return;
+  }
+  const val=id=>document.getElementById(id).value.trim();
+  const lines=[
+    "TRAVEL ENQUIRY — GOD'S TIME TRAVEL AND TOURS",
+    "",
+    "Service: "+val("service"),
+    "Package: "+val("package"),
+    "Full name: "+val("fullName"),
+    "Email: "+val("email"),
+    "Phone: "+val("phone"),
+    "Nationality: "+val("nationality"),
+    "Passport status: "+val("passportStatus"),
+    "Destination: "+val("destination"),
+    "Destination city: "+val("city"),
+    "Departure location: "+val("departure"),
+    "Preferred airline: "+val("airlineChoice"),
+    "Cabin class: "+val("cabin"),
+    "Departure date: "+val("travelDate"),
+    "Travellers: "+val("travellers"),
+    "Trip type: "+val("tripType"),
+    "Payment preference: "+val("paymentMethod"),
+    "Payment reference: "+val("paymentReference"),
+    "Additional details: "+val("notes"),
+    "",
+    "Please confirm service availability, the full price and the official payment process."
+  ];
+  const message=encodeURIComponent(lines.join("\n"));
+  const phone="233241226239";
+  const photoInput=document.getElementById("profilePhoto").files[0];
+  const receiptInput=document.getElementById("receipt").files[0];
+  let warning="Your enquiry will open in WhatsApp. Files selected in this form will NOT be attached automatically.";
+  if(photoInput || receiptInput){
+    warning+=" After WhatsApp opens, attach your profile photograph";
+    if(receiptInput)warning+=" and receipt";
+    warning+=" manually if requested by the company.";
+  }
+  document.getElementById("formMessage").className="notice";
+  document.getElementById("formMessage").textContent=warning;
+  document.getElementById("formMessage").classList.remove("hidden");
+  window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 });
-
-function validateFile(input) {
-    const file = input.files && input.files[0];
-
-    if (!file) return true;
-
-    const isProfile = input.id === "profilePhoto";
-
-    const maxSize = isProfile
-        ? 3 * 1024 * 1024
-        : 5 * 1024 * 1024;
-
-    const allowedTypes = isProfile
-        ? ["image/jpeg", "image/png", "image/webp"]
-        : [
-            "image/jpeg",
-            "image/png",
-            "image/webp",
-            "application/pdf"
-        ];
-
-    if (!allowedTypes.includes(file.type)) {
-        alert(isProfile
-            ? "Profile picture must be JPG, PNG or WEBP."
-            : "Receipt must be JPG, PNG, WEBP or PDF.");
-
-        input.value = "";
-        return false;
-    }
-
-    if (file.size > maxSize) {
-        alert(isProfile
-            ? "Profile picture must be 3 MB or smaller."
-            : "Receipt must be 5 MB or smaller.");
-
-        input.value = "";
-        return false;
-    }
-
-    return true;
-}
-
-document.getElementById("profilePhoto").addEventListener(
-    "change",
-    function () {
-        const file = this.files[0];
-
-        const preview = document.getElementById("profilePreview");
-
-        if (!file) {
-            preview.style.display = "none";
-            document.getElementById("profileName").textContent = "";
-            return;
-        }
-
-        if (!validateFile(this)) return;
-
-        preview.src = URL.createObjectURL(file);
-        preview.style.display = "block";
-
-        document.getElementById("profileName").textContent =
-            "Selected: " + file.name;
-    }
-);
-
-document.getElementById("receiptFile").addEventListener(
-    "change",
-    function () {
-        const file = this.files[0];
-
-        const preview = document.getElementById("receiptPreview");
-
-        if (!file) {
-            preview.style.display = "none";
-            document.getElementById("receiptName").textContent = "";
-            return;
-        }
-
-        if (!validateFile(this)) return;
-
-        document.getElementById("receiptName").textContent =
-            "Selected: " + file.name;
-
-        if (file.type.startsWith("image/")) {
-            preview.src = URL.createObjectURL(file);
-            preview.style.display = "block";
-        } else {
-            preview.style.display = "none";
-        }
-    }
-);
-
-/* Destination pictures prefill the form. */
-
-document.querySelectorAll(".destination").forEach(card => {
-    card.addEventListener("click", () => {
-        document.querySelectorAll(".destination").forEach(item => {
-            item.classList.remove("selected");
-        });
-
-        card.classList.add("selected");
-
-        document.getElementById("destinationCountry").value =
-            card.dataset.country;
-
-        document.getElementById("destinationCity").value =
-            card.dataset.city;
-
-        document.getElementById("apply").scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
-
-function value(id) {
-    const field = document.getElementById(id);
-
-    return field.value.trim() || "Not provided";
-}
-
-function buildMessage() {
-    return [
-        "GOD'S TIME TRAVEL AND TOURS",
-        "NEW TRAVEL APPLICATION",
-        "",
-        "Service: " + value("service"),
-        "Package fee: GH₵" + getFee(),
-        "Processing priority: " +
-            (getFee() === "200" ? "Basic" :
-             getFee() === "350" ? "Standard" :
-             "Priority"),
-        "Applicant: " + value("fullName"),
-        "Email: " + value("email"),
-        "Phone: " + value("phone"),
-        "Residence: " + value("residence"),
-        "",
-        "DESTINATION",
-        value("destinationCity") + ", " +
-            value("destinationCountry"),
-        "Departure: " + value("departure"),
-        "Preferred airline: " + value("airline"),
-        "Travel class: " + value("travelClass"),
-        "Departure date: " + value("travelDate"),
-        "Return date: " + value("returnDate"),
-        "Travellers: " + value("travellers"),
-        "Timeframe: " + value("urgency"),
-        "",
-        "PAYMENT",
-        "Payment method: " + value("paymentMethod"),
-        "Transaction reference: " +
-            value("transactionReference"),
-        "Receipt file: " +
-            (document.getElementById("receiptFile").files[0]?.name ||
-             "No file uploaded"),
-        "Profile picture: " +
-            (document.getElementById("profilePhoto").files[0]?.name ||
-             "No file uploaded"),
-        "",
-        "Additional information: " + value("notes"),
-        "",
-        "NOTE: Payment must be verified by the business.",
-        "The applicant must attach the selected profile picture",
-        "and receipt manually before sending this WhatsApp message."
-    ].join("\n");
-}
-
-function escapeHTML(text) {
-    return String(text).replace(/[&<>"']/g, character => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;"
-    })[character]);
-}
-
-function showReview() {
-    if (!validateStep()) return;
-
-    const fee = getFee();
-
-    const packageName =
-        fee === "200" ? "Basic Priority" :
-        fee === "350" ? "Standard Priority" :
-        "Priority Processing";
-
-    const items = [
-        ["Service", value("service")],
-        ["Package", packageName + " — GH₵" + fee],
-        ["Applicant", value("fullName")],
-        ["Email", value("email")],
-        ["Phone", value("phone")],
-        ["Residence", value("residence")],
-        ["Destination", value("destinationCity") +
-            ", " + value("destinationCountry")],
-        ["Departure", value("departure")],
-        ["Preferred airline", value("airline")],
-        ["Travel class", value("travelClass")],
-        ["Departure date", value("travelDate")],
-        ["Return date", value("returnDate")],
-        ["Travellers", value("travellers")],
-        ["Payment method", value("paymentMethod")],
-        ["Transaction reference", value("transactionReference")],
-        ["Receipt file", document.getElementById("receiptFile")
-            .files[0]?.name || "No file uploaded"],
-        ["Profile picture", document.getElementById("profilePhoto")
-            .files[0]?.name || "No file uploaded"],
-        ["Additional information", value("notes")]
-    ];
-
-    document.getElementById("reviewBox").innerHTML =
-        items.map(([label, detail]) => `
-            <div class="review-row">
-                <strong>${escapeHTML(label)}</strong>
-                ${escapeHTML(detail)}
-            </div>
-        `).join("");
-
-    document.getElementById("emailFallback").href =
-        "mailto:godstimetravelandtour12@gmail.com" +
-        "?subject=" +
-        encodeURIComponent("Travel Application") +
-        "&body=" +
-        encodeURIComponent(
-            buildMessage() +
-            "\n\nPlease attach your profile picture and payment receipt."
-        );
-
-    currentStep = 4;
-    updateStep();
-}
-
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (!document.getElementById("privacyConsent").checked) {
-        alert("Please accept the privacy notice before continuing.");
-        return;
-    }
-
-    const profile =
-        document.getElementById("profilePhoto").files[0];
-
-    const receipt =
-        document.getElementById("receiptFile").files[0];
-
-    const reference =
-        document.getElementById("transactionReference").value.trim();
-
-    if (!profile) {
-        alert("Please select a profile picture.");
-        currentStep = 1;
-        updateStep();
-        return;
-    }
-
-    if (!receipt && !reference) {
-        alert("Provide receipt details or upload a receipt file.");
-        currentStep = 3;
-        updateStep();
-        return;
-    }
-
-    const message = buildMessage();
-
-    const whatsappURL =
-        "https://wa.me/233241226239?text=" +
-        encodeURIComponent(message);
-
-    alert(
-        "WhatsApp will open with your application details. " +
-        "Attach your profile picture and payment receipt manually, " +
-        "then press Send. Your application has not been submitted " +
-        "until you send the message. Payment must be verified."
-    );
-
-    window.open(whatsappURL, "_blank", "noopener,noreferrer");
-});
-
-updateStep();
+renderCountries();
+renderAirlines();
+renderAircraft();
 </script>
-
 </body>
 </html>
