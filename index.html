@@ -1,600 +1,1194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="God's Time Travel And Tours offers flight booking assistance, visa guidance, passport information and travel planning services.">
+<title>God's Time Travel and Tours | Travel With Confidence</title>
 
-    <title>God's Time Travel And Tours | Your Journey, Our Priority</title>
+<meta name="description"
+content="God's Time Travel and Tours provides flight booking assistance, visa assistance, passport guidance and travel packages. Contact us to plan your next journey.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="theme-color" content="#071b36">
 
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
+:root {
+    --navy: #071b36;
+    --blue: #123d70;
+    --gold: #e8b44c;
+    --light: #f4f7fb;
+    --white: #ffffff;
+    --text: #1c2738;
+    --muted: #68758a;
+    --border: #dce3ed;
+    --green: #147d53;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-            color: #17243a;
-            line-height: 1.7;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        header {
-            background: #071c38;
-            color: white;
-            padding: 22px 15px;
-            text-align: center;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
 
-        header p {
-            color: #d4e2f5;
-            font-size: 14px;
-            margin-top: 5px;
-        }
+a {
+    color: inherit;
+}
 
-        nav {
-            background: #102d53;
-            padding: 13px 8px;
-            text-align: center;
-        }
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            display: inline-block;
-            margin: 5px 10px;
-            font-size: 14px;
-            font-weight: bold;
-        }
+button {
+    cursor: pointer;
+}
 
-        nav a:hover {
-            color: #ffc857;
-        }
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #071c38, #087eaa);
-            color: white;
-            text-align: center;
-            padding: 85px 20px;
-        }
+/* HEADER */
 
-        .hero .welcome {
-            color: #ffd166;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 15px #00000020;
+}
 
-        .hero h1 {
-            font-size: 39px;
-            line-height: 1.25;
-            margin-bottom: 20px;
-        }
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
 
-        .hero p {
-            max-width: 680px;
-            margin: 0 auto 28px;
-            font-size: 17px;
-            color: #edf5ff;
-        }
+.brand {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--gold);
+    text-decoration: none;
+}
 
-        .button {
-            display: inline-block;
-            background: #ffc857;
-            color: #10213a;
-            padding: 13px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 5px;
-            border: none;
-        }
+.brand span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: normal;
+}
 
-        .button:hover {
-            background: #ffdb88;
-        }
+.nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
 
-        .button-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-        }
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 22px;
-        }
+.nav-links a:hover {
+    color: var(--gold);
+}
 
-        h2 {
-            color: #0a2b50;
-            text-align: center;
-            font-size: 29px;
-            margin-bottom: 22px;
-        }
+/* HERO */
 
-        .intro {
-            max-width: 800px;
-            text-align: center;
-            margin: auto;
-        }
+.hero {
+    background:
+        linear-gradient(120deg, #071b36f5, #123d70e8),
+        radial-gradient(circle at top right, #e8b44c, #071b36);
+    color: white;
+    padding: 85px 0;
+}
 
-        .intro p {
-            color: #536176;
-        }
+.hero-content {
+    max-width: 760px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-            gap: 22px;
-            margin-top: 30px;
-        }
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
 
-        .card {
-            background: white;
-            padding: 28px 23px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(12, 39, 70, 0.07);
-            border-bottom: 4px solid #087eaa;
-        }
+.hero h1 {
+    font-size: clamp(34px, 6vw, 57px);
+    line-height: 1.12;
+    margin: 18px 0;
+}
 
-        .icon {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
+.hero p {
+    color: #e4eaf3;
+    font-size: 17px;
+    max-width: 650px;
+}
 
-        .card h3 {
-            color: #0a4774;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 9px;
+    padding: 13px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
 
-        .card p {
-            color: #596579;
-            font-size: 15px;
-        }
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+}
 
-        .steps {
-            background: #e8f2fa;
-            max-width: none;
-        }
+.btn-white {
+    background: white;
+    color: var(--navy);
+}
 
-        .steps-inner {
-            max-width: 1000px;
-            margin: auto;
-        }
+.btn-blue {
+    background: var(--blue);
+    color: white;
+}
 
-        .step-list {
-            max-width: 750px;
-            margin: auto;
-        }
+.btn-outline {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--navy);
+}
 
-        .step-list p {
-            margin: 13px 0;
-        }
+.hero .btn {
+    margin-top: 15px;
+    margin-right: 8px;
+}
 
-        .notice {
-            background: #fff7e5;
-            border-left: 5px solid #e8aa28;
-            border-radius: 6px;
-            padding: 20px;
-            margin-top: 25px;
-            color: #59451c;
-        }
+/* SECTIONS */
 
-        .contact {
-            max-width: none;
-            background: #071c38;
-            color: white;
-            text-align: center;
-        }
+section {
+    padding: 65px 0;
+}
 
-        .contact-inner {
-            max-width: 850px;
-            margin: auto;
-        }
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
 
-        .contact h2 {
-            color: white;
-        }
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 8px;
+}
 
-        .contact p {
-            margin: 12px 0;
-        }
+.section-heading p {
+    color: var(--muted);
+    margin: 0 auto;
+    max-width: 650px;
+}
 
-        .contact a:not(.button) {
-            color: #ffd166;
-            text-decoration: none;
-            overflow-wrap: anywhere;
-        }
+/* SERVICES */
 
-        .contact .button {
-            margin-top: 22px;
-        }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
 
-        footer {
-            background: #041226;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 24px 15px;
-            font-size: 13px;
-        }
+.service-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 5px 20px #071b3608;
+}
 
-        footer p {
-            margin: 5px 0;
-        }
+.service-icon {
+    font-size: 30px;
+}
 
-        @media (max-width: 600px) {
-            .logo {
-                font-size: 20px;
-            }
+.service-card h3 {
+    margin: 10px 0;
+    color: var(--navy);
+}
 
-            .hero {
-                padding: 65px 18px;
-            }
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
 
-            .hero h1 {
-                font-size: 31px;
-            }
+/* APPLICATION */
 
-            .hero p {
-                font-size: 16px;
-            }
+.application-section {
+    background: #eaf0f8;
+}
 
-            h2 {
-                font-size: 25px;
-            }
+.application-card {
+    max-width: 720px;
+    margin: auto;
+    background: white;
+    padding: clamp(20px, 5vw, 38px);
+    border-radius: 18px;
+    box-shadow: 0 12px 40px #071b3610;
+}
 
-            section {
-                padding: 45px 18px;
-            }
-        }
-    </style>
+.progress-track {
+    width: 100%;
+    height: 7px;
+    background: #e8edf4;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 18px 0 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 25%;
+    background: var(--gold);
+    transition: width 0.2s;
+}
+
+.step-label {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step h3 {
+    color: var(--navy);
+    font-size: 23px;
+    margin-top: 25px;
+}
+
+.field {
+    margin: 19px 0;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.required {
+    color: #b42318;
+}
+
+.field input,
+.field select,
+.field textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #123d7014;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.help-text {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.check-label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+.check-label input {
+    margin-top: 5px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.form-actions button {
+    width: 100%;
+}
+
+.review-box {
+    padding: 16px;
+    background: #f6f8fb;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.review-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-item strong {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.notice {
+    padding: 14px;
+    background: #fff8e8;
+    border: 1px solid #f2dca5;
+    border-radius: 9px;
+    color: #63490e;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* CONTACT */
+
+.contact-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 18px;
+    padding: 32px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    color: var(--gold);
+}
+
+.contact-box p {
+    color: #e4eaf3;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-links a:hover {
+    color: var(--gold);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px 0;
+    background: #041226;
+    color: #c7d1df;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer a {
+    color: var(--gold);
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .navbar {
+        align-items: flex-start;
+        padding: 15px 0;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero .btn {
+        display: block;
+        margin-right: 0;
+    }
+
+    .application-card {
+        padding: 20px;
+    }
+
+    .contact-box {
+        padding: 24px 18px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">✈ GOD'S TIME TRAVEL AND TOURS</div>
-        <p>Your Journey, Our Priority</p>
-    </header>
+<header>
+    <div class="container navbar">
+        <a class="brand" href="#home">
+            GOD'S TIME TRAVEL
+            <span>AND TOURS</span>
+        </a>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#travel">Travel Guide</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#apply">Apply</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <main>
+<main>
 
-        <div class="hero" id="home">
-            <p class="welcome">Explore the world with confidence</p>
+<!-- HERO -->
 
-            <h1>Your Journey Begins Here</h1>
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <div class="eyebrow">Your journey starts here</div>
 
+        <h1>Travel With Confidence. Explore More.</h1>
+
+        <p>
+            Planning a trip abroad? God's Time Travel and Tours
+            helps you make a start with flight booking assistance,
+            visa application guidance, passport assistance and
+            travel planning.
+        </p>
+
+        <a href="#apply" class="btn btn-gold">
+            Start Your Application
+        </a>
+
+        <a href="#services" class="btn btn-white">
+            Explore Our Services
+        </a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Our Services</h2>
             <p>
-                Planning an international trip? Let God's Time Travel And
-                Tours help you navigate flight enquiries, visa requirements,
-                passport information and travel preparation.
+                Tell us what you need, and our team can review
+                your request and explain the next steps.
             </p>
-
-            <a class="button" href="#services">Explore Our Services</a>
-
-            <a class="button button-outline"
-               href="https://wa.me/233241226239">
-                Chat With Us
-            </a>
         </div>
 
-        <section id="about">
-            <h2>Welcome to God's Time Travel And Tours</h2>
+        <div class="services-grid">
 
-            <div class="intro">
+            <article class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>Flight Booking Assistance</h3>
                 <p>
-                    We aim to make travel planning simpler by helping
-                    travellers understand their options and prepare for
-                    their journeys. Whether you are travelling for tourism,
-                    education, business or a family visit, we are here to
-                    provide travel information and assistance.
+                    Request assistance with flight options,
+                    travel dates, quotations and booking arrangements.
                 </p>
+            </article>
 
-                <p style="margin-top: 15px;">
-                    Our goal is to offer friendly guidance and help you
-                    understand the steps involved in preparing for travel.
+            <article class="service-card">
+                <div class="service-icon">🌍</div>
+                <h3>Visa Assistance</h3>
+                <p>
+                    Get guidance on visa application requirements,
+                    supporting documents and application preparation.
+                    Visa approval is determined by the relevant authorities.
                 </p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🛂</div>
+                <h3>Passport Assistance</h3>
+                <p>
+                    Request guidance on passport application
+                    procedures and the official requirements.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🧳</div>
+                <h3>Tour Packages</h3>
+                <p>
+                    Tell us your destination, travel dates and budget
+                    so we can discuss suitable travel options.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION FORM -->
+
+<section class="application-section" id="apply">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Travel Application</h2>
+            <p>
+                Complete the form one step at a time.
+                All fields are arranged vertically for easy use on your phone.
+            </p>
+        </div>
+
+        <div class="application-card">
+
+            <div class="step-label" id="stepLabel">
+                Step 1 of 4 — Choose a service
             </div>
-        </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
 
-            <p style="text-align:center; color:#596579;">
-                Discover how we can assist you with your travel plans.
+            <form id="travelForm">
+
+                <!-- STEP 1 -->
+
+                <div class="form-step active" data-step="0">
+
+                    <h3>What service do you need?</h3>
+
+                    <div class="field">
+                        <label for="service">
+                            Select a service <span class="required">*</span>
+                        </label>
+
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option>Flight Booking Assistance</option>
+                            <option>Visa Assistance</option>
+                            <option>Passport Assistance</option>
+                            <option>Tour Package</option>
+                            <option>Other Travel Service</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="urgency">When do you need the service?</label>
+
+                        <select id="urgency" name="urgency" required>
+                            <option value="">Select a timeframe</option>
+                            <option>As soon as possible</option>
+                            <option>Within 1 month</option>
+                            <option>Within 3 months</option>
+                            <option>Within 6 months</option>
+                            <option>More than 6 months from now</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="budget">Estimated budget (GHS)</label>
+
+                        <select id="budget" name="budget">
+                            <option value="">Select if known</option>
+                            <option>Below GHS 1,000</option>
+                            <option>GHS 1,000–2,999</option>
+                            <option>GHS 3,000–5,999</option>
+                            <option>GHS 6,000–9,999</option>
+                            <option>GHS 10,000 or more</option>
+                            <option>Need a quotation first</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button"
+                                class="btn btn-blue"
+                                onclick="nextStep()">
+                            Continue
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+
+                <div class="form-step" data-step="1">
+
+                    <h3>Your contact information</h3>
+
+                    <div class="field">
+                        <label for="fullName">
+                            Full name <span class="required">*</span>
+                        </label>
+                        <input type="text"
+                               id="fullName"
+                               name="fullName"
+                               autocomplete="name"
+                               required
+                               maxlength="100"
+                               placeholder="Enter your full name">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">
+                            Email address <span class="required">*</span>
+                        </label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               autocomplete="email"
+                               required
+                               maxlength="150"
+                               placeholder="you@example.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">
+                            Phone / WhatsApp number <span class="required">*</span>
+                        </label>
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               autocomplete="tel"
+                               required
+                               maxlength="30"
+                               placeholder="e.g. 0240000000">
+                    </div>
+
+                    <div class="field">
+                        <label for="country">Country of residence</label>
+                        <input type="text"
+                               id="country"
+                               name="country"
+                               maxlength="80"
+                               placeholder="e.g. Ghana">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button"
+                                class="btn btn-outline"
+                                onclick="previousStep()">
+                            Back
+                        </button>
+
+                        <button type="button"
+                                class="btn btn-blue"
+                                onclick="nextStep()">
+                            Continue
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+
+                <div class="form-step" data-step="2">
+
+                    <h3>Your travel information</h3>
+
+                    <div class="field">
+                        <label for="destination">
+                            Destination / country
+                            <span class="required">*</span>
+                        </label>
+                        <input type="text"
+                               id="destination"
+                               name="destination"
+                               required
+                               maxlength="100"
+                               placeholder="Where do you want to go?">
+                    </div>
+
+                    <div class="field">
+                        <label for="departure">Departure city / country</label>
+                        <input type="text"
+                               id="departure"
+                               name="departure"
+                               maxlength="100"
+                               placeholder="e.g. Accra, Ghana">
+                    </div>
+
+                    <div class="field">
+                        <label for="travelDate">Preferred travel date</label>
+                        <input type="date"
+                               id="travelDate"
+                               name="travelDate">
+                    </div>
+
+                    <div class="field">
+                        <label for="returnDate">Return date, if applicable</label>
+                        <input type="date"
+                               id="returnDate"
+                               name="returnDate">
+                    </div>
+
+                    <div class="field">
+                        <label for="travellers">Number of travellers</label>
+                        <select id="travellers" name="travellers">
+                            <option value="1">1 traveller</option>
+                            <option value="2">2 travellers</option>
+                            <option value="3">3 travellers</option>
+                            <option value="4">4 travellers</option>
+                            <option value="5">5 travellers</option>
+                            <option value="6 or more">6 or more travellers</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="paymentMethod">
+                            Preferred payment method
+                            <span class="required">*</span>
+                        </label>
+
+                        <select id="paymentMethod"
+                                name="paymentMethod"
+                                required>
+
+                            <option value="">Choose a payment method</option>
+
+                            <option value="Hubtel">
+                                Hubtel — Online payment (preferred)
+                            </option>
+
+                            <option value="MTN MoMo">
+                                MTN Mobile Money
+                            </option>
+
+                            <option value="Telecel Cash">
+                                Telecel Cash
+                            </option>
+
+                            <option value="AT Money">
+                                AT Money, where available
+                            </option>
+
+                            <option value="Bank Transfer">
+                                Bank transfer
+                            </option>
+
+                            <option value="Pay After Review">
+                                Pay after application review
+                            </option>
+                        </select>
+
+                        <span class="help-text">
+                            Alternative payment instructions will be provided
+                            after your request is reviewed. Do not send a
+                            MoMo PIN or banking password.
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <label for="notes">
+                            Additional information
+                        </label>
+
+                        <textarea id="notes"
+                                  name="notes"
+                                  maxlength="1000"
+                                  placeholder="Tell us anything else we should know. Do not enter passport numbers or payment passwords here."></textarea>
+                    </div>
+
+                    <label class="check-label">
+                        <input type="checkbox"
+                               id="consent"
+                               name="consent"
+                               required>
+
+                        <span>
+                            I confirm that the information I provided is
+                            accurate, and I agree to be contacted about this
+                            travel request.
+                            <span class="required">*</span>
+                        </span>
+                    </label>
+
+                    <div class="form-actions">
+                        <button type="button"
+                                class="btn btn-outline"
+                                onclick="previousStep()">
+                            Back
+                        </button>
+
+                        <button type="button"
+                                class="btn btn-blue"
+                                onclick="showReview()">
+                            Review Application
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+
+                <div class="form-step" data-step="3">
+
+                    <h3>Review your application</h3>
+
+                    <p>
+                        Check your information carefully before sending
+                        your request to our WhatsApp business contact.
+                    </p>
+
+                    <div class="review-box" id="reviewBox"></div>
+
+                    <div class="notice">
+                        <strong>Payment notice:</strong>
+                        Submitting this form does not make a payment or
+                        confirm a flight, visa, passport or tour booking.
+                        We will review your request and explain the next steps.
+                        Visa decisions are made by the relevant authorities.
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button"
+                                class="btn btn-outline"
+                                onclick="previousStep()">
+                            Edit Application
+                        </button>
+
+                        <button type="submit"
+                                class="btn btn-blue">
+                            Send Application on WhatsApp
+                        </button>
+
+                        <a class="btn btn-outline"
+                           id="emailFallback"
+                           href="mailto:godstimetravelandtour@gmail.com">
+                            Use Email Instead
+                        </a>
+                    </div>
+                </div>
+
+            </form>
+
+            <p class="help-text" style="margin-top:24px;">
+                Your application is sent through WhatsApp or your email app.
+                Do not close the form until you have checked that your
+                message is ready to send.
             </p>
 
-            <div class="services">
-
-                <div class="card">
-                    <div class="icon">✈️</div>
-
-                    <h3>Flight Booking</h3>
-
-                    <p>
-                        Get assistance with flight enquiries, available
-                        routes, travel dates, fare information and booking
-                        arrangements.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="icon">🌍</div>
-
-                    <h3>Visa Assistance</h3>
-
-                    <p>
-                        Get guidance on visa application requirements,
-                        supporting documents, application procedures and
-                        official embassy information.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="icon">🛂</div>
-
-                    <h3>Passport Information</h3>
-
-                    <p>
-                        Learn about passport application requirements,
-                        relevant documentation and official passport
-                        application procedures.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="icon">🧳</div>
-
-                    <h3>Travel Planning</h3>
-
-                    <p>
-                        Prepare for your journey with information about
-                        destinations, travel documents and other
-                        pre-departure requirements.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="steps" id="travel">
-            <div class="steps-inner">
-
-                <h2>How to Get Started</h2>
-
-                <div class="step-list">
-
-                    <p>
-                        <strong>Step 1:</strong>
-                        Contact us with your destination and intended
-                        travel dates.
-                    </p>
-
-                    <p>
-                        <strong>Step 2:</strong>
-                        Tell us which service you need, such as flight
-                        booking assistance or visa guidance.
-                    </p>
-
-                    <p>
-                        <strong>Step 3:</strong>
-                        We will discuss the relevant requirements and
-                        possible next steps with you.
-                    </p>
-
-                    <p>
-                        <strong>Step 4:</strong>
-                        Verify all official requirements and confirm
-                        arrangements before making payments.
-                    </p>
-
-                </div>
-
-                <div class="notice">
-                    <strong>Important travel information:</strong>
-                    Visa approvals and passport decisions are made by
-                    the relevant government authorities. Always verify
-                    requirements through official sources.
-                </div>
-
-            </div>
-        </section>
-        <!-- FLIGHT BOOKING REQUEST FORM -->
-<section id="flight-booking">
-    <h2>Flight Booking Request</h2>
-    <p>Tell us your travel plans, and our team will contact you.</p>
-
-    <form action="https://formsubmit.co/godstimetravelandtour12@gmail.com"
-          method="POST">
-
-        <input type="hidden" name="_subject"
-               value="New Flight Booking Request">
-
-        <input type="hidden" name="_template"
-               value="table">
-
-        <label>Full Name</label>
-        <input type="text" name="Full Name"
-               placeholder="Enter your full name" required>
-
-        <label>Email Address</label>
-        <input type="email" name="Email"
-               placeholder="Enter your email" required>
-
-        <label>Phone Number</label>
-        <input type="tel" name="Phone"
-               placeholder="Enter your phone number" required>
-
-        <label>Departure City</label>
-        <input type="text" name="Departure City"
-               placeholder="e.g. Accra (ACC)" required>
-
-        <label>Destination</label>
-        <input type="text" name="Destination"
-               placeholder="Where do you want to travel?" required>
-
-        <label>Departure Date</label>
-        <input type="date" name="Departure Date" required>
-
-        <label>Number of Passengers</label>
-        <input type="number" name="Passengers"
-               min="1" value="1" required>
-
-        <button type="submit">Request Flight Options</button>
-    </form>
+        </div>
+    </div>
 </section>
 
+<!-- CONTACT -->
 
-<!-- VISA ASSISTANCE REQUEST FORM -->
-<section id="visa-assistance">
-    <h2>Visa Assistance Request</h2>
-    <p>Tell us where you plan to travel and what assistance you need.</p>
+<section id="contact">
+    <div class="container">
 
-    <form action="https://formsubmit.co/godstimetravelandtour12@gmail.com"
-          method="POST">
-
-        <input type="hidden" name="_subject"
-               value="New Visa Assistance Request">
-
-        <input type="hidden" name="_template"
-               value="table">
-
-        <label>Full Name</label>
-        <input type="text" name="Full Name"
-               placeholder="Enter your full name" required>
-
-        <label>Email Address</label>
-        <input type="email" name="Email"
-               placeholder="Enter your email" required>
-
-        <label>Phone Number</label>
-        <input type="tel" name="Phone"
-               placeholder="Enter your phone number" required>
-
-        <label>Destination Country</label>
-        <select name="Destination Country" required>
-            <option value="">Select country</option>
-            <option>United States</option>
-            <option>United Kingdom</option>
-            <option>Canada</option>
-            <option>United Arab Emirates</option>
-            <option>France</option>
-            <option>Germany</option>
-            <option>Australia</option>
-            <option>South Africa</option>
-            <option>Other</option>
-        </select>
-
-        <label>Visa Type</label>
-        <select name="Visa Type" required>
-            <option value="">Select visa type</option>
-            <option>Tourist</option>
-            <option>Student</option>
-            <option>Business</option>
-            <option>Work</option>
-            <option>Transit</option>
-            <option>Other</option>
-        </select>
-
-        <label>Message</label>
-        <textarea name="Message" rows="5"
-                  placeholder="Tell us what assistance you need"
-                  required></textarea>
-
-        <button type="submit">Submit Visa Request</button>
-    </form>
-
-    <p>
-        Submitting this form requests assistance only.
-        Visa decisions are made by the relevant government authorities.
-    </p>
-</section>
-
-        <section>
+        <div class="contact-box">
             <h2>Ready to Plan Your Next Trip?</h2>
 
-            <div class="intro">
-                <p>
-                    Tell us about your travel plans. Contact God's Time
-                    Travel And Tours to discuss the assistance you need.
-                </p>
+            <p>
+                Contact God's Time Travel and Tours to discuss
+                your travel needs and request a quotation.
+            </p>
 
-                <a class="button"
-                   href="https://wa.me/233241226239">
-                    Contact Us on WhatsApp
+            <div class="contact-links">
+
+                <a href="https://wa.me/233241226239"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp: 0241226239
                 </a>
-            </div>
-        </section>
 
-        <section class="contact" id="contact">
-            <div class="contact-inner">
+                <a href="tel:+233241226239">
+                    Call: 0241226239
+                </a>
 
-                <h2>Contact Us</h2>
-
-                <p>
-                    Have a question about your next journey?
-                    We would be happy to hear from you.
-                </p>
-
-                <p>
-                    📱 <strong>WhatsApp / Phone:</strong>
-                    <a href="https://wa.me/233241226239">
-                        024 122 6239
-                    </a>
-                </p>
-
-                <p>
-                    📧 <strong>Email:</strong>
-                    <a href="mailto:godstimetravelandtour12@gmail.com">
-                        godstimetravelandtour12@gmail.com
-                    </a>
-                </p>
-
-                <a class="button"
-                   href="https://wa.me/233241226239">
-                    Message Us Now
+                <a href="mailto:godstimetravelandtour@gmail.com">
+                    Email: godstimetravelandtour@gmail.com
                 </a>
 
             </div>
-        </section>
 
-    </main>
+            <p class="help-text" style="color:#d8e0eb; margin-top:25px;">
+                Please verify the contact details before publishing
+                the website to customers.
+            </p>
+        </div>
 
-    <footer>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
         <p>
-            &copy; 2026 God's Time Travel And Tours.
-            All rights reserved.
+            &copy; <span id="year"></span>
+            God's Time Travel and Tours. All rights reserved.
         </p>
 
         <p>
-            Travel responsibly and verify official travel requirements.
+            Travel assistance and application guidance.
+            Services are subject to review, availability and applicable rules.
         </p>
-    </footer>
+    </div>
+</footer>
+
+<script>
+const form = document.getElementById("travelForm");
+const steps = Array.from(document.querySelectorAll(".form-step"));
+const stepLabel = document.getElementById("stepLabel");
+const progressFill = document.getElementById("progressFill");
+const reviewBox = document.getElementById("reviewBox");
+const emailFallback = document.getElementById("emailFallback");
+
+let currentStep = 0;
+
+const stepNames = [
+    "Choose a service",
+    "Contact information",
+    "Travel and payment details",
+    "Review and submit"
+];
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+function updateStep() {
+    steps.forEach((step, index) => {
+        step.classList.toggle("active", index === currentStep);
+    });
+
+    stepLabel.textContent =
+        `Step ${currentStep + 1} of ${steps.length} — ${stepNames[currentStep]}`;
+
+    progressFill.style.width =
+        `${((currentStep + 1) / steps.length) * 100}%`;
+
+    document.getElementById("apply").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+function validateCurrentStep() {
+    const activeStep = steps[currentStep];
+    const fields = Array.from(
+        activeStep.querySelectorAll("input, select, textarea")
+    );
+
+    for (const field of fields) {
+        if (!field.checkValidity()) {
+            field.reportValidity();
+            field.focus();
+            return false;
+        }
+    }
+
+    if (currentStep === 2) {
+        const travelDate = document.getElementById("travelDate").value;
+        const returnDate = document.getElementById("returnDate").value;
+
+        if (travelDate && returnDate && returnDate < travelDate) {
+            alert("The return date cannot be earlier than the travel date.");
+            document.getElementById("returnDate").focus();
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function nextStep() {
+    if (!validateCurrentStep()) return;
+
+    if (currentStep < steps.length - 1) {
+        currentStep++;
+        updateStep();
+    }
+}
+
+function previousStep() {
+    if (currentStep > 0) {
+        currentStep--;
+        updateStep();
+    }
+}
+
+function getValue(id) {
+    const element = document.getElementById(id);
+    return element.value.trim() || "Not provided";
+}
+
+function safeText(value) {
+    return String(value).replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+    })[character]);
+}
+
+function reviewItem(label, value) {
+    return `
+        <div class="review-item">
+            <strong>${safeText(label)}</strong>
+            <div>${safeText(value)}</div>
+        </div>
+    `;
+}
+
+function buildApplicationMessage() {
+    return [
+        "GOD'S TIME TRAVEL AND TOURS — NEW APPLICATION",
+        "",
+        "SERVICE: " + getValue("service"),
+        "TIMEFRAME: " + getValue("urgency"),
+        "BUDGET: " + getValue("budget"),
+        "",
+        "CUSTOMER DETAILS",
+        "Full name: " + getValue("fullName"),
+        "Email: " + getValue("email"),
+        "Phone: " + getValue("phone"),
+        "Country: " + getValue("country"),
+        "",
+        "TRAVEL DETAILS",
+        "Destination: " + getValue("destination"),
+        "Departure: " + getValue("departure"),
+        "Travel date: " + getValue("travelDate"),
+        "Return date: " + getValue("returnDate"),
+        "Travellers: " + getValue("travellers"),
+        "",
+        "PREFERRED PAYMENT METHOD: " + getValue("paymentMethod"),
+        "",
+        "ADDITIONAL INFORMATION",
+        getValue("notes"),
+        "",
+        "The customer understands that this is an application request,",
+        "not a confirmed booking or verified payment."
+    ].join("\n");
+}
+
+function showReview() {
+    if (!validateCurrentStep()) return;
+
+    const fields = [
+        ["Service", "service"],
+        ["Timeframe", "urgency"],
+        ["Estimated budget", "budget"],
+        ["Full name", "fullName"],
+        ["Email", "email"],
+        ["Phone / WhatsApp", "phone"],
+        ["Country of residence", "country"],
+        ["Destination", "destination"],
+        ["Departure location", "departure"],
+        ["Travel date", "travelDate"],
+        ["Return date", "returnDate"],
+        ["Number of travellers", "travellers"],
+        ["Preferred payment method", "paymentMethod"],
+        ["Additional information", "notes"]
+    ];
+
+    reviewBox.innerHTML = fields.map(([label, id]) =>
+        reviewItem(label, getValue(id))
+    ).join("");
+
+    const message = buildApplicationMessage();
+
+    emailFallback.href =
+        "mailto:godstimetravelandtour@gmail.com" +
+        "?subject=" +
+        encodeURIComponent("New Travel Application") +
+        "&body=" +
+        encodeURIComponent(message);
+
+    currentStep = 3;
+    updateStep();
+}
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (!validateCurrentStep()) return;
+
+    const message = buildApplicationMessage();
+
+    /*
+      This opens WhatsApp with the application details.
+      The customer must press Send in WhatsApp.
+
+      IMPORTANT:
+      This does not process payments or confirm bookings.
+      Connect an approved Hubtel checkout/backend separately
+      before advertising online payments as operational.
+    */
+
+    const whatsappNumber = "233241226239";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+});
+
+updateStep();
+</script>
 
 </body>
 </html>
