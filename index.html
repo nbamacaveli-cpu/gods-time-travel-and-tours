@@ -3,1136 +3,1437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>God's Time Travel and Tours</title>
-
-<meta name="description" content="Explore destinations, plan your journey, and contact God's Time Travel and Tours for travel assistance.">
-
+<title>God's Time Travel and Tours | Flights, Visas & Travel Support</title>
+<meta name="description" content="God's Time Travel and Tours provides travel enquiry support for flights, visa guidance, passport information and international travel planning.">
+<meta name="theme-color" content="#071b35">
 <style>
 :root {
-    --navy: #071a33;
-    --blue: #123d70;
-    --gold: #d7a943;
-    --background: #f5f7fb;
-    --white: #ffffff;
-    --text: #263449;
-    --muted: #64748b;
-    --border: #dfe6ef;
+  --navy: #071b35;
+  --navy2: #102d50;
+  --gold: #e5b653;
+  --cream: #f7f8fb;
+  --white: #ffffff;
+  --text: #26364b;
+  --muted: #69788b;
+  --border: #e2e8f0;
+  --green: #16865c;
+  --shadow: 0 12px 35px rgba(7,27,53,.09);
 }
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.6;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.65;
 }
-
-header {
-    background: var(--navy);
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-
-nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+button, input, select, textarea {
+  font: inherit;
 }
-
-.logo {
-    font-weight: bold;
-    font-size: 17px;
-    color: white;
-    text-decoration: none;
+button, .btn {
+  cursor: pointer;
 }
-
-.logo span {
-    color: var(--gold);
+img {
+  max-width: 100%;
+  display: block;
 }
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-}
-
-.hero {
-    min-height: 440px;
-    padding: 70px 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    background:
-        linear-gradient(90deg, rgba(4,20,42,.93), rgba(4,20,42,.42)),
-        url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.eyebrow {
-    color: var(--gold);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    max-width: 750px;
-    font-size: clamp(34px, 6vw, 58px);
-    line-height: 1.1;
-    margin: 15px 0;
-}
-
-.hero p {
-    max-width: 650px;
-    font-size: 16px;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 18px;
-    border-radius: 7px;
-    border: none;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 5px 5px 5px 0;
-}
-
-.button-gold {
-    background: var(--gold);
-    color: var(--navy);
-}
-
-.button-blue {
-    background: var(--blue);
-    color: white;
-}
-
-.button-white {
-    background: white;
-    color: var(--navy);
-}
-
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 35px 20px;
+  width: min(1160px, 92%);
+  margin: auto;
 }
-
-h2 {
-    color: var(--navy);
-    font-size: clamp(25px, 4vw, 34px);
-    line-height: 1.2;
-    margin: 8px 0;
+.topbar {
+  background: #041226;
+  color: #fff;
+  padding: 9px 0;
+  font-size: 13px;
 }
-
-h3 {
-    color: var(--navy);
-    margin-top: 0;
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
 }
-
-.muted {
-    color: var(--muted);
+header {
+  background: var(--navy);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 18px rgba(0,0,0,.15);
 }
-
-.small {
-    font-size: 12px;
-    color: var(--muted);
+.nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
 }
-
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 25px;
+  flex-shrink: 0;
+}
+.brand strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.brand small {
+  color: #d4dce8;
+  font-size: 11px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+nav a:hover {
+  color: var(--gold);
+}
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #52637a;
+  color: white;
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+.hero {
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(4,18,38,.95), rgba(7,27,53,.75)),
+    url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+  padding: 105px 0 95px;
+}
+.hero-content {
+  max-width: 760px;
+}
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.hero h1 {
+  font-size: clamp(36px, 5.5vw, 64px);
+  line-height: 1.12;
+  margin: 16px 0;
+}
+.hero p {
+  color: #e1e8f1;
+  max-width: 650px;
+  font-size: 17px;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 27px;
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 18px;
+  font-weight: bold;
+  transition: .2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.65);
+  color: white;
+  background: transparent;
+}
+.btn-navy {
+  background: var(--navy);
+  color: white;
+}
+.btn-green {
+  background: var(--green);
+  color: white;
+}
+.trust-strip {
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 22px 0;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.trust-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: #fff5dc;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.trust-item strong {
+  display: block;
+  font-size: 13px;
+}
+.trust-item small {
+  color: var(--muted);
+  font-size: 11px;
+}
+section {
+  padding: 76px 0;
+  scroll-margin-top: 85px;
+}
 .section-heading {
-    margin-bottom: 22px;
+  max-width: 720px;
+  margin-bottom: 30px;
 }
-
-.search-bar {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+.section-heading h2 {
+  color: var(--navy);
+  font-size: clamp(27px, 4vw, 39px);
+  line-height: 1.2;
+  margin: 9px 0;
 }
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 7px;
-    background: white;
-    font: inherit;
+.section-heading p {
+  color: var(--muted);
 }
-
-.search-bar input,
-.search-bar select {
-    flex: 1;
-    min-width: 180px;
+.section-label {
+  color: #a57820;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-weight: bold;
+  font-size: 12px;
 }
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 17px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-
-.card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,.04);
+.service-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow);
 }
-
-.card img {
-    width: 100%;
-    height: 155px;
-    object-fit: cover;
+.service-icon {
+  font-size: 30px;
 }
-
-.card-body {
-    padding: 15px;
+.service-card h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
 }
-
-.card h3 {
-    font-size: 17px;
-    margin-bottom: 7px;
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
 }
-
-.card p {
-    font-size: 13px;
-    color: var(--muted);
+.service-card a {
+  color: #9b701d;
+  font-weight: bold;
+  font-size: 13px;
 }
-
-.tag {
-    display: inline-block;
-    padding: 4px 9px;
-    margin-bottom: 8px;
-    border-radius: 20px;
-    background: #eaf1fa;
-    color: var(--blue);
-    font-size: 11px;
-    font-weight: bold;
+.destinations-section {
+  background: #eef2f7;
 }
-
-.panel {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px;
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
 }
-
-.info-box {
-    padding: 15px;
-    margin: 15px 0;
-    background: #fff5dc;
-    border-radius: 8px;
-    font-size: 13px;
+.field-control {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d7e0eb;
+  border-radius: 8px;
+  background: white;
+  color: var(--text);
+  outline-color: var(--gold);
 }
-
-.hidden {
-    display: none !important;
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
-
-form {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
+.destination-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(7,27,53,.05);
 }
-
-form h3 {
-    margin-top: 25px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
+.destination-photo {
+  height: 145px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #102d50, #517b9d);
+  color: white;
+  font-size: 48px;
 }
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.destination-info {
+  padding: 16px;
 }
-
-.field {
-    margin-bottom: 14px;
+.destination-info h3 {
+  margin: 0 0 3px;
+  color: var(--navy);
+  font-size: 17px;
 }
-
-label {
-    display: block;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 6px;
+.destination-region {
+  color: #9b701d;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-
-.checkbox-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 9px;
-    font-weight: normal;
+.destination-info p {
+  color: var(--muted);
+  font-size: 12px;
+  min-height: 58px;
 }
-
-.checkbox-label input {
-    width: auto;
-    margin-top: 5px;
+.destination-info button {
+  width: 100%;
+  border: 1px solid #cfd9e5;
+  border-radius: 7px;
+  background: white;
+  padding: 9px;
+  color: var(--navy);
+  font-weight: bold;
 }
-
+.destination-info button:hover {
+  background: var(--navy);
+  color: white;
+}
+.empty-state {
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--muted);
+  grid-column: 1/-1;
+}
+.airline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.airline-card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 11px;
+}
+.airline-card .plane {
+  font-size: 27px;
+}
+.airline-card h3 {
+  color: var(--navy);
+  font-size: 16px;
+  margin: 8px 0 4px;
+}
+.airline-card p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+}
+.aircraft-section {
+  background: var(--navy);
+  color: white;
+}
+.aircraft-section .section-heading h2 {
+  color: white;
+}
+.aircraft-section .section-heading p {
+  color: #c7d1df;
+}
+.cabin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.cabin-card {
+  background: #102d50;
+  border: 1px solid #34506e;
+  border-radius: 12px;
+  padding: 22px;
+}
+.cabin-card h3 {
+  color: var(--gold);
+}
+.cabin-card p {
+  color: #d3dce8;
+  font-size: 13px;
+}
+.cabin-card small {
+  color: #b8c6d7;
+}
 .notice {
-    padding: 13px;
-    border-radius: 8px;
-    background: #eaf1fa;
-    font-size: 13px;
-    margin: 15px 0;
+  padding: 14px 16px;
+  border-radius: 9px;
+  background: #fff6df;
+  border: 1px solid #f0d796;
+  color: #654b14;
+  font-size: 13px;
+  margin: 18px 0;
 }
-
+.booking-section {
+  background: #eef2f7;
+}
+.booking-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.5fr;
+  gap: 25px;
+  align-items: start;
+}
+.booking-aside {
+  background: var(--navy);
+  color: white;
+  padding: 27px;
+  border-radius: 14px;
+  position: sticky;
+  top: 100px;
+}
+.booking-aside h3 {
+  font-size: 25px;
+  margin-top: 0;
+}
+.booking-aside p,
+.booking-aside li {
+  color: #d0d9e5;
+  font-size: 14px;
+}
+.booking-aside ul {
+  padding-left: 20px;
+}
+.booking-aside .contact-line {
+  border-top: 1px solid #34506e;
+  padding-top: 14px;
+  margin-top: 18px;
+  overflow-wrap: anywhere;
+}
+.form-card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 27px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.form-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+.form-section-title {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin: 25px 0 16px;
+  color: var(--navy);
+  font-size: 16px;
+}
+.form-section-title:first-of-type {
+  margin-top: 10px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.form-group {
+  min-width: 0;
+}
+.form-group.full {
+  grid-column: 1/-1;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #26364b;
+  font-size: 13px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #d7e0eb;
+  border-radius: 8px;
+  padding: 11px;
+  background: white;
+  color: var(--text);
+}
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.help-text {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.checkbox-row input {
+  margin-top: 5px;
+}
+.form-message {
+  display: none;
+  padding: 13px;
+  background: #eaf8ef;
+  color: #17623d;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+.form-message.show {
+  display: block;
+}
+.small-note {
+  font-size: 11px;
+  color: var(--muted);
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+details {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 17px;
+}
+summary {
+  color: var(--navy);
+  font-weight: bold;
+  cursor: pointer;
+}
+details p {
+  font-size: 13px;
+  color: var(--muted);
+}
+.contact-section {
+  background: white;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.contact-card {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.contact-card h3 {
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+.contact-card p {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
 footer {
-    background: var(--navy);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 30px;
+  background: #041226;
+  color: white;
+  padding: 35px 0;
 }
-
-footer p {
-    font-size: 13px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 25px;
 }
-
+footer p,
 footer a {
-    color: var(--gold);
+  color: #c4d0df;
+  font-size: 13px;
 }
-
+footer h3 {
+  color: var(--gold);
+  font-size: 15px;
+}
+.footer-bottom {
+  border-top: 1px solid #263a53;
+  padding-top: 18px;
+  margin-top: 25px;
+  font-size: 11px;
+  color: #a9b8ca;
+}
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  background: #16865c;
+  color: white;
+  padding: 13px 17px;
+  border-radius: 40px;
+  box-shadow: 0 7px 20px rgba(0,0,0,.22);
+  font-weight: bold;
+  font-size: 13px;
+}
 @media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .destination-grid,
+  .airline-grid,
+  .cabin-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .booking-aside {
+    position: static;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-@media (max-width: 600px) {
-    nav {
-        padding: 13px;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .container {
-        padding: 25px 14px;
-    }
-
-    .hero {
-        padding: 45px 18px;
-        min-height: 390px;
-    }
-
-    .grid {
-        gap: 10px;
-    }
-
-    .card img {
-        height: 120px;
-    }
-
-    .card-body {
-        padding: 11px;
-    }
-
-    .card h3 {
-        font-size: 15px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    form {
-        padding: 16px;
-    }
+@media (max-width: 680px) {
+  .nav {
+    min-height: 70px;
+  }
+  .brand strong {
+    font-size: 13px;
+  }
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    padding: 18px 5%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  nav.open {
+    display: flex;
+  }
+  .hero {
+    padding: 75px 0;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  section {
+    padding: 55px 0;
+  }
+  .destination-grid,
+  .airline-grid,
+  .cabin-grid,
+  .services-grid,
+  .faq-grid,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .filters,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.full {
+    grid-column: auto;
+  }
+  .form-card {
+    padding: 18px;
+  }
+  .trust-grid {
+    gap: 18px 10px;
+  }
+  .trust-item {
+    align-items: flex-start;
+  }
+  .trust-item strong {
+    font-size: 12px;
+  }
+  .trust-item small {
+    font-size: 10px;
+  }
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 11px 14px;
+  }
 }
 </style>
 </head>
-
 <body>
-
+<div class="topbar">
+  <div class="container">
+    <span>✈ International Travel Planning & Support</span>
+    <span>Contact: 0241226239</span>
+  </div>
+</div>
 <header>
-<nav>
-    <a class="logo" href="#home">
-        GOD'S TIME <span>TRAVEL &amp; TOURS</span>
+  <div class="container nav">
+    <a href="#home" class="brand" aria-label="God's Time Travel and Tours home">
+      <div class="brand-logo">✈</div>
+      <div>
+        <strong>GOD'S TIME TRAVEL</strong>
+        <small>AND TOURS</small>
+      </div>
     </a>
-
-    <div class="nav-links">
-        <a href="#countries">Countries</a>
-        <a href="#airlines">Airlines</a>
-        <a href="#aircraft">Aircraft</a>
-        <a href="#application">Apply</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#airlines">Airlines</a>
+      <a href="#aircraft">Cabin Classes</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#enquiry">Make an Enquiry</a>
+    </nav>
+  </div>
 </header>
-
+<main>
 <section class="hero" id="home">
-    <div class="hero-content">
-        <div class="eyebrow">Your journey starts here</div>
-
-        <h1>Discover the World. Experience More.</h1>
-
-        <p>
-            Explore destinations around the world, discover airlines,
-            learn about aircraft and contact God's Time Travel and Tours
-            to begin planning your next journey.
-        </p>
-
-        <a href="#countries" class="button button-gold">
-            Explore Destinations
-        </a>
-
-        <a href="#application" class="button button-white">
-            Plan My Trip
-        </a>
-    </div>
-</section>
-
-<section class="container" id="countries">
-    <div class="section-heading">
-        <div class="eyebrow">Destination guide</div>
-        <h2>Explore Countries Around the World</h2>
-
-        <p class="muted">
-            Search for a destination and discover its capital city
-            and popular attractions.
-        </p>
-    </div>
-
-    <div class="search-bar">
-        <input
-            type="search"
-            id="countrySearch"
-            placeholder="Search countries, cities or attractions..."
-            aria-label="Search countries"
-        >
-
-        <select id="regionFilter" aria-label="Filter countries by region">
-            <option value="">All regions</option>
-            <option value="Africa">Africa</option>
-            <option value="Europe">Europe</option>
-            <option value="Asia">Asia</option>
-            <option value="North America">North America</option>
-            <option value="South America">South America</option>
-            <option value="Oceania">Oceania</option>
-        </select>
-    </div>
-
-    <div class="grid" id="countryGrid"></div>
-
-    <p id="noCountries" class="muted hidden">
-        No matching country found. Try another search.
-    </p>
-</section>
-
-<section class="container" id="airlines">
-    <div class="section-heading">
-        <div class="eyebrow">Air travel</div>
-        <h2>Discover International Airlines</h2>
-
-        <p class="muted">
-            Learn about airlines that operate international and regional
-            passenger services. Routes and availability depend on your
-            travel dates.
-        </p>
-    </div>
-
-    <div class="grid" id="airlineGrid"></div>
-</section>
-
-<section class="container" id="aircraft">
-    <div class="section-heading">
-        <div class="eyebrow">On your journey</div>
-        <h2>Aircraft and Cabin Classes</h2>
-
-        <p class="muted">
-            Understand common aircraft features and passenger cabin classes.
-        </p>
-    </div>
-
-    <div class="grid" id="aircraftGrid"></div>
-
-    <div class="panel" style="margin-top:20px">
-        <h3>Cabin Classes Explained</h3>
-
-        <p><b>Economy Class:</b> Usually the most affordable cabin option.</p>
-
-        <p><b>Premium Economy:</b> Available on selected airlines, sometimes
-        with additional space and comfort.</p>
-
-        <p><b>Business Class:</b> May provide premium seating, meals and
-        additional services.</p>
-
-        <p><b>First Class:</b> Available on selected airlines and aircraft
-        with premium seating and services.</p>
-
-        <p class="small">
-            Aircraft layouts and cabin features vary by airline, route
-            and aircraft. Always confirm your flight details before booking.
-        </p>
-    </div>
-</section>
-
-<section class="container" id="application">
-    <div class="section-heading">
-        <div class="eyebrow">Start your journey</div>
-        <h2>Prepare Travel Enquiry</h2>
-
-        <p class="muted">
-            Complete the form below. Your email application will open
-            with your enquiry prepared for our team.
-        </p>
-    </div>
-
-    <form id="travelForm">
-
-        <h3>1. Choose Your Service</h3>
-
-        <div class="field">
-            <label for="service">Travel service *</label>
-
-            <select id="service" required>
-                <option value="">Select a service</option>
-                <option>Flight Booking Assistance</option>
-                <option>Visa Application Assistance</option>
-                <option>Passport Assistance</option>
-                <option>Tour Packages and Travel Planning</option>
-                <option>Hotel and Accommodation Assistance</option>
-            </select>
-        </div>
-
-        <div class="field">
-            <label for="package">Service package *</label>
-
-            <select id="package" required>
-                <option value="">Select a package</option>
-                <option>GH₵200 - Basic Priority</option>
-                <option>GH₵350 - Standard Priority</option>
-                <option>GH₵500 - Priority Processing</option>
-            </select>
-
-            <p class="small">
-                These are service-package options, not flight-ticket prices
-                or government fees. They do not guarantee a visa, ticket
-                or faster government processing.
-            </p>
-        </div>
-
-        <h3>2. Applicant Information</h3>
-
-        <div class="form-grid">
-            <div class="field">
-                <label for="fullName">Full name *</label>
-                <input id="fullName" required autocomplete="name">
-            </div>
-
-            <div class="field">
-                <label for="email">Your email address *</label>
-                <input id="email" type="email" required autocomplete="email">
-            </div>
-
-            <div class="field">
-                <label for="phone">Phone number *</label>
-                <input id="phone" type="tel" required autocomplete="tel">
-            </div>
-
-            <div class="field">
-                <label for="nationality">Nationality *</label>
-                <input id="nationality" value="Ghanaian" required>
-            </div>
-
-            <div class="field">
-                <label for="passportStatus">Passport status</label>
-
-                <select id="passportStatus">
-                    <option>I have a valid passport</option>
-                    <option>Passport application in progress</option>
-                    <option>I need passport assistance</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label for="profilePhoto">Profile photograph (optional)</label>
-                <input
-                    id="profilePhoto"
-                    type="file"
-                    accept="image/jpeg,image/png,image/webp"
-                >
-            </div>
-        </div>
-
-        <h3>3. Destination and Flight Preferences</h3>
-
-        <div class="form-grid">
-            <div class="field">
-                <label for="destination">Destination country *</label>
-
-                <input
-                    id="destination"
-                    list="destinationList"
-                    placeholder="Enter your destination"
-                    required
-                >
-
-                <datalist id="destinationList"></datalist>
-            </div>
-
-            <div class="field">
-                <label for="city">Destination city</label>
-                <input id="city" placeholder="e.g. London">
-            </div>
-
-            <div class="field">
-                <label for="departure">Departure location</label>
-                <input id="departure" placeholder="e.g. Accra, Ghana">
-            </div>
-
-            <div class="field">
-                <label for="airlineChoice">Preferred airline</label>
-
-                <select id="airlineChoice">
-                    <option>No preference</option>
-                    <option>Emirates</option>
-                    <option>Qatar Airways</option>
-                    <option>Turkish Airlines</option>
-                    <option>British Airways</option>
-                    <option>KLM</option>
-                    <option>Air France</option>
-                    <option>Lufthansa</option>
-                    <option>Ethiopian Airlines</option>
-                    <option>Kenya Airways</option>
-                    <option>Africa World Airlines</option>
-                    <option>United Airlines</option>
-                    <option>Delta Air Lines</option>
-                    <option>Singapore Airlines</option>
-                    <option>Other / Please advise</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label for="cabin">Preferred cabin class</label>
-
-                <select id="cabin">
-                    <option>No preference</option>
-                    <option>Economy Class</option>
-                    <option>Premium Economy</option>
-                    <option>Business Class</option>
-                    <option>First Class</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label for="travelDate">Preferred departure date</label>
-                <input id="travelDate" type="date">
-            </div>
-
-            <div class="field">
-                <label for="travellers">Number of travellers</label>
-                <input id="travellers" type="number" min="1" max="30" value="1">
-            </div>
-
-            <div class="field">
-                <label for="tripType">Trip type</label>
-
-                <select id="tripType">
-                    <option>One way</option>
-                    <option>Return trip</option>
-                    <option>Multi-city</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="field">
-            <label for="notes">Additional details</label>
-
-            <textarea
-                id="notes"
-                rows="4"
-                placeholder="Tell us more about your travel plans..."
-            ></textarea>
-        </div>
-
-        <h3>4. Payment Enquiry</h3>
-
-        <div class="field">
-            <label for="paymentMethod">Preferred payment method</label>
-
-            <select id="paymentMethod">
-                <option>Hubtel - confirm checkout with the company</option>
-                <option>MTN Mobile Money</option>
-                <option>Telecel Cash</option>
-                <option>AT Money</option>
-                <option>Bank transfer</option>
-            </select>
-        </div>
-
-        <div class="field">
-            <label for="paymentReference">Payment reference (if applicable)</label>
-
-            <input
-                id="paymentReference"
-                placeholder="Enter a transaction reference, if applicable"
-            >
-        </div>
-
-        <div class="field">
-            <label for="receipt">Payment receipt (optional)</label>
-            <input id="receipt" type="file" accept="image/*,.pdf">
-        </div>
-
-        <div class="info-box">
-            <b>Important:</b> Confirm the service, total cost and official
-            payment details with the company before making any payment.
-            Never share your mobile-money PIN, banking password or OTP.
-            Selecting a payment method here does not initiate a payment.
-        </div>
-
-        <div class="field">
-            <label class="checkbox-label">
-                <input id="consent" type="checkbox" required>
-
-                <span>
-                    I confirm that the information provided is accurate
-                    and agree to be contacted about this travel enquiry. *
-                </span>
-            </label>
-        </div>
-
-        <button type="submit" class="button button-blue">
-            Prepare Travel Enquiry
-        </button>
-
-        <div id="formMessage" class="notice hidden" role="status"></div>
-
-        <p class="small">
-            This form prepares an email addressed to
-            godstimetravelandtour12@gmail.com. Review the details and press
-            Send in your email application. Selected files are not attached
-            automatically. The website does not automatically book flights
-            or process payments.
-        </p>
-
-    </form>
-</section>
-
-<section class="container" id="contact">
-    <div class="panel">
-        <div class="eyebrow">Get in touch</div>
-
-        <h2>Contact God's Time Travel and Tours</h2>
-
-        <p>
-            Contact our team to discuss travel assistance, destination
-            information, flights and service availability.
-        </p>
-
-        <p>
-            <b>Email:</b>
-            <a href="mailto:godstimetravelandtour12@gmail.com">
-                godstimetravelandtour12@gmail.com
-            </a>
-        </p>
-
-        <p>
-            <b>Phone / WhatsApp:</b>
-            <a href="https://wa.me/233241226239">
-                0241226239
-            </a>
-        </p>
-
-        <a
-            class="button button-blue"
-            href="https://wa.me/233241226239"
-            target="_blank"
-            rel="noopener"
-        >
-            Contact Us on WhatsApp
-        </a>
-    </div>
-</section>
-
-<footer>
-    <b>GOD'S TIME TRAVEL AND TOURS</b>
-
-    <p>Discover destinations. Explore experiences. Plan responsibly.</p>
-
+  <div class="container hero-content">
+    <span class="eyebrow">Your Journey Starts Here</span>
+    <h1>Explore the World.<br>Travel With Confidence.</h1>
     <p>
-        Email:
-        <a href="mailto:godstimetravelandtour12@gmail.com">
-            godstimetravelandtour12@gmail.com
-        </a>
+      Your travel plans deserve careful attention. Contact God's Time Travel
+      and Tours for flight enquiries, visa guidance, passport information and
+      support with planning your next journey.
     </p>
-
-    <p class="small" style="color:#dbe5f1">
-        Travel information may change. Confirm current requirements,
-        prices and availability with official providers.
-    </p>
-
-    <p class="small" style="color:#dbe5f1">
-        © <span id="year"></span> God's Time Travel and Tours.
-    </p>
+    <div class="hero-actions">
+      <a href="#enquiry" class="btn btn-gold">Start a Travel Enquiry →</a>
+      <a href="#destinations" class="btn btn-outline">Explore Destinations</a>
+    </div>
+  </div>
+</section>
+<div class="trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">🌍</div>
+      <div><strong>Global Destinations</strong><small>Explore 40 countries</small></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✈️</div>
+      <div><strong>Flight Enquiries</strong><small>Discuss airline options</small></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🛂</div>
+      <div><strong>Travel Guidance</strong><small>Visa and passport information</small></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💬</div>
+      <div><strong>Personal Support</strong><small>Contact our team</small></div>
+    </div>
+  </div>
+</div>
+<section id="services">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">What We Offer</span>
+      <h2>Travel Services Designed Around You</h2>
+      <p>Tell us what you need and we can discuss the available options, requirements and next steps.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">✈️</div>
+        <h3>Flight Booking Enquiries</h3>
+        <p>Request assistance comparing possible routes, airlines, travel dates and cabin classes. Flight availability and fares must be confirmed before purchase.</p>
+        <a href="#enquiry" data-service="Flight booking enquiry">Enquire about flights →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🛂</div>
+        <h3>Visa Guidance</h3>
+        <p>Ask about general visa requirements, application preparation and official resources relevant to your intended destination.</p>
+        <a href="#enquiry" data-service="Visa guidance">Ask about visa guidance →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">📘</div>
+        <h3>Passport Information</h3>
+        <p>Get directed towards official passport application and renewal information. Government applications and fees are handled through the appropriate authorities.</p>
+        <a href="#enquiry" data-service="Passport information">Ask about passports →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🧳</div>
+        <h3>Travel Planning</h3>
+        <p>Discuss your destination, trip type, preferred dates and general travel arrangements before making your plans.</p>
+        <a href="#enquiry" data-service="Travel planning">Plan your trip →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🏨</div>
+        <h3>Trip Assistance</h3>
+        <p>Tell us about the support you need for your proposed trip so we can discuss whether assistance is available.</p>
+        <a href="#enquiry" data-service="General trip assistance">Request assistance →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>International Travel Advice</h3>
+        <p>Ask about planning considerations such as entry requirements, travel documents and where to find official destination information.</p>
+        <a href="#enquiry" data-service="International travel advice">Make an enquiry →</a>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="destinations" class="destinations-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Discover the World</span>
+      <h2>Explore 40 Destinations</h2>
+      <p>Search countries by name or filter by region. Select a destination to start an enquiry.</p>
+    </div>
+    <div class="filters">
+      <input class="field-control" type="search" id="countrySearch" placeholder="Search a country..." aria-label="Search destinations">
+      <select class="field-control" id="regionFilter" aria-label="Filter by region">
+        <option value="all">All regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+        <option value="Oceania">Oceania</option>
+        <option value="Middle East">Middle East</option>
+      </select>
+    </div>
+    <div class="destination-grid" id="destinationGrid"></div>
+    <p id="destinationCount" class="small-note" aria-live="polite"></p>
+  </div>
+</section>
+<section id="airlines">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Airline Directory</span>
+      <h2>Explore Airline Options</h2>
+      <p>These are examples of airlines you may wish to ask about. Routes, schedules, fares and availability vary by date.</p>
+    </div>
+    <div class="airline-grid">
+      <article class="airline-card"><div class="plane">✈️</div><h3>Qatar Airways</h3><p>Doha-based international airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Emirates</h3><p>Dubai-based international airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Turkish Airlines</h3><p>Istanbul-based international airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>British Airways</h3><p>United Kingdom-based airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>KLM</h3><p>Netherlands-based airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Ethiopian Airlines</h3><p>African international airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Kenya Airways</h3><p>Kenya-based international airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Air France</h3><p>France-based international airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Lufthansa</h3><p>Germany-based airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>United Airlines</h3><p>United States-based airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Delta Air Lines</h3><p>United States-based airline.</p></article>
+      <article class="airline-card"><div class="plane">✈️</div><h3>Air Peace</h3><p>Nigerian airline.</p></article>
+    </div>
+    <div class="notice">
+      Listing an airline does not mean that God's Time Travel and Tours is an official partner or representative of that airline.
+      Always verify ticket details and payment instructions before paying.
+    </div>
+  </div>
+</section>
+<section id="aircraft" class="aircraft-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Flying Comfort</span>
+      <h2>Understand Aircraft & Cabin Classes</h2>
+      <p>Aircraft types and cabin options differ by airline, route and individual flight.</p>
+    </div>
+    <div class="cabin-grid">
+      <article class="cabin-card">
+        <div class="service-icon">🛫</div>
+        <h3>Economy Class</h3>
+        <p>A standard cabin option that is often the most affordable. Seat space, baggage and meals depend on the fare.</p>
+        <small>Availability depends on airline and route.</small>
+      </article>
+      <article class="cabin-card">
+        <div class="service-icon">💺</div>
+        <h3>Premium Economy</h3>
+        <p>Offered on selected airlines, usually with additional space or other benefits compared with standard economy.</p>
+        <small>Not available on every flight.</small>
+      </article>
+      <article class="cabin-card">
+        <div class="service-icon">🥂</div>
+        <h3>Business Class</h3>
+        <p>A higher cabin class that may provide additional comfort, lounge access and enhanced service.</p>
+        <small>Benefits vary by airline and aircraft.</small>
+      </article>
+      <article class="cabin-card">
+        <div class="service-icon">👑</div>
+        <h3>First Class</h3>
+        <p>A premium cabin offered on selected routes and aircraft, with service and features set by the airline.</p>
+        <small>Limited route availability.</small>
+      </article>
+    </div>
+    <div class="notice">
+      Aircraft examples include the Airbus A320 family, Airbus A350, Airbus A380, Boeing 737, Boeing 777 and Boeing 787.
+      The aircraft operating a flight can change. Confirm the details with the airline before travel.
+    </div>
+  </div>
+</section>
+<section id="enquiry" class="booking-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Start Your Journey</span>
+      <h2>Prepare Your Travel Enquiry</h2>
+      <p>Complete the form with accurate information. Your email application will open with your enquiry prepared for review and sending.</p>
+    </div>
+    <div class="booking-layout">
+      <aside class="booking-aside">
+        <span class="eyebrow">Let's Plan Together</span>
+        <h3>Your next journey starts with an enquiry.</h3>
+        <p>Share your travel needs and we can discuss possible next steps.</p>
+        <ul>
+          <li>Tell us your intended destination.</li>
+          <li>Choose your preferred service option.</li>
+          <li>Provide a way to contact you.</li>
+          <li>Wait for confirmation before making payments or final travel arrangements.</li>
+        </ul>
+        <div class="contact-line">
+          <strong>Email</strong><br>
+          <a href="mailto:godstimetravelandtour12@gmail.com">godstimetravelandtour12@gmail.com</a>
+        </div>
+        <div class="contact-line">
+          <strong>Phone / WhatsApp</strong><br>
+          <a href="https://wa.me/233241226239" target="_blank" rel="noopener">0241226239</a>
+        </div>
+      </aside>
+      <form class="form-card" id="travelForm">
+        <h3>Travel Enquiry Form</h3>
+        <div class="notice">
+          <strong>Before you begin:</strong> This is an enquiry form, not a confirmed booking or government application.
+          Do not submit bank PINs, passwords, card security codes or other secret financial information.
+        </div>
+        <h4 class="form-section-title">1. Choose Your Service</h4>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="service">Service required *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Flight booking enquiry</option>
+              <option>Visa guidance</option>
+              <option>Passport information</option>
+              <option>Travel planning</option>
+              <option>General trip assistance</option>
+              <option>International travel advice</option>
+              <option>Other travel service</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="package">Service package *</label>
+            <select id="package" name="package" required>
+              <option value="">Choose a package</option>
+              <option value="GH₵200">GH₵200 service option</option>
+              <option value="GH₵350">GH₵350 service option</option>
+              <option value="GH₵500">GH₵500 service option</option>
+              <option value="Need advice">I need advice first</option>
+            </select>
+            <small class="help-text">These are enquiry options, not confirmed fees. Ask for a written breakdown before paying. Flight tickets, government charges and other costs may be separate.</small>
+          </div>
+        </div>
+        <h4 class="form-section-title">2. Applicant Information</h4>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full name *</label>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required maxlength="100" placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required maxlength="150" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp number *</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required maxlength="30" placeholder="e.g. 0241234567">
+          </div>
+          <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality" maxlength="80" placeholder="e.g. Ghanaian">
+          </div>
+          <div class="form-group">
+            <label for="passportStatus">Passport status</label>
+            <select id="passportStatus" name="passportStatus">
+              <option value="">Select status</option>
+              <option>I have a valid passport</option>
+              <option>Passport application not started</option>
+              <option>Passport application in progress</option>
+              <option>Passport renewal needed</option>
+              <option>Prefer to discuss privately</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="profilePhoto">Optional profile photo</label>
+            <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*">
+            <small class="help-text">Selected files will not be attached to the email automatically.</small>
+          </div>
+        </div>
+        <h4 class="form-section-title">3. Trip Information</h4>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="destination">Destination country *</label>
+            <input type="text" id="destination" name="destination" list="countryOptions" required maxlength="100" placeholder="e.g. United Kingdom">
+            <datalist id="countryOptions"></datalist>
+          </div>
+          <div class="form-group">
+            <label for="city">Destination city</label>
+            <input type="text" id="city" name="city" maxlength="100" placeholder="e.g. London">
+          </div>
+          <div class="form-group">
+            <label for="departure">Departure location *</label>
+            <input type="text" id="departure" name="departure" required maxlength="100" placeholder="e.g. Accra, Ghana">
+          </div>
+          <div class="form-group">
+            <label for="travelDate">Preferred departure date</label>
+            <input type="date" id="travelDate" name="travelDate">
+          </div>
+          <div class="form-group">
+            <label for="airlineChoice">Preferred airline</label>
+            <select id="airlineChoice" name="airlineChoice">
+              <option value="No preference">No preference</option>
+              <option>Qatar Airways</option>
+              <option>Emirates</option>
+              <option>Turkish Airlines</option>
+              <option>British Airways</option>
+              <option>KLM</option>
+              <option>Ethiopian Airlines</option>
+              <option>Kenya Airways</option>
+              <option>Air France</option>
+              <option>Lufthansa</option>
+              <option>United Airlines</option>
+              <option>Delta Air Lines</option>
+              <option>Air Peace</option>
+              <option>Other airline</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cabin">Preferred cabin class</label>
+            <select id="cabin" name="cabin">
+              <option>Economy</option>
+              <option>Premium Economy</option>
+              <option>Business Class</option>
+              <option>First Class</option>
+              <option>No preference</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="travellers">Number of travellers *</label>
+            <select id="travellers" name="travellers" required>
+              <option value="">Select number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6 or more</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tripType">Trip type</label>
+            <select id="tripType" name="tripType">
+              <option>One-way</option>
+              <option>Return trip</option>
+              <option>Multiple destinations</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="notes">Additional details</label>
+            <textarea id="notes" name="notes" maxlength="2000" placeholder="Tell us more about your travel plans or the support you need. Do not include passwords or confidential financial information."></textarea>
+          </div>
+        </div>
+        <h4 class="form-section-title">4. Payment Preference (Optional)</h4>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="paymentMethod">Preferred payment method</label>
+            <select id="paymentMethod" name="paymentMethod">
+              <option value="Not decided">Not decided</option>
+              <option>Hubtel</option>
+              <option>Mobile Money</option>
+              <option>Bank transfer</option>
+              <option>Other method</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="paymentReference">Payment reference (optional)</label>
+            <input type="text" id="paymentReference" name="paymentReference" maxlength="100" placeholder="Only if you have already paid">
+            <small class="help-text">Do not enter a PIN, password or card security code.</small>
+          </div>
+          <div class="form-group full">
+            <label for="receipt">Optional payment receipt</label>
+            <input type="file" id="receipt" name="receipt" accept="image/*,.pdf">
+            <small class="help-text">The file will not be attached automatically. Attach it yourself in your email app if necessary and appropriate.</small>
+          </div>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">
+            I confirm that the information I have entered is accurate and understand that submitting this form prepares an email enquiry.
+            I understand that this does not confirm a booking, visa approval, payment or service availability. *
+          </label>
+        </div>
+        <button type="submit" class="btn btn-navy" style="width:100%">
+          Prepare Email Enquiry →
+        </button>
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+        <p class="small-note">
+          Your device must have an email app or email handler configured. After it opens, review the recipient, subject and message, then press Send.
+          If no email app opens, email us directly at godstimetravelandtour12@gmail.com.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Helpful Information</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <details>
+        <summary>Does submitting the form book my flight?</summary>
+        <p>No. The form prepares an email enquiry. A booking is not confirmed until the relevant details, availability, fare and booking process have been verified.</p>
+      </details>
+      <details>
+        <summary>Does the website process payments?</summary>
+        <p>No. Selecting Hubtel, Mobile Money or bank transfer only communicates your preference. This website has no integrated payment gateway. Confirm official payment details and the full amount before paying.</p>
+      </details>
+      <details>
+        <summary>Are the service packages the total cost of travelling?</summary>
+        <p>Not necessarily. The GH₵200, GH₵350 and GH₵500 choices are service enquiry options, not verified prices or guarantees. Ask for a written breakdown. Airfare, visa fees, passport fees and other charges may be separate.</p>
+      </details>
+      <details>
+        <summary>Can you guarantee visa approval?</summary>
+        <p>No. Visa decisions are made by the relevant government or immigration authority. No travel service should guarantee an approval it cannot control.</p>
+      </details>
+      <details>
+        <summary>Will my uploaded documents be emailed automatically?</summary>
+        <p>No. The standard email form cannot automatically attach selected files. If a document is genuinely needed, attach it manually after reviewing the recipient and considering whether it is safe to send.</p>
+      </details>
+      <details>
+        <summary>Where can I confirm visa and passport requirements?</summary>
+        <p>Confirm requirements with the destination country's official embassy, consulate, immigration authority or passport authority. Requirements can change.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Get in Touch</span>
+      <h2>Contact God's Time Travel and Tours</h2>
+      <p>Have a question before filling out the form? Contact us using the details below.</p>
+    </div>
+    <div class="contact-grid">
+      <article class="contact-card">
+        <div class="service-icon">📧</div>
+        <h3>Email Us</h3>
+        <p>Send travel questions and enquiries.</p>
+        <a class="btn btn-navy" href="mailto:godstimetravelandtour12@gmail.com">Send an Email</a>
+      </article>
+      <article class="contact-card">
+        <div class="service-icon">📱</div>
+        <h3>Call or WhatsApp</h3>
+        <p>Phone: 0241226239</p>
+        <a class="btn btn-green" href="https://wa.me/233241226239" target="_blank" rel="noopener">Open WhatsApp</a>
+      </article>
+      <article class="contact-card">
+        <div class="service-icon">🌍</div>
+        <h3>Travel Enquiries</h3>
+        <p>Tell us your destination and the assistance you need.</p>
+        <a class="btn btn-navy" href="#enquiry">Complete the Form</a>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>God's Time Travel and Tours</h3>
+        <p>Supporting your travel planning with enquiries, information and guidance.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#services">Our Services</a></p>
+        <p><a href="#destinations">Destinations</a></p>
+        <p><a href="#airlines">Airlines</a></p>
+        <p><a href="#enquiry">Travel Enquiry</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="mailto:godstimetravelandtour12@gmail.com">godstimetravelandtour12@gmail.com</a></p>
+        <p><a href="https://wa.me/233241226239" target="_blank" rel="noopener">0241226239 — WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> God's Time Travel and Tours. All rights reserved.
+      <br><br>
+      This website provides travel enquiry information. It is not a government website and does not represent an airline, embassy or immigration authority unless a separate verified relationship is established.
+      Travel, visa and passport decisions remain with the relevant providers and authorities.
+    </div>
+  </div>
 </footer>
-
+<a class="whatsapp-float" href="https://wa.me/233241226239" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">✆ WhatsApp</a>
 <script>
-const countries = [
-    {name:"Ghana",region:"Africa",capital:"Accra",attractions:"Cape Coast Castle, Kakum National Park, Mole National Park"},
-    {name:"Nigeria",region:"Africa",capital:"Abuja",attractions:"Lagos, Zuma Rock, Olumo Rock"},
-    {name:"South Africa",region:"Africa",capital:"Pretoria",attractions:"Table Mountain, Kruger National Park, Robben Island"},
-    {name:"Kenya",region:"Africa",capital:"Nairobi",attractions:"Maasai Mara, Diani Beach, Mount Kenya"},
-    {name:"Ethiopia",region:"Africa",capital:"Addis Ababa",attractions:"Lalibela, Simien Mountains, Lake Tana"},
-    {name:"Rwanda",region:"Africa",capital:"Kigali",attractions:"Volcanoes National Park, Lake Kivu"},
-    {name:"Egypt",region:"Africa",capital:"Cairo",attractions:"Pyramids of Giza, Luxor, Red Sea"},
-    {name:"Morocco",region:"Africa",capital:"Rabat",attractions:"Marrakesh, Chefchaouen, Atlas Mountains"},
-    {name:"Tanzania",region:"Africa",capital:"Dodoma",attractions:"Mount Kilimanjaro, Serengeti, Zanzibar"},
-    {name:"Uganda",region:"Africa",capital:"Kampala",attractions:"Bwindi Forest, Lake Victoria, Murchison Falls"},
-    {name:"United Kingdom",region:"Europe",capital:"London",attractions:"Big Ben, Tower Bridge, Edinburgh Castle"},
-    {name:"France",region:"Europe",capital:"Paris",attractions:"Eiffel Tower, Louvre Museum, French Riviera"},
-    {name:"Germany",region:"Europe",capital:"Berlin",attractions:"Brandenburg Gate, Black Forest, Cologne Cathedral"},
-    {name:"Italy",region:"Europe",capital:"Rome",attractions:"Colosseum, Venice, Florence"},
-    {name:"Spain",region:"Europe",capital:"Madrid",attractions:"Barcelona, Seville, Prado Museum"},
-    {name:"Portugal",region:"Europe",capital:"Lisbon",attractions:"Belém Tower, Porto, Algarve coast"},
-    {name:"Netherlands",region:"Europe",capital:"Amsterdam",attractions:"Canals, Rijksmuseum, Rotterdam"},
-    {name:"Switzerland",region:"Europe",capital:"Bern",attractions:"Swiss Alps, Lake Geneva, Lucerne"},
-    {name:"Greece",region:"Europe",capital:"Athens",attractions:"Acropolis, Santorini, Meteora"},
-    {name:"Turkey",region:"Europe",capital:"Ankara",attractions:"Istanbul, Cappadocia, Pamukkale"},
-    {name:"United Arab Emirates",region:"Asia",capital:"Abu Dhabi",attractions:"Burj Khalifa, Sheikh Zayed Grand Mosque, desert safaris"},
-    {name:"Saudi Arabia",region:"Asia",capital:"Riyadh",attractions:"Riyadh, Jeddah, AlUla"},
-    {name:"Qatar",region:"Asia",capital:"Doha",attractions:"Souq Waqif, Museum of Islamic Art, The Pearl"},
-    {name:"India",region:"Asia",capital:"New Delhi",attractions:"Taj Mahal, Jaipur, Kerala backwaters"},
-    {name:"China",region:"Asia",capital:"Beijing",attractions:"Great Wall, Forbidden City, Shanghai"},
-    {name:"Japan",region:"Asia",capital:"Tokyo",attractions:"Mount Fuji, Kyoto temples, Tokyo"},
-    {name:"Singapore",region:"Asia",capital:"Singapore",attractions:"Marina Bay, Gardens by the Bay, Sentosa"},
-    {name:"Thailand",region:"Asia",capital:"Bangkok",attractions:"Bangkok temples, Phuket, Chiang Mai"},
-    {name:"Malaysia",region:"Asia",capital:"Kuala Lumpur",attractions:"Petronas Towers, Langkawi, Penang"},
-    {name:"South Korea",region:"Asia",capital:"Seoul",attractions:"Gyeongbokgung Palace, Busan, Jeju Island"},
-    {name:"United States",region:"North America",capital:"Washington, D.C.",attractions:"New York City, Grand Canyon, Yellowstone"},
-    {name:"Canada",region:"North America",capital:"Ottawa",attractions:"Niagara Falls, Banff, Vancouver"},
-    {name:"Mexico",region:"North America",capital:"Mexico City",attractions:"Chichén Itzá, Cancún, Oaxaca"},
-    {name:"Jamaica",region:"North America",capital:"Kingston",attractions:"Dunn's River Falls, Negril, Blue Mountains"},
-    {name:"Brazil",region:"South America",capital:"Brasília",attractions:"Rio de Janeiro, Amazon rainforest, Iguazu Falls"},
-    {name:"Argentina",region:"South America",capital:"Buenos Aires",attractions:"Patagonia, Iguazu Falls, Mendoza"},
-    {name:"Chile",region:"South America",capital:"Santiago",attractions:"Atacama Desert, Torres del Paine, Valparaíso"},
-    {name:"Australia",region:"Oceania",capital:"Canberra",attractions:"Sydney Opera House, Great Barrier Reef, Uluru"},
-    {name:"New Zealand",region:"Oceania",capital:"Wellington",attractions:"Milford Sound, Queenstown, Rotorua"},
-    {name:"Fiji",region:"Oceania",capital:"Suva",attractions:"Coral reefs, island beaches, rainforest"}
+"use strict";
+/* =========================================
+   DESTINATION GUIDE: 40 COUNTRIES
+========================================= */
+const destinations = [
+  {name:"Ghana",region:"Africa",emoji:"🇬🇭",attractions:"Accra, Cape Coast Castle and Kakum National Park"},
+  {name:"Nigeria",region:"Africa",emoji:"🇳🇬",attractions:"Lagos, Abuja and cultural attractions"},
+  {name:"South Africa",region:"Africa",emoji:"🇿🇦",attractions:"Cape Town, Table Mountain and Kruger National Park"},
+  {name:"Kenya",region:"Africa",emoji:"🇰🇪",attractions:"Nairobi, Maasai Mara and coastal beaches"},
+  {name:"Egypt",region:"Africa",emoji:"🇪🇬",attractions:"The Pyramids of Giza, Cairo and Luxor"},
+  {name:"Morocco",region:"Africa",emoji:"🇲🇦",attractions:"Marrakech, Fes and the Atlas Mountains"},
+  {name:"Ethiopia",region:"Africa",emoji:"🇪🇹",attractions:"Addis Ababa, Lalibela and historic sites"},
+  {name:"Tanzania",region:"Africa",emoji:"🇹🇿",attractions:"Zanzibar, Serengeti and Mount Kilimanjaro"},
+  {name:"Rwanda",region:"Africa",emoji:"🇷🇼",attractions:"Kigali, national parks and mountain scenery"},
+  {name:"Mauritius",region:"Africa",emoji:"🇲🇺",attractions:"Beaches, lagoons and island scenery"},
+  {name:"United Arab Emirates",region:"Middle East",emoji:"🇦🇪",attractions:"Dubai, Abu Dhabi and desert excursions"},
+  {name:"Saudi Arabia",region:"Middle East",emoji:"🇸🇦",attractions:"Riyadh, Jeddah and religious destinations"},
+  {name:"Qatar",region:"Middle East",emoji:"🇶🇦",attractions:"Doha, museums and waterfront attractions"},
+  {name:"Turkey",region:"Asia",emoji:"🇹🇷",attractions:"Istanbul, Cappadocia and historic sites"},
+  {name:"China",region:"Asia",emoji:"🇨🇳",attractions:"The Great Wall, Beijing and Shanghai"},
+  {name:"Japan",region:"Asia",emoji:"🇯🇵",attractions:"Tokyo, Kyoto and Mount Fuji"},
+  {name:"South Korea",region:"Asia",emoji:"🇰🇷",attractions:"Seoul, Busan and cultural districts"},
+  {name:"India",region:"Asia",emoji:"🇮🇳",attractions:"The Taj Mahal, Delhi and Jaipur"},
+  {name:"Singapore",region:"Asia",emoji:"🇸🇬",attractions:"Marina Bay, Gardens by the Bay and Sentosa"},
+  {name:"Malaysia",region:"Asia",emoji:"🇲🇾",attractions:"Kuala Lumpur, Penang and Langkawi"},
+  {name:"Thailand",region:"Asia",emoji:"🇹🇭",attractions:"Bangkok, Chiang Mai and island beaches"},
+  {name:"Indonesia",region:"Asia",emoji:"🇮🇩",attractions:"Bali, Jakarta and volcanic landscapes"},
+  {name:"Philippines",region:"Asia",emoji:"🇵🇭",attractions:"Manila, Palawan and island beaches"},
+  {name:"United Kingdom",region:"Europe",emoji:"🇬🇧",attractions:"London, Edinburgh and historic landmarks"},
+  {name:"France",region:"Europe",emoji:"🇫🇷",attractions:"Paris, the French Riviera and museums"},
+  {name:"Germany",region:"Europe",emoji:"🇩🇪",attractions:"Berlin, Munich and historic towns"},
+  {name:"Italy",region:"Europe",emoji:"🇮🇹",attractions:"Rome, Venice and Florence"},
+  {name:"Spain",region:"Europe",emoji:"🇪🇸",attractions:"Barcelona, Madrid and coastal cities"},
+  {name:"Netherlands",region:"Europe",emoji:"🇳🇱",attractions:"Amsterdam, canals and museums"},
+  {name:"Portugal",region:"Europe",emoji:"🇵🇹",attractions:"Lisbon, Porto and Atlantic coastlines"},
+  {name:"Switzerland",region:"Europe",emoji:"🇨🇭",attractions:"The Alps, Lucerne and scenic rail journeys"},
+  {name:"United States",region:"North America",emoji:"🇺🇸",attractions:"New York, Los Angeles and national parks"},
+  {name:"Canada",region:"North America",emoji:"🇨🇦",attractions:"Toronto, Vancouver and the Rocky Mountains"},
+  {name:"Mexico",region:"North America",emoji:"🇲🇽",attractions:"Mexico City, Cancún and historic sites"},
+  {name:"Brazil",region:"South America",emoji:"🇧🇷",attractions:"Rio de Janeiro, São Paulo and the Amazon"},
+  {name:"Argentina",region:"South America",emoji:"🇦🇷",attractions:"Buenos Aires, Patagonia and Mendoza"},
+  {name:"Chile",region:"South America",emoji:"🇨🇱",attractions:"Atacama Desert, Santiago and Patagonia"},
+  {name:"Australia",region:"Oceania",emoji:"🇦🇺",attractions:"Sydney, Melbourne and the Great Barrier Reef"},
+  {name:"New Zealand",region:"Oceania",emoji:"🇳🇿",attractions:"Queenstown, Auckland and mountain scenery"},
+  {name:"Fiji",region:"Oceania",emoji:"🇫🇯",attractions:"Island resorts, reefs and tropical beaches"}
 ];
-
-const countryGrid = document.getElementById("countryGrid");
+const destinationGrid = document.getElementById("destinationGrid");
 const countrySearch = document.getElementById("countrySearch");
 const regionFilter = document.getElementById("regionFilter");
-
-function countryImage(name) {
-    const images = {
-        "Ghana":"photo-1500530855697-b586d89ba3ee",
-        "United Kingdom":"photo-1513635269975-59663e0ac1ad",
-        "France":"photo-1502602898657-3e91760cbb34",
-        "Italy":"photo-1523906834658-6e24ef2386f9",
-        "Japan":"photo-1493976040374-85c8e12f0c0e",
-        "United States":"photo-1519501025264-65ba15a82390",
-        "Australia":"photo-1506973035872-a4ec16b8e8d9",
-        "Brazil":"photo-1483729558449-99ef09a8c325"
-    };
-
-    const selected = images[name] || "photo-1488646953014-85cb44e25828";
-
-    return "https://images.unsplash.com/" + selected +
-        "?auto=format&fit=crop&w=700&q=80";
-}
-
-function renderCountries() {
-    const search = countrySearch.value.toLowerCase().trim();
-    const region = regionFilter.value;
-
-    const filtered = countries.filter(country => {
-        const searchable =
-            country.name + " " +
-            country.region + " " +
-            country.capital + " " +
-            country.attractions;
-
-        return searchable.toLowerCase().includes(search) &&
-            (!region || country.region === region);
+const destinationCount = document.getElementById("destinationCount");
+function renderDestinations() {
+  const searchTerm = countrySearch.value.trim().toLowerCase();
+  const selectedRegion = regionFilter.value;
+  const filtered = destinations.filter(country => {
+    const matchesName = country.name.toLowerCase().includes(searchTerm);
+    const matchesRegion = selectedRegion === "all" || country.region === selectedRegion;
+    return matchesName && matchesRegion;
+  });
+  destinationGrid.innerHTML = "";
+  if (filtered.length === 0) {
+    destinationGrid.innerHTML =
+      '<div class="empty-state">No destinations match your search. Try another country or region.</div>';
+  } else {
+    filtered.forEach(country => {
+      const card = document.createElement("article");
+      card.className = "destination-card";
+      const photo = document.createElement("div");
+      photo.className = "destination-photo";
+      photo.setAttribute("aria-hidden", "true");
+      photo.textContent = country.emoji;
+      const info = document.createElement("div");
+      info.className = "destination-info";
+      const region = document.createElement("div");
+      region.className = "destination-region";
+      region.textContent = country.region;
+      const title = document.createElement("h3");
+      title.textContent = country.name;
+      const description = document.createElement("p");
+      description.textContent = country.attractions;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = "Enquire about this country →";
+      button.addEventListener("click", () => {
+        document.getElementById("destination").value = country.name;
+        document.getElementById("enquiry").scrollIntoView({behavior:"smooth"});
+      });
+      info.append(region, title, description, button);
+      card.append(photo, info);
+      destinationGrid.appendChild(card);
     });
-
-    countryGrid.innerHTML = filtered.map(country => `
-        <article class="card">
-            <img
-                src="${countryImage(country.name)}"
-                alt="${country.name}"
-                loading="lazy"
-            >
-
-            <div class="card-body">
-                <span class="tag">${country.region}</span>
-
-                <h3>${country.name}</h3>
-
-                <p><b>Capital:</b> ${country.capital}</p>
-
-                <p>${country.attractions}</p>
-
-                <button
-                    type="button"
-                    class="button button-blue"
-                    onclick="selectCountry('${country.name.replace(/'/g, "\\'")}')"
-                >
-                    Enquire about this country
-                </button>
-            </div>
-        </article>
-    `).join("");
-
-    document.getElementById("noCountries")
-        .classList.toggle("hidden", filtered.length !== 0);
+  }
+  destinationCount.textContent =
+    "Showing " + filtered.length + " of " + destinations.length + " destinations.";
 }
-
-function selectCountry(name) {
-    document.getElementById("destination").value = name;
-
-    document.getElementById("application").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-countrySearch.addEventListener("input", renderCountries);
-regionFilter.addEventListener("change", renderCountries);
-
-renderCountries();
-
-document.getElementById("destinationList").innerHTML =
-    countries.map(country =>
-        `<option value="${country.name}"></option>`
-    ).join("");
-
-const airlines = [
-    {
-        name:"Emirates",
-        description:"Dubai-based airline operating an extensive international network."
-    },
-    {
-        name:"Qatar Airways",
-        description:"International airline based in Doha, Qatar."
-    },
-    {
-        name:"Turkish Airlines",
-        description:"International airline connecting destinations through Istanbul."
-    },
-    {
-        name:"British Airways",
-        description:"UK airline serving domestic and international destinations."
-    },
-    {
-        name:"KLM",
-        description:"Netherlands-based international airline."
-    },
-    {
-        name:"Air France",
-        description:"French airline operating international passenger services."
-    },
-    {
-        name:"Lufthansa",
-        description:"German airline with a broad international network."
-    },
-    {
-        name:"Ethiopian Airlines",
-        description:"Ethiopian carrier serving African and international destinations."
-    },
-    {
-        name:"Kenya Airways",
-        description:"Kenyan airline connecting African and international destinations."
-    },
-    {
-        name:"Africa World Airlines",
-        description:"Ghanaian airline serving selected regional routes."
-    },
-    {
-        name:"United Airlines",
-        description:"US airline with domestic and international services."
-    },
-    {
-        name:"Singapore Airlines",
-        description:"Singapore-based international airline."
-    }
-];
-
-document.getElementById("airlineGrid").innerHTML = airlines.map(airline => `
-    <article class="card">
-        <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80"
-            alt="Passenger aircraft"
-            loading="lazy"
-        >
-
-        <div class="card-body">
-            <h3>${airline.name}</h3>
-            <p>${airline.description}</p>
-            <span class="tag">International travel</span>
-        </div>
-    </article>
-`).join("");
-
-const aircraft = [
-    {
-        name:"Passenger Aircraft",
-        description:"Aircraft designs and passenger capacity vary by model."
-    },
-    {
-        name:"Economy Cabin",
-        description:"Standard passenger seating with layouts that vary by airline."
-    },
-    {
-        name:"Premium Cabin",
-        description:"Selected aircraft offer premium seating and additional services."
-    },
-    {
-        name:"Airport Experience",
-        description:"Prepare your travel documents and follow airport instructions."
-    }
-];
-
-document.getElementById("aircraftGrid").innerHTML = aircraft.map(item => `
-    <article class="card">
-        <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80"
-            alt="${item.name}"
-            loading="lazy"
-        >
-
-        <div class="card-body">
-            <h3>${item.name}</h3>
-            <p>${item.description}</p>
-        </div>
-    </article>
-`).join("");
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/*
-    TRAVEL ENQUIRY EMAIL HANDLER
-
-    This is the corrected part:
-    The form prepares an email to:
-    godstimetravelandtour12@gmail.com
-
-    It does not redirect the form to WhatsApp.
-*/
-
-document.getElementById("travelForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const form = this;
-
-    if (!form.reportValidity()) {
-        return;
-    }
-
-    if (!document.getElementById("consent").checked) {
-        alert("Please confirm the consent checkbox.");
-        return;
-    }
-
-    const value = id =>
-        document.getElementById(id).value.trim();
-
-    const details = [
-        "TRAVEL ENQUIRY - GOD'S TIME TRAVEL AND TOURS",
-        "",
-        "Service: " + value("service"),
-        "Package: " + value("package"),
-        "",
-        "APPLICANT INFORMATION",
-        "Full name: " + value("fullName"),
-        "Email: " + value("email"),
-        "Phone: " + value("phone"),
-        "Nationality: " + value("nationality"),
-        "Passport status: " + value("passportStatus"),
-        "",
-        "TRAVEL INFORMATION",
-        "Destination: " + value("destination"),
-        "Destination city: " + value("city"),
-        "Departure location: " + value("departure"),
-        "Preferred airline: " + value("airlineChoice"),
-        "Cabin class: " + value("cabin"),
-        "Departure date: " + value("travelDate"),
-        "Number of travellers: " + value("travellers"),
-        "Trip type: " + value("tripType"),
-        "",
-        "PAYMENT ENQUIRY",
-        "Preferred payment method: " + value("paymentMethod"),
-        "Payment reference: " + value("paymentReference"),
-        "",
-        "Additional details: " + value("notes"),
-        "",
-        "Please confirm the service availability, total cost and official payment process."
-    ];
-
-    const subject =
-        "Travel Enquiry - " +
-        value("fullName") +
-        " - " +
-        value("destination");
-
-    const recipient = "godstimetravelandtour12@gmail.com";
-
-    const emailLink =
-        "mailto:" + recipient +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(details.join("\n"));
-
-    const message = document.getElementById("formMessage");
-
-    message.textContent =
-        "Your email application will open with your travel enquiry prepared. " +
-        "Review the details and press Send. If your email application does not " +
-        "open, contact us at godstimetravelandtour12@gmail.com. " +
-        "Any photograph or receipt selected in this form must be attached manually.";
-
-    message.classList.remove("hidden");
-
-    window.location.href = emailLink;
+countrySearch.addEventListener("input", renderDestinations);
+regionFilter.addEventListener("change", renderDestinations);
+renderDestinations();
+/* Populate destination suggestions in the enquiry form */
+const countryOptions = document.getElementById("countryOptions");
+destinations.forEach(country => {
+  const option = document.createElement("option");
+  option.value = country.name;
+  countryOptions.appendChild(option);
 });
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+mainNav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+/* =========================================
+   SERVICE LINKS PREFILL THE ENQUIRY FORM
+========================================= */
+document.querySelectorAll("[data-service]").forEach(link => {
+  link.addEventListener("click", () => {
+    const serviceField = document.getElementById("service");
+    const wantedService = link.getAttribute("data-service");
+    const optionExists = Array.from(serviceField.options).some(
+      option => option.value === wantedService || option.text === wantedService
+    );
+    if (optionExists) {
+      serviceField.value = wantedService;
+    }
+  });
+});
+/* =========================================
+   EMAIL ENQUIRY FORM
+   This prepares an email; it does not send
+   automatically, book flights or process payment.
+========================================= */
+document.getElementById("travelForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const form = this;
+  if (!form.reportValidity()) {
+    return;
+  }
+  const consent = document.getElementById("consent");
+  if (!consent.checked) {
+    alert("Please confirm the consent checkbox before continuing.");
+    return;
+  }
+  const getValue = id => {
+    const field = document.getElementById(id);
+    return field ? field.value.trim() : "";
+  };
+  const name = getValue("fullName");
+  const destination = getValue("destination");
+  const email = getValue("email");
+  const messageLines = [
+    "TRAVEL ENQUIRY — GOD'S TIME TRAVEL AND TOURS",
+    "",
+    "SERVICE INFORMATION",
+    "Service required: " + getValue("service"),
+    "Service package option: " + getValue("package"),
+    "",
+    "APPLICANT INFORMATION",
+    "Full name: " + name,
+    "Email address: " + email,
+    "Phone / WhatsApp: " + getValue("phone"),
+    "Nationality: " + (getValue("nationality") || "Not provided"),
+    "Passport status: " + (getValue("passportStatus") || "Not provided"),
+    "",
+    "TRIP INFORMATION",
+    "Destination country: " + destination,
+    "Destination city: " + (getValue("city") || "Not provided"),
+    "Departure location: " + getValue("departure"),
+    "Preferred departure date: " + (getValue("travelDate") || "Not specified"),
+    "Preferred airline: " + getValue("airlineChoice"),
+    "Preferred cabin class: " + getValue("cabin"),
+    "Number of travellers: " + getValue("travellers"),
+    "Trip type: " + getValue("tripType"),
+    "Additional details: " + (getValue("notes") || "None provided"),
+    "",
+    "PAYMENT PREFERENCE",
+    "Preferred method: " + getValue("paymentMethod"),
+    "Payment reference: " + (getValue("paymentReference") || "Not provided"),
+    "",
+    "FILE REMINDER",
+    "The applicant may have selected a photo or receipt in the website form.",
+    "Selected files are NOT attached automatically. Please request any necessary files separately or attach them manually after checking the recipient.",
+    "",
+    "Please confirm service availability, the full written cost breakdown, any additional fees and the official payment process before I make payment.",
+    "",
+    "I understand this is an enquiry and does not itself confirm a booking, payment, visa approval or service availability."
+  ];
+  const subject = "Travel Enquiry - " + name + " - " + destination;
+  const mailtoLink =
+    "mailto:godstimetravelandtour12@gmail.com" +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(messageLines.join("\n"));
+  const formMessage = document.getElementById("formMessage");
+  formMessage.textContent =
+    "Your email app should open with your travel enquiry prepared and addressed to godstimetravelandtour12@gmail.com. Review the recipient and message, then press Send. Any selected files must be attached manually.";
+  formMessage.classList.add("show");
+  /*
+    Keep the email link within normal browser limits.
+    If no email app opens, use the direct email address shown on this page.
+  */
+  window.location.href = mailtoLink;
+});
+/* Automatic current year */
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
