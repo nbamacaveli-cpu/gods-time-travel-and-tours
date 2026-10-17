@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>God's Time Travel and Tours | Travel With Confidence</title>
+<title>God's Time Travel and Tours</title>
 
-<meta name="description"
-content="God's Time Travel and Tours provides flight booking assistance, visa assistance, passport guidance and travel packages. Contact us to plan your next journey.">
+<meta name="description" content="Flight booking assistance, visa guidance, passport assistance and tour packages from God's Time Travel and Tours.">
 
 <meta name="theme-color" content="#071b36">
 
@@ -16,12 +15,12 @@ content="God's Time Travel and Tours provides flight booking assistance, visa as
     --navy: #071b36;
     --blue: #123d70;
     --gold: #e8b44c;
-    --light: #f4f7fb;
+    --light: #f3f6fb;
     --white: #ffffff;
-    --text: #1c2738;
-    --muted: #68758a;
-    --border: #dce3ed;
-    --green: #147d53;
+    --text: #182538;
+    --muted: #64748b;
+    --border: #dce4ef;
+    --green: #16834f;
 }
 
 * {
@@ -40,19 +39,12 @@ body {
     line-height: 1.6;
 }
 
-a {
-    color: inherit;
-}
-
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
     font: inherit;
 }
 
-button {
-    cursor: pointer;
+button, a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -60,135 +52,121 @@ button {
     margin: auto;
 }
 
-/* HEADER */
-
 header {
     background: var(--navy);
     color: white;
     position: sticky;
     top: 0;
-    z-index: 10;
-    box-shadow: 0 3px 15px #00000020;
+    z-index: 100;
 }
 
 .navbar {
-    min-height: 76px;
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 18px;
+    gap: 20px;
 }
 
-.brand {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--gold);
+.logo {
     text-decoration: none;
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 900;
 }
 
-.brand span {
+.logo small {
     display: block;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 3px;
     color: white;
-    font-weight: normal;
 }
 
 .nav-links {
     display: flex;
-    gap: 18px;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: white;
-    font-size: 14px;
+    text-decoration: none;
+    font-size: 13px;
 }
 
 .nav-links a:hover {
     color: var(--gold);
 }
 
-/* HERO */
-
 .hero {
-    background:
-        linear-gradient(120deg, #071b36f5, #123d70e8),
-        radial-gradient(circle at top right, #e8b44c, #071b36);
-    color: white;
     padding: 85px 0;
-}
-
-.hero-content {
-    max-width: 760px;
+    color: white;
+    background:
+        linear-gradient(115deg, #071b36f5, #123d70df),
+        url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
 }
 
 .eyebrow {
     color: var(--gold);
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
     font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: clamp(34px, 6vw, 57px);
+    font-size: clamp(35px, 6vw, 58px);
     line-height: 1.12;
+    max-width: 750px;
     margin: 18px 0;
 }
 
 .hero p {
-    color: #e4eaf3;
+    max-width: 680px;
+    color: #e5edf7;
     font-size: 17px;
-    max-width: 650px;
 }
 
 .btn {
     display: inline-block;
+    padding: 13px 19px;
     border: none;
     border-radius: 9px;
-    padding: 13px 20px;
-    font-weight: bold;
-    text-decoration: none;
+    font-weight: 800;
     text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.btn-gold {
+.gold {
     background: var(--gold);
     color: var(--navy);
 }
 
-.btn-white {
-    background: white;
-    color: var(--navy);
-}
-
-.btn-blue {
+.blue {
     background: var(--blue);
     color: white;
 }
 
-.btn-outline {
+.outline {
     border: 1px solid var(--border);
     background: white;
     color: var(--navy);
 }
 
 .hero .btn {
-    margin-top: 15px;
-    margin-right: 8px;
+    margin: 12px 8px 0 0;
 }
 
-/* SECTIONS */
-
 section {
-    padding: 65px 0;
+    padding: 60px 0;
 }
 
 .section-heading {
     text-align: center;
-    margin-bottom: 35px;
+    max-width: 750px;
+    margin: 0 auto 32px;
 }
 
 .section-heading h2 {
@@ -199,72 +177,131 @@ section {
 
 .section-heading p {
     color: var(--muted);
-    margin: 0 auto;
-    max-width: 650px;
 }
 
-/* SERVICES */
-
-.services-grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
 }
 
-.service-card {
+.card {
     background: white;
-    padding: 25px;
     border: 1px solid var(--border);
     border-radius: 14px;
-    box-shadow: 0 5px 20px #071b3608;
+    overflow: hidden;
 }
 
-.service-icon {
-    font-size: 30px;
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
 }
 
-.service-card h3 {
-    margin: 10px 0;
+.card-body {
+    padding: 22px;
+}
+
+.card h3 {
     color: var(--navy);
+    margin-top: 8px;
 }
 
-.service-card p {
+.card p, .card li {
     color: var(--muted);
     font-size: 14px;
 }
 
-/* APPLICATION */
+.tag {
+    display: inline-block;
+    background: #fff3d4;
+    color: #735000;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.destination {
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    background: white;
+}
+
+.destination img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 10px 12px;
+    background: linear-gradient(transparent, #071b36f0);
+    color: white;
+    font-weight: bold;
+}
+
+.destination.selected {
+    border-color: var(--gold);
+}
+
+.destination.selected::after {
+    content: "✓ Selected";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: bold;
+}
 
 .application-section {
     background: #eaf0f8;
 }
 
-.application-card {
-    max-width: 720px;
+.form-card {
+    max-width: 780px;
     margin: auto;
     background: white;
-    padding: clamp(20px, 5vw, 38px);
-    border-radius: 18px;
-    box-shadow: 0 12px 40px #071b3610;
+    padding: clamp(20px, 4vw, 36px);
+    border-radius: 16px;
+    box-shadow: 0 10px 35px #071b3610;
 }
 
 .progress-track {
-    width: 100%;
     height: 7px;
-    background: #e8edf4;
     border-radius: 20px;
     overflow: hidden;
-    margin: 18px 0 10px;
+    background: #e8edf4;
+    margin: 12px 0;
 }
 
 .progress-fill {
     height: 100%;
-    width: 25%;
+    width: 20%;
     background: var(--gold);
     transition: width 0.2s;
 }
 
-.step-label {
+.step-caption {
     font-size: 13px;
     color: var(--muted);
 }
@@ -284,18 +321,14 @@ section {
 }
 
 .field {
-    margin: 19px 0;
+    margin: 18px 0;
 }
 
 .field label {
     display: block;
-    margin-bottom: 7px;
-    font-weight: 700;
     font-size: 14px;
-}
-
-.required {
-    color: #b42318;
+    font-weight: 800;
+    margin-bottom: 7px;
 }
 
 .field input,
@@ -303,155 +336,216 @@ section {
 .field textarea {
     display: block;
     width: 100%;
-    min-width: 0;
     padding: 13px;
-    border: 1px solid var(--border);
+    border: 1px solid #cfd9e6;
     border-radius: 9px;
     background: white;
     color: var(--text);
-    outline: none;
+}
+
+.field textarea {
+    min-height: 100px;
+    resize: vertical;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
+    outline: 2px solid #123d7020;
     border-color: var(--blue);
-    box-shadow: 0 0 0 3px #123d7014;
 }
 
-.field textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.help-text {
+.hint {
     display: block;
     color: var(--muted);
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
-.check-label {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
+.notice {
+    background: #fff7e5;
+    border: 1px solid #efd69b;
+    color: #63490e;
+    padding: 14px;
+    border-radius: 10px;
     font-size: 13px;
-    margin: 18px 0;
+    margin: 16px 0;
 }
 
-.check-label input {
-    margin-top: 5px;
+.info {
+    background: #edf7f1;
+    border: 1px solid #c9e7d5;
+    color: #205c3f;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin: 16px 0;
 }
 
-.form-actions {
+.packages {
+    display: grid;
+    gap: 12px;
+}
+
+.package {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.package input {
+    margin-top: 6px;
+}
+
+.package strong {
+    color: var(--navy);
+}
+
+.package.selected {
+    border-color: var(--gold);
+    background: #fffbf0;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--navy);
+}
+
+.preview {
+    display: none;
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-top: 12px;
+}
+
+.file-name {
+    font-size: 12px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.actions {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 28px;
+    margin-top: 25px;
 }
 
-.form-actions button {
+.actions button,
+.actions a {
     width: 100%;
 }
 
 .review-box {
-    padding: 16px;
-    background: #f6f8fb;
+    background: #f7f9fc;
     border: 1px solid var(--border);
+    padding: 15px;
     border-radius: 10px;
     overflow-wrap: anywhere;
 }
 
-.review-item {
+.review-row {
     padding: 10px 0;
     border-bottom: 1px solid var(--border);
 }
 
-.review-item:last-child {
+.review-row:last-child {
     border-bottom: none;
 }
 
-.review-item strong {
+.review-row strong {
     display: block;
-    font-size: 12px;
     color: var(--muted);
+    font-size: 11px;
     text-transform: uppercase;
-    margin-bottom: 3px;
 }
-
-.notice {
-    padding: 14px;
-    background: #fff8e8;
-    border: 1px solid #f2dca5;
-    border-radius: 9px;
-    color: #63490e;
-    font-size: 13px;
-    margin-top: 18px;
-}
-
-/* CONTACT */
 
 .contact-box {
     background: var(--navy);
     color: white;
-    border-radius: 18px;
-    padding: 32px;
+    padding: 30px;
     text-align: center;
+    border-radius: 16px;
 }
 
 .contact-box h2 {
     color: var(--gold);
 }
 
-.contact-box p {
-    color: #e4eaf3;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.contact-links a {
+.contact-box a {
     color: white;
     text-decoration: none;
     overflow-wrap: anywhere;
 }
 
-.contact-links a:hover {
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-box a:hover {
     color: var(--gold);
 }
 
-/* FOOTER */
+.faq details {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.faq summary {
+    font-weight: bold;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.faq details p {
+    color: var(--muted);
+}
 
 footer {
-    padding: 25px 0;
     background: #041226;
-    color: #c7d1df;
+    color: #cbd5e1;
+    padding: 24px 0;
     text-align: center;
     font-size: 12px;
 }
 
-footer a {
-    color: var(--gold);
+.whatsapp-float {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 100;
+    padding: 13px 16px;
+    background: var(--green);
+    color: white;
+    border-radius: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 5px 20px #0003;
 }
 
-/* MOBILE */
-
-@media (max-width: 650px) {
+@media(max-width:700px) {
     .navbar {
         align-items: flex-start;
-        padding: 15px 0;
         flex-direction: column;
+        padding: 14px 0;
     }
 
     .nav-links {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 13px;
+        gap: 12px;
     }
 
     .nav-links a {
@@ -462,25 +556,22 @@ footer a {
         padding: 60px 0;
     }
 
-    section {
-        padding: 45px 0;
-    }
-
-    .services-grid {
+    .grid {
         grid-template-columns: 1fr;
     }
 
-    .hero .btn {
-        display: block;
-        margin-right: 0;
+    .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .application-card {
-        padding: 20px;
+    section {
+        padding: 45px 0;
     }
+}
 
-    .contact-box {
-        padding: 24px 18px;
+@media(max-width:420px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -490,14 +581,16 @@ footer a {
 
 <header>
     <div class="container navbar">
-        <a class="brand" href="#home">
+        <a class="logo" href="#home">
             GOD'S TIME TRAVEL
-            <span>AND TOURS</span>
+            <small>AND TOURS</small>
         </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
+        <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#airlines">Airlines</a>
             <a href="#apply">Apply</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -506,28 +599,22 @@ footer a {
 
 <main>
 
-<!-- HERO -->
+<!-- HOMEPAGE -->
 
 <section class="hero" id="home">
-    <div class="container hero-content">
+    <div class="container">
         <div class="eyebrow">Your journey starts here</div>
 
         <h1>Travel With Confidence. Explore More.</h1>
 
         <p>
-            Planning a trip abroad? God's Time Travel and Tours
-            helps you make a start with flight booking assistance,
-            visa application guidance, passport assistance and
-            travel planning.
+            Plan your next journey with God's Time Travel and Tours.
+            Request flight booking assistance, visa guidance,
+            passport assistance and tour planning in one place.
         </p>
 
-        <a href="#apply" class="btn btn-gold">
-            Start Your Application
-        </a>
-
-        <a href="#services" class="btn btn-white">
-            Explore Our Services
-        </a>
+        <a href="#apply" class="btn gold">Start Application</a>
+        <a href="#services" class="btn outline">Explore Services</a>
     </div>
 </section>
 
@@ -539,48 +626,264 @@ footer a {
         <div class="section-heading">
             <h2>Our Services</h2>
             <p>
-                Tell us what you need, and our team can review
-                your request and explain the next steps.
+                Read the details of each service before applying.
+                We will review your request and explain the next steps.
             </p>
         </div>
 
-        <div class="services-grid">
+        <div class="grid">
 
-            <article class="service-card">
-                <div class="service-icon">✈️</div>
-                <h3>Flight Booking Assistance</h3>
-                <p>
-                    Request assistance with flight options,
-                    travel dates, quotations and booking arrangements.
-                </p>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80"
+                     alt="Passenger aircraft">
+
+                <div class="card-body">
+                    <span class="tag">FLIGHT SERVICES</span>
+
+                    <h3>Flight Booking Assistance</h3>
+
+                    <p>
+                        Request help finding flight options for your
+                        destination, travel dates and preferred airline.
+                        We can review your enquiry and provide information
+                        about available fares, schedules and baggage
+                        conditions before you decide.
+                    </p>
+
+                    <ul>
+                        <li>Flight quotation requests.</li>
+                        <li>Airline and travel-class preferences.</li>
+                        <li>Departure and return date planning.</li>
+                        <li>Guidance on fare and baggage conditions.</li>
+                    </ul>
+
+                    <p>
+                        <strong>Important:</strong> An enquiry is not
+                        a confirmed ticket. Availability and fares
+                        must be checked before booking.
+                    </p>
+                </div>
             </article>
 
-            <article class="service-card">
-                <div class="service-icon">🌍</div>
-                <h3>Visa Assistance</h3>
-                <p>
-                    Get guidance on visa application requirements,
-                    supporting documents and application preparation.
-                    Visa approval is determined by the relevant authorities.
-                </p>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1526495124232-a04e1849168c?auto=format&fit=crop&w=1000&q=80"
+                     alt="Travel documents">
+
+                <div class="card-body">
+                    <span class="tag">VISA GUIDANCE</span>
+
+                    <h3>Visa Application Assistance</h3>
+
+                    <p>
+                        Get guidance on understanding the published
+                        requirements for your intended destination
+                        and organising the information required for
+                        a visa application.
+                    </p>
+
+                    <ul>
+                        <li>General document-checklist guidance.</li>
+                        <li>Application preparation assistance.</li>
+                        <li>Guidance on official application procedures.</li>
+                        <li>Appointment information where available.</li>
+                    </ul>
+
+                    <p>
+                        <strong>Important:</strong> Visa approval is
+                        decided by the relevant authorities.
+                        We cannot guarantee approval or control
+                        embassy processing times.
+                    </p>
+                </div>
             </article>
 
-            <article class="service-card">
-                <div class="service-icon">🛂</div>
-                <h3>Passport Assistance</h3>
-                <p>
-                    Request guidance on passport application
-                    procedures and the official requirements.
-                </p>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80"
+                     alt="Documents on a desk">
+
+                <div class="card-body">
+                    <span class="tag">PASSPORT SERVICES</span>
+
+                    <h3>Passport Assistance</h3>
+
+                    <p>
+                        Request guidance on official passport
+                        application and renewal procedures.
+                        We can help you understand which requirements
+                        to check with the appropriate government authority.
+                    </p>
+
+                    <ul>
+                        <li>General application guidance.</li>
+                        <li>Passport renewal procedure information.</li>
+                        <li>Guidance on required supporting documents.</li>
+                        <li>Information about official next steps.</li>
+                    </ul>
+
+                    <p>
+                        <strong>Important:</strong> Passports are
+                        issued by government authorities, not by
+                        our travel company.
+                    </p>
+                </div>
             </article>
 
-            <article class="service-card">
-                <div class="service-icon">🧳</div>
-                <h3>Tour Packages</h3>
-                <p>
-                    Tell us your destination, travel dates and budget
-                    so we can discuss suitable travel options.
-                </p>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
+                     alt="Mountain travel destination">
+
+                <div class="card-body">
+                    <span class="tag">TOURS AND HOLIDAYS</span>
+
+                    <h3>Tour Packages and Travel Planning</h3>
+
+                    <p>
+                        Tell us where you want to travel, your budget,
+                        preferred dates and number of travellers.
+                        We can review your request and discuss
+                        possible itineraries and travel arrangements.
+                    </p>
+
+                    <ul>
+                        <li>Destination and itinerary enquiries.</li>
+                        <li>Individual and group travel planning.</li>
+                        <li>Requests for accommodation options.</li>
+                        <li>Travel-budget and quotation discussions.</li>
+                    </ul>
+
+                    <p>
+                        Package prices, accommodation and activities
+                        must be confirmed in a written quotation.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- DESTINATIONS -->
+
+<section id="destinations" style="background:white">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Explore Destinations</h2>
+            <p>
+                Tap a destination picture to select it for your application.
+                You can also select a country and enter another city.
+            </p>
+        </div>
+
+        <div class="destination-grid">
+
+            <div class="destination"
+                 data-country="United Kingdom"
+                 data-city="London">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80"
+                     alt="London, United Kingdom">
+                <div class="destination-label">🇬🇧 United Kingdom — London</div>
+            </div>
+
+            <div class="destination"
+                 data-country="United States"
+                 data-city="New York">
+                <img src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=700&q=80"
+                     alt="New York, United States">
+                <div class="destination-label">🇺🇸 United States — New York</div>
+            </div>
+
+            <div class="destination"
+                 data-country="Canada"
+                 data-city="Toronto">
+                <img src="https://images.unsplash.com/photo-1517090504586-fde19ea6066f?auto=format&fit=crop&w=700&q=80"
+                     alt="Toronto, Canada">
+                <div class="destination-label">🇨🇦 Canada — Toronto</div>
+            </div>
+
+            <div class="destination"
+                 data-country="United Arab Emirates"
+                 data-city="Dubai">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80"
+                     alt="Dubai, United Arab Emirates">
+                <div class="destination-label">🇦🇪 UAE — Dubai</div>
+            </div>
+
+            <div class="destination"
+                 data-country="France"
+                 data-city="Paris">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80"
+                     alt="Paris, France">
+                <div class="destination-label">🇫🇷 France — Paris</div>
+            </div>
+
+            <div class="destination"
+                 data-country="South Africa"
+                 data-city="Cape Town">
+                <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=700&q=80"
+                     alt="Cape Town, South Africa">
+                <div class="destination-label">🇿🇦 South Africa — Cape Town</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AIRLINES -->
+
+<section id="airlines">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Airline Choices</h2>
+            <p>
+                Choose your preferred airline in the application form.
+                If you have no preference, we can review suitable options.
+            </p>
+        </div>
+
+        <div class="grid">
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1000&q=80"
+                     alt="Commercial passenger aircraft">
+
+                <div class="card-body">
+                    <h3>International Airlines</h3>
+
+                    <p>
+                        Applicants may express a preference for
+                        Emirates, Qatar Airways, Turkish Airlines,
+                        British Airways, KLM, Air France, Lufthansa,
+                        Ethiopian Airlines, Kenya Airways, United Airlines
+                        or Delta Air Lines.
+                    </p>
+
+                    <p>
+                        Routes, schedules, prices and baggage allowances
+                        must be confirmed for each individual enquiry.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1000&q=80"
+                     alt="Passenger aircraft at an airport">
+
+                <div class="card-body">
+                    <h3>Regional and Local Airlines</h3>
+
+                    <p>
+                        For suitable routes, applicants may request
+                        regional or domestic flight options, including
+                        Africa World Airlines where applicable.
+                    </p>
+
+                    <p>
+                        Selecting an airline does not guarantee that
+                        it operates your route or has seats available.
+                    </p>
+                </div>
             </article>
 
         </div>
@@ -595,338 +898,587 @@ footer a {
         <div class="section-heading">
             <h2>Travel Application</h2>
             <p>
-                Complete the form one step at a time.
-                All fields are arranged vertically for easy use on your phone.
+                Complete the steps below. Required information and
+                payment evidence must be provided before you can
+                prepare your application for submission.
             </p>
         </div>
 
-        <div class="application-card">
+        <div class="form-card">
 
-            <div class="step-label" id="stepLabel">
-                Step 1 of 4 — Choose a service
+            <div class="step-caption" id="stepCaption">
+                Step 1 of 5 — Service and priority
             </div>
 
             <div class="progress-track">
                 <div class="progress-fill" id="progressFill"></div>
             </div>
 
-            <form id="travelForm">
+            <form id="travelForm" novalidate>
 
                 <!-- STEP 1 -->
 
-                <div class="form-step active" data-step="0">
+                <div class="form-step active">
 
-                    <h3>What service do you need?</h3>
+                    <h3>1. Select Your Service</h3>
 
                     <div class="field">
-                        <label for="service">
-                            Select a service <span class="required">*</span>
-                        </label>
+                        <label for="service">Service required *</label>
 
-                        <select id="service" name="service" required>
+                        <select id="service" required>
                             <option value="">Choose a service</option>
                             <option>Flight Booking Assistance</option>
-                            <option>Visa Assistance</option>
+                            <option>Visa Application Assistance</option>
                             <option>Passport Assistance</option>
-                            <option>Tour Package</option>
-                            <option>Other Travel Service</option>
+                            <option>Tour Package / Travel Planning</option>
+                            <option>Travel Consultation</option>
                         </select>
                     </div>
 
-                    <div class="field">
-                        <label for="urgency">When do you need the service?</label>
+                    <div class="notice">
+                        <strong>Application processing priority</strong><br><br>
 
-                        <select id="urgency" name="urgency" required>
-                            <option value="">Select a timeframe</option>
+                        The amount you pay determines the internal
+                        processing priority assigned to your application.
+
+                        Higher-priced packages receive higher priority
+                        within our company's processing queue, subject
+                        to workload, complete documents and availability.
+
+                        This does not control the processing times of
+                        embassies, governments, airlines or other
+                        independent organisations.
+                    </div>
+
+                    <div class="packages">
+
+                        <label class="package">
+                            <input type="radio"
+                                   name="package"
+                                   value="200"
+                                   required>
+
+                            <span>
+                                <strong>Basic Priority</strong><br>
+                                Standard internal processing queue.<br>
+                                <span class="price">GH₵200</span>
+                            </span>
+                        </label>
+
+                        <label class="package">
+                            <input type="radio"
+                                   name="package"
+                                   value="350"
+                                   required>
+
+                            <span>
+                                <strong>Standard Priority</strong><br>
+                                Higher internal priority than Basic.<br>
+                                <span class="price">GH₵350</span>
+                            </span>
+                        </label>
+
+                        <label class="package">
+                            <input type="radio"
+                                   name="package"
+                                   value="500"
+                                   required>
+
+                            <span>
+                                <strong>Priority Processing</strong><br>
+                                Highest internal priority in these packages.<br>
+                                <span class="price">GH₵500</span>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <span class="hint">
+                        These are proposed company service fees.
+                        They must be approved by the business before
+                        publishing. They are separate from airline fares,
+                        government charges, visa fees and other third-party
+                        costs. The package must describe services the
+                        company can genuinely provide.
+                    </span>
+
+                    <div class="field">
+                        <label for="urgency">When do you need the service? *</label>
+
+                        <select id="urgency" required>
+                            <option value="">Choose timeframe</option>
                             <option>As soon as possible</option>
-                            <option>Within 1 month</option>
-                            <option>Within 3 months</option>
-                            <option>Within 6 months</option>
-                            <option>More than 6 months from now</option>
+                            <option>Within one month</option>
+                            <option>Within three months</option>
+                            <option>Within six months</option>
+                            <option>More than six months from now</option>
                             <option>Not sure yet</option>
                         </select>
                     </div>
 
-                    <div class="field">
-                        <label for="budget">Estimated budget (GHS)</label>
-
-                        <select id="budget" name="budget">
-                            <option value="">Select if known</option>
-                            <option>Below GHS 1,000</option>
-                            <option>GHS 1,000–2,999</option>
-                            <option>GHS 3,000–5,999</option>
-                            <option>GHS 6,000–9,999</option>
-                            <option>GHS 10,000 or more</option>
-                            <option>Need a quotation first</option>
-                        </select>
-                    </div>
-
-                    <div class="form-actions">
+                    <div class="actions">
                         <button type="button"
-                                class="btn btn-blue"
+                                class="btn blue"
                                 onclick="nextStep()">
                             Continue
                         </button>
                     </div>
+
                 </div>
 
                 <!-- STEP 2 -->
 
-                <div class="form-step" data-step="1">
+                <div class="form-step">
 
-                    <h3>Your contact information</h3>
+                    <h3>2. Applicant Information</h3>
 
                     <div class="field">
-                        <label for="fullName">
-                            Full name <span class="required">*</span>
-                        </label>
+                        <label for="profilePhoto">Profile picture *</label>
+
+                        <input type="file"
+                               id="profilePhoto"
+                               accept="image/jpeg,image/png,image/webp"
+                               required>
+
+                        <span class="hint">
+                            JPG, PNG or WEBP. Maximum size: 3 MB.
+                            Select a clear picture from your phone.
+                        </span>
+
+                        <img id="profilePreview"
+                             class="preview"
+                             alt="Profile picture preview">
+
+                        <div class="file-name" id="profileName"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="fullName">Full name *</label>
                         <input type="text"
                                id="fullName"
-                               name="fullName"
                                autocomplete="name"
-                               required
                                maxlength="100"
+                               required
                                placeholder="Enter your full name">
                     </div>
 
                     <div class="field">
-                        <label for="email">
-                            Email address <span class="required">*</span>
-                        </label>
+                        <label for="email">Email address *</label>
                         <input type="email"
                                id="email"
-                               name="email"
                                autocomplete="email"
-                               required
                                maxlength="150"
+                               required
                                placeholder="you@example.com">
                     </div>
 
                     <div class="field">
-                        <label for="phone">
-                            Phone / WhatsApp number <span class="required">*</span>
-                        </label>
+                        <label for="phone">Phone / WhatsApp number *</label>
                         <input type="tel"
                                id="phone"
-                               name="phone"
                                autocomplete="tel"
-                               required
                                maxlength="30"
+                               required
                                placeholder="e.g. 0240000000">
                     </div>
 
                     <div class="field">
-                        <label for="country">Country of residence</label>
-                        <input type="text"
-                               id="country"
-                               name="country"
-                               maxlength="80"
-                               placeholder="e.g. Ghana">
+                        <label for="residence">Country of residence *</label>
+
+                        <select id="residence" required>
+                            <option value="">Choose country</option>
+                            <option>Ghana</option>
+                            <option>Nigeria</option>
+                            <option>United Kingdom</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>Other</option>
+                        </select>
                     </div>
 
-                    <div class="form-actions">
+                    <div class="actions">
                         <button type="button"
-                                class="btn btn-outline"
+                                class="btn outline"
                                 onclick="previousStep()">
                             Back
                         </button>
 
                         <button type="button"
-                                class="btn btn-blue"
+                                class="btn blue"
                                 onclick="nextStep()">
                             Continue
                         </button>
                     </div>
+
                 </div>
 
                 <!-- STEP 3 -->
 
-                <div class="form-step" data-step="2">
+                <div class="form-step">
 
-                    <h3>Your travel information</h3>
+                    <h3>3. Travel Details</h3>
 
                     <div class="field">
-                        <label for="destination">
-                            Destination / country
-                            <span class="required">*</span>
+                        <label for="destinationCountry">
+                            Destination country *
                         </label>
-                        <input type="text"
-                               id="destination"
-                               name="destination"
-                               required
-                               maxlength="100"
-                               placeholder="Where do you want to go?">
+
+                        <select id="destinationCountry" required>
+                            <option value="">Choose destination</option>
+                            <option>Ghana</option>
+                            <option>Nigeria</option>
+                            <option>United Kingdom</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>United Arab Emirates</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                            <option>Italy</option>
+                            <option>South Africa</option>
+                            <option>Kenya</option>
+                            <option>China</option>
+                            <option>India</option>
+                            <option>Other / not listed</option>
+                        </select>
                     </div>
 
                     <div class="field">
-                        <label for="departure">Departure city / country</label>
+                        <label for="destinationCity">Destination city *</label>
+
+                        <input type="text"
+                               id="destinationCity"
+                               maxlength="100"
+                               required
+                               placeholder="e.g. London, Dubai or Toronto">
+                    </div>
+
+                    <div class="field">
+                        <label for="departure">Departure city / airport</label>
+
                         <input type="text"
                                id="departure"
-                               name="departure"
                                maxlength="100"
                                placeholder="e.g. Accra, Ghana">
                     </div>
 
                     <div class="field">
-                        <label for="travelDate">Preferred travel date</label>
-                        <input type="date"
-                               id="travelDate"
-                               name="travelDate">
+                        <label for="airline">Preferred airline</label>
+
+                        <select id="airline">
+                            <option>No preference — recommend an airline</option>
+                            <option>Emirates</option>
+                            <option>Qatar Airways</option>
+                            <option>Turkish Airlines</option>
+                            <option>British Airways</option>
+                            <option>KLM</option>
+                            <option>Air France</option>
+                            <option>Lufthansa</option>
+                            <option>Ethiopian Airlines</option>
+                            <option>Kenya Airways</option>
+                            <option>Africa World Airlines</option>
+                            <option>United Airlines</option>
+                            <option>Delta Air Lines</option>
+                            <option>Other / advise me</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="travelClass">Preferred travel class</label>
+
+                        <select id="travelClass">
+                            <option>Economy</option>
+                            <option>Premium Economy</option>
+                            <option>Business Class</option>
+                            <option>First Class</option>
+                            <option>Not sure</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="travelDate">Departure date</label>
+                        <input type="date" id="travelDate">
                     </div>
 
                     <div class="field">
                         <label for="returnDate">Return date, if applicable</label>
-                        <input type="date"
-                               id="returnDate"
-                               name="returnDate">
+                        <input type="date" id="returnDate">
                     </div>
 
                     <div class="field">
                         <label for="travellers">Number of travellers</label>
-                        <select id="travellers" name="travellers">
-                            <option value="1">1 traveller</option>
-                            <option value="2">2 travellers</option>
-                            <option value="3">3 travellers</option>
-                            <option value="4">4 travellers</option>
-                            <option value="5">5 travellers</option>
-                            <option value="6 or more">6 or more travellers</option>
+
+                        <select id="travellers">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6 or more</option>
                         </select>
                     </div>
 
                     <div class="field">
-                        <label for="paymentMethod">
-                            Preferred payment method
-                            <span class="required">*</span>
-                        </label>
-
-                        <select id="paymentMethod"
-                                name="paymentMethod"
-                                required>
-
-                            <option value="">Choose a payment method</option>
-
-                            <option value="Hubtel">
-                                Hubtel — Online payment (preferred)
-                            </option>
-
-                            <option value="MTN MoMo">
-                                MTN Mobile Money
-                            </option>
-
-                            <option value="Telecel Cash">
-                                Telecel Cash
-                            </option>
-
-                            <option value="AT Money">
-                                AT Money, where available
-                            </option>
-
-                            <option value="Bank Transfer">
-                                Bank transfer
-                            </option>
-
-                            <option value="Pay After Review">
-                                Pay after application review
-                            </option>
-                        </select>
-
-                        <span class="help-text">
-                            Alternative payment instructions will be provided
-                            after your request is reviewed. Do not send a
-                            MoMo PIN or banking password.
-                        </span>
-                    </div>
-
-                    <div class="field">
-                        <label for="notes">
-                            Additional information
-                        </label>
+                        <label for="notes">Additional information</label>
 
                         <textarea id="notes"
-                                  name="notes"
                                   maxlength="1000"
-                                  placeholder="Tell us anything else we should know. Do not enter passport numbers or payment passwords here."></textarea>
+                                  placeholder="Explain any additional requirements. Do not enter passwords or MoMo PINs."></textarea>
                     </div>
 
-                    <label class="check-label">
-                        <input type="checkbox"
-                               id="consent"
-                               name="consent"
-                               required>
-
-                        <span>
-                            I confirm that the information I provided is
-                            accurate, and I agree to be contacted about this
-                            travel request.
-                            <span class="required">*</span>
-                        </span>
-                    </label>
-
-                    <div class="form-actions">
+                    <div class="actions">
                         <button type="button"
-                                class="btn btn-outline"
+                                class="btn outline"
                                 onclick="previousStep()">
                             Back
                         </button>
 
                         <button type="button"
-                                class="btn btn-blue"
-                                onclick="showReview()">
-                            Review Application
+                                class="btn blue"
+                                onclick="nextStep()">
+                            Continue
                         </button>
                     </div>
+
                 </div>
 
                 <!-- STEP 4 -->
 
-                <div class="form-step" data-step="3">
+                <div class="form-step">
 
-                    <h3>Review your application</h3>
+                    <h3>4. Payment and Receipt</h3>
+
+                    <div class="notice">
+                        <strong>Before paying:</strong>
+
+                        Your selected package determines your company's
+                        internal processing priority. It does not guarantee
+                        a visa, flight ticket, appointment or decision
+                        from an external authority.
+
+                        The package price is a company service fee,
+                        separate from any government, embassy or airline
+                        charges. Check the applicable terms before payment.
+                    </div>
+
+                    <div class="field">
+                        <label for="feeDisplay">Selected service fee</label>
+
+                        <input type="text"
+                               id="feeDisplay"
+                               readonly
+                               value="Select a package in Step 1">
+                    </div>
+
+                    <div class="field">
+                        <label for="paymentMethod">Payment method *</label>
+
+                        <select id="paymentMethod" required>
+                            <option value="">Choose payment method</option>
+                            <option>Hubtel — online checkout</option>
+                            <option>MTN Mobile Money — manual payment</option>
+                            <option>Telecel Cash — manual payment</option>
+                            <option>AT Money — where available</option>
+                            <option>Bank transfer</option>
+                        </select>
+
+                        <span class="hint">
+                            Hubtel requires an approved checkout link or
+                            secure integration. Alternative payment methods
+                            require confirmed business payment details.
+                            Do not send money to an unverified number.
+                        </span>
+                    </div>
+
+                    <div class="info">
+                        <strong>Payment verification:</strong>
+
+                        Your application remains pending until the business
+                        confirms that payment has been received.
+                        A receipt screenshot or reference number alone
+                        does not prove that funds were received.
+                    </div>
+
+                    <div class="field">
+                        <label for="transactionReference">
+                            Transaction reference or receipt text
+                        </label>
+
+                        <input type="text"
+                               id="transactionReference"
+                               maxlength="150"
+                               placeholder="Enter transaction ID or receipt details">
+                    </div>
+
+                    <div class="field">
+                        <label for="receiptFile">
+                            Upload receipt image or PDF
+                        </label>
+
+                        <input type="file"
+                               id="receiptFile"
+                               accept="image/jpeg,image/png,image/webp,application/pdf">
+
+                        <span class="hint">
+                            JPG, PNG, WEBP or PDF. Maximum size: 5 MB.
+                            Upload the receipt image or PDF, or provide
+                            receipt details in the text field above.
+                        </span>
+
+                        <img id="receiptPreview"
+                             class="preview"
+                             alt="Receipt preview">
+
+                        <div class="file-name" id="receiptName"></div>
+                    </div>
+
+                    <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:18px 0">
+                        <input type="checkbox"
+                               id="paymentAcknowledgement"
+                               required
+                               style="margin-top:5px">
+
+                        <span>
+                            I understand the selected fee, the processing
+                            priority terms and the payment verification
+                            requirements. *
+                        </span>
+                    </label>
+
+                    <div class="notice">
+                        <strong>Important technical limitation:</strong>
+
+                        On this GitHub Pages version, the selected receipt
+                        is not automatically uploaded to a secure server.
+                        You must attach the file manually after WhatsApp
+                        opens. Secure automatic uploads and payment
+                        verification require a backend.
+                    </div>
+
+                    <div class="actions">
+                        <button type="button"
+                                class="btn outline"
+                                onclick="previousStep()">
+                            Back
+                        </button>
+
+                        <button type="button"
+                                class="btn blue"
+                                onclick="showReview()">
+                            Review Application
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- STEP 5 -->
+
+                <div class="form-step">
+
+                    <h3>5. Review Your Application</h3>
 
                     <p>
-                        Check your information carefully before sending
-                        your request to our WhatsApp business contact.
+                        Check your details carefully before preparing
+                        your application message.
                     </p>
 
                     <div class="review-box" id="reviewBox"></div>
 
                     <div class="notice">
-                        <strong>Payment notice:</strong>
-                        Submitting this form does not make a payment or
-                        confirm a flight, visa, passport or tour booking.
-                        We will review your request and explain the next steps.
-                        Visa decisions are made by the relevant authorities.
+                        <strong>Before submission:</strong>
+
+                        WhatsApp will open with your application details.
+                        You must attach your profile picture and payment
+                        receipt manually, then press Send.
+
+                        This website does not create a database record,
+                        automatically verify payment or issue an official
+                        application reference number.
                     </div>
 
-                    <div class="form-actions">
+                    <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:18px 0">
+                        <input type="checkbox"
+                               id="privacyConsent"
+                               required
+                               style="margin-top:5px">
+
+                        <span>
+                            I agree that God's Time Travel and Tours may
+                            use my submitted information to respond to
+                            my travel enquiry. *
+                        </span>
+                    </label>
+
+                    <div class="actions">
                         <button type="button"
-                                class="btn btn-outline"
+                                class="btn outline"
                                 onclick="previousStep()">
                             Edit Application
                         </button>
 
                         <button type="submit"
-                                class="btn btn-blue">
-                            Send Application on WhatsApp
+                                class="btn blue">
+                            Prepare Application in WhatsApp
                         </button>
 
-                        <a class="btn btn-outline"
+                        <a class="btn outline"
                            id="emailFallback"
-                           href="mailto:godstimetravelandtour@gmail.com">
-                            Use Email Instead
+                           href="mailto:godstimetravelandtour12@gmail.com">
+                            Prepare Email Instead
                         </a>
                     </div>
+
                 </div>
 
             </form>
-
-            <p class="help-text" style="margin-top:24px;">
-                Your application is sent through WhatsApp or your email app.
-                Do not close the form until you have checked that your
-                message is ready to send.
-            </p>
-
         </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Frequently Asked Questions</h2>
+            <p>Important information for applicants.</p>
+        </div>
+
+        <details>
+            <summary>Does paying GH₵500 guarantee a visa?</summary>
+            <p>
+                No. The amount determines the internal processing
+                priority offered by the company. Visa decisions are
+                made by the relevant authorities.
+            </p>
+        </details>
+
+        <details>
+            <summary>Does submitting a receipt confirm payment?</summary>
+            <p>
+                No. The company must verify that the payment was
+                received before marking the application as paid.
+            </p>
+        </details>
+
+        <details>
+            <summary>Are the package fees government charges?</summary>
+            <p>
+                No. The displayed prices are proposed company service
+                fees. Airline fares, government fees, embassy charges
+                and other third-party costs are separate.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can I select an airline and destination?</summary>
+            <p>
+                Yes. You can select a destination and express an
+                airline preference. Routes, schedules and fares
+                must be confirmed before booking.
+            </p>
+        </details>
+
     </div>
 </section>
 
@@ -939,12 +1491,11 @@ footer a {
             <h2>Ready to Plan Your Next Trip?</h2>
 
             <p>
-                Contact God's Time Travel and Tours to discuss
-                your travel needs and request a quotation.
+                Contact God's Time Travel and Tours for questions
+                about services, application fees and payment verification.
             </p>
 
             <div class="contact-links">
-
                 <a href="https://wa.me/233241226239"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -955,22 +1506,23 @@ footer a {
                     Call: 0241226239
                 </a>
 
-                <a href="mailto:godstimetravelandtour@gmail.com">
-                    Email: godstimetravelandtour@gmail.com
+                <a href="mailto:godstimetravelandtour12@gmail.com">
+                    godstimetravelandtour12@gmail.com
                 </a>
-
             </div>
-
-            <p class="help-text" style="color:#d8e0eb; margin-top:25px;">
-                Please verify the contact details before publishing
-                the website to customers.
-            </p>
         </div>
 
     </div>
 </section>
 
 </main>
+
+<a class="whatsapp-float"
+   href="https://wa.me/233241226239"
+   target="_blank"
+   rel="noopener noreferrer">
+    WhatsApp Support
+</a>
 
 <footer>
     <div class="container">
@@ -980,26 +1532,23 @@ footer a {
         </p>
 
         <p>
-            Travel assistance and application guidance.
-            Services are subject to review, availability and applicable rules.
+            Travel assistance only. Service availability and external
+            decisions must be confirmed.
         </p>
     </div>
 </footer>
 
 <script>
 const form = document.getElementById("travelForm");
-const steps = Array.from(document.querySelectorAll(".form-step"));
-const stepLabel = document.getElementById("stepLabel");
-const progressFill = document.getElementById("progressFill");
-const reviewBox = document.getElementById("reviewBox");
-const emailFallback = document.getElementById("emailFallback");
+const steps = [...document.querySelectorAll(".form-step")];
 
 let currentStep = 0;
 
 const stepNames = [
-    "Choose a service",
-    "Contact information",
-    "Travel and payment details",
+    "Service and priority",
+    "Applicant information",
+    "Travel details",
+    "Payment and receipt",
     "Review and submit"
 ];
 
@@ -1011,11 +1560,15 @@ function updateStep() {
         step.classList.toggle("active", index === currentStep);
     });
 
-    stepLabel.textContent =
+    document.getElementById("stepCaption").textContent =
         `Step ${currentStep + 1} of ${steps.length} — ${stepNames[currentStep]}`;
 
-    progressFill.style.width =
+    document.getElementById("progressFill").style.width =
         `${((currentStep + 1) / steps.length) * 100}%`;
+
+    if (currentStep === 3) {
+        updateFee();
+    }
 
     document.getElementById("apply").scrollIntoView({
         behavior: "smooth",
@@ -1023,13 +1576,18 @@ function updateStep() {
     });
 }
 
-function validateCurrentStep() {
-    const activeStep = steps[currentStep];
-    const fields = Array.from(
-        activeStep.querySelectorAll("input, select, textarea")
-    );
+function validateStep() {
+    const active = steps[currentStep];
 
-    for (const field of fields) {
+    for (const field of active.querySelectorAll(
+        "input, select, textarea"
+    )) {
+        if (field.type === "file" && field.files.length) {
+            if (!validateFile(field)) {
+                return false;
+            }
+        }
+
         if (!field.checkValidity()) {
             field.reportValidity();
             field.focus();
@@ -1037,13 +1595,33 @@ function validateCurrentStep() {
         }
     }
 
-    if (currentStep === 2) {
-        const travelDate = document.getElementById("travelDate").value;
-        const returnDate = document.getElementById("returnDate").value;
+    if (currentStep === 0 && !getFee()) {
+        alert("Please select an application package.");
+        return false;
+    }
 
-        if (travelDate && returnDate && returnDate < travelDate) {
-            alert("The return date cannot be earlier than the travel date.");
-            document.getElementById("returnDate").focus();
+    if (currentStep === 2) {
+        const departure =
+            document.getElementById("travelDate").value;
+
+        const returning =
+            document.getElementById("returnDate").value;
+
+        if (departure && returning && returning < departure) {
+            alert("The return date cannot be earlier than the departure date.");
+            return false;
+        }
+    }
+
+    if (currentStep === 3) {
+        const reference =
+            document.getElementById("transactionReference").value.trim();
+
+        const receipt =
+            document.getElementById("receiptFile").files[0];
+
+        if (!reference && !receipt) {
+            alert("Enter receipt details or upload a receipt image/PDF.");
             return false;
         }
     }
@@ -1052,7 +1630,7 @@ function validateCurrentStep() {
 }
 
 function nextStep() {
-    if (!validateCurrentStep()) return;
+    if (!validateStep()) return;
 
     if (currentStep < steps.length - 1) {
         currentStep++;
@@ -1067,13 +1645,201 @@ function previousStep() {
     }
 }
 
-function getValue(id) {
-    const element = document.getElementById(id);
-    return element.value.trim() || "Not provided";
+function getFee() {
+    const selected = document.querySelector(
+        'input[name="package"]:checked'
+    );
+
+    return selected ? selected.value : "";
 }
 
-function safeText(value) {
-    return String(value).replace(/[&<>"']/g, character => ({
+function updateFee() {
+    const fee = getFee();
+
+    document.getElementById("feeDisplay").value =
+        fee ? "GH₵" + Number(fee).toFixed(2) :
+        "Select a package in Step 1";
+}
+
+document.querySelectorAll('input[name="package"]').forEach(input => {
+    input.addEventListener("change", () => {
+        document.querySelectorAll(".package").forEach(packageLabel => {
+            packageLabel.classList.remove("selected");
+        });
+
+        input.closest(".package").classList.add("selected");
+
+        updateFee();
+    });
+});
+
+function validateFile(input) {
+    const file = input.files && input.files[0];
+
+    if (!file) return true;
+
+    const isProfile = input.id === "profilePhoto";
+
+    const maxSize = isProfile
+        ? 3 * 1024 * 1024
+        : 5 * 1024 * 1024;
+
+    const allowedTypes = isProfile
+        ? ["image/jpeg", "image/png", "image/webp"]
+        : [
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "application/pdf"
+        ];
+
+    if (!allowedTypes.includes(file.type)) {
+        alert(isProfile
+            ? "Profile picture must be JPG, PNG or WEBP."
+            : "Receipt must be JPG, PNG, WEBP or PDF.");
+
+        input.value = "";
+        return false;
+    }
+
+    if (file.size > maxSize) {
+        alert(isProfile
+            ? "Profile picture must be 3 MB or smaller."
+            : "Receipt must be 5 MB or smaller.");
+
+        input.value = "";
+        return false;
+    }
+
+    return true;
+}
+
+document.getElementById("profilePhoto").addEventListener(
+    "change",
+    function () {
+        const file = this.files[0];
+
+        const preview = document.getElementById("profilePreview");
+
+        if (!file) {
+            preview.style.display = "none";
+            document.getElementById("profileName").textContent = "";
+            return;
+        }
+
+        if (!validateFile(this)) return;
+
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+
+        document.getElementById("profileName").textContent =
+            "Selected: " + file.name;
+    }
+);
+
+document.getElementById("receiptFile").addEventListener(
+    "change",
+    function () {
+        const file = this.files[0];
+
+        const preview = document.getElementById("receiptPreview");
+
+        if (!file) {
+            preview.style.display = "none";
+            document.getElementById("receiptName").textContent = "";
+            return;
+        }
+
+        if (!validateFile(this)) return;
+
+        document.getElementById("receiptName").textContent =
+            "Selected: " + file.name;
+
+        if (file.type.startsWith("image/")) {
+            preview.src = URL.createObjectURL(file);
+            preview.style.display = "block";
+        } else {
+            preview.style.display = "none";
+        }
+    }
+);
+
+/* Destination pictures prefill the form. */
+
+document.querySelectorAll(".destination").forEach(card => {
+    card.addEventListener("click", () => {
+        document.querySelectorAll(".destination").forEach(item => {
+            item.classList.remove("selected");
+        });
+
+        card.classList.add("selected");
+
+        document.getElementById("destinationCountry").value =
+            card.dataset.country;
+
+        document.getElementById("destinationCity").value =
+            card.dataset.city;
+
+        document.getElementById("apply").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+function value(id) {
+    const field = document.getElementById(id);
+
+    return field.value.trim() || "Not provided";
+}
+
+function buildMessage() {
+    return [
+        "GOD'S TIME TRAVEL AND TOURS",
+        "NEW TRAVEL APPLICATION",
+        "",
+        "Service: " + value("service"),
+        "Package fee: GH₵" + getFee(),
+        "Processing priority: " +
+            (getFee() === "200" ? "Basic" :
+             getFee() === "350" ? "Standard" :
+             "Priority"),
+        "Applicant: " + value("fullName"),
+        "Email: " + value("email"),
+        "Phone: " + value("phone"),
+        "Residence: " + value("residence"),
+        "",
+        "DESTINATION",
+        value("destinationCity") + ", " +
+            value("destinationCountry"),
+        "Departure: " + value("departure"),
+        "Preferred airline: " + value("airline"),
+        "Travel class: " + value("travelClass"),
+        "Departure date: " + value("travelDate"),
+        "Return date: " + value("returnDate"),
+        "Travellers: " + value("travellers"),
+        "Timeframe: " + value("urgency"),
+        "",
+        "PAYMENT",
+        "Payment method: " + value("paymentMethod"),
+        "Transaction reference: " +
+            value("transactionReference"),
+        "Receipt file: " +
+            (document.getElementById("receiptFile").files[0]?.name ||
+             "No file uploaded"),
+        "Profile picture: " +
+            (document.getElementById("profilePhoto").files[0]?.name ||
+             "No file uploaded"),
+        "",
+        "Additional information: " + value("notes"),
+        "",
+        "NOTE: Payment must be verified by the business.",
+        "The applicant must attach the selected profile picture",
+        "and receipt manually before sending this WhatsApp message."
+    ].join("\n");
+}
+
+function escapeHTML(text) {
+    return String(text).replace(/[&<>"']/g, character => ({
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
@@ -1082,107 +1848,105 @@ function safeText(value) {
     })[character]);
 }
 
-function reviewItem(label, value) {
-    return `
-        <div class="review-item">
-            <strong>${safeText(label)}</strong>
-            <div>${safeText(value)}</div>
-        </div>
-    `;
-}
-
-function buildApplicationMessage() {
-    return [
-        "GOD'S TIME TRAVEL AND TOURS — NEW APPLICATION",
-        "",
-        "SERVICE: " + getValue("service"),
-        "TIMEFRAME: " + getValue("urgency"),
-        "BUDGET: " + getValue("budget"),
-        "",
-        "CUSTOMER DETAILS",
-        "Full name: " + getValue("fullName"),
-        "Email: " + getValue("email"),
-        "Phone: " + getValue("phone"),
-        "Country: " + getValue("country"),
-        "",
-        "TRAVEL DETAILS",
-        "Destination: " + getValue("destination"),
-        "Departure: " + getValue("departure"),
-        "Travel date: " + getValue("travelDate"),
-        "Return date: " + getValue("returnDate"),
-        "Travellers: " + getValue("travellers"),
-        "",
-        "PREFERRED PAYMENT METHOD: " + getValue("paymentMethod"),
-        "",
-        "ADDITIONAL INFORMATION",
-        getValue("notes"),
-        "",
-        "The customer understands that this is an application request,",
-        "not a confirmed booking or verified payment."
-    ].join("\n");
-}
-
 function showReview() {
-    if (!validateCurrentStep()) return;
+    if (!validateStep()) return;
 
-    const fields = [
-        ["Service", "service"],
-        ["Timeframe", "urgency"],
-        ["Estimated budget", "budget"],
-        ["Full name", "fullName"],
-        ["Email", "email"],
-        ["Phone / WhatsApp", "phone"],
-        ["Country of residence", "country"],
-        ["Destination", "destination"],
-        ["Departure location", "departure"],
-        ["Travel date", "travelDate"],
-        ["Return date", "returnDate"],
-        ["Number of travellers", "travellers"],
-        ["Preferred payment method", "paymentMethod"],
-        ["Additional information", "notes"]
+    const fee = getFee();
+
+    const packageName =
+        fee === "200" ? "Basic Priority" :
+        fee === "350" ? "Standard Priority" :
+        "Priority Processing";
+
+    const items = [
+        ["Service", value("service")],
+        ["Package", packageName + " — GH₵" + fee],
+        ["Applicant", value("fullName")],
+        ["Email", value("email")],
+        ["Phone", value("phone")],
+        ["Residence", value("residence")],
+        ["Destination", value("destinationCity") +
+            ", " + value("destinationCountry")],
+        ["Departure", value("departure")],
+        ["Preferred airline", value("airline")],
+        ["Travel class", value("travelClass")],
+        ["Departure date", value("travelDate")],
+        ["Return date", value("returnDate")],
+        ["Travellers", value("travellers")],
+        ["Payment method", value("paymentMethod")],
+        ["Transaction reference", value("transactionReference")],
+        ["Receipt file", document.getElementById("receiptFile")
+            .files[0]?.name || "No file uploaded"],
+        ["Profile picture", document.getElementById("profilePhoto")
+            .files[0]?.name || "No file uploaded"],
+        ["Additional information", value("notes")]
     ];
 
-    reviewBox.innerHTML = fields.map(([label, id]) =>
-        reviewItem(label, getValue(id))
-    ).join("");
+    document.getElementById("reviewBox").innerHTML =
+        items.map(([label, detail]) => `
+            <div class="review-row">
+                <strong>${escapeHTML(label)}</strong>
+                ${escapeHTML(detail)}
+            </div>
+        `).join("");
 
-    const message = buildApplicationMessage();
-
-    emailFallback.href =
-        "mailto:godstimetravelandtour@gmail.com" +
+    document.getElementById("emailFallback").href =
+        "mailto:godstimetravelandtour12@gmail.com" +
         "?subject=" +
-        encodeURIComponent("New Travel Application") +
+        encodeURIComponent("Travel Application") +
         "&body=" +
-        encodeURIComponent(message);
+        encodeURIComponent(
+            buildMessage() +
+            "\n\nPlease attach your profile picture and payment receipt."
+        );
 
-    currentStep = 3;
+    currentStep = 4;
     updateStep();
 }
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (!validateCurrentStep()) return;
+    if (!document.getElementById("privacyConsent").checked) {
+        alert("Please accept the privacy notice before continuing.");
+        return;
+    }
 
-    const message = buildApplicationMessage();
+    const profile =
+        document.getElementById("profilePhoto").files[0];
 
-    /*
-      This opens WhatsApp with the application details.
-      The customer must press Send in WhatsApp.
+    const receipt =
+        document.getElementById("receiptFile").files[0];
 
-      IMPORTANT:
-      This does not process payments or confirm bookings.
-      Connect an approved Hubtel checkout/backend separately
-      before advertising online payments as operational.
-    */
+    const reference =
+        document.getElementById("transactionReference").value.trim();
 
-    const whatsappNumber = "233241226239";
+    if (!profile) {
+        alert("Please select a profile picture.");
+        currentStep = 1;
+        updateStep();
+        return;
+    }
+
+    if (!receipt && !reference) {
+        alert("Provide receipt details or upload a receipt file.");
+        currentStep = 3;
+        updateStep();
+        return;
+    }
+
+    const message = buildMessage();
 
     const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
+        "https://wa.me/233241226239?text=" +
         encodeURIComponent(message);
+
+    alert(
+        "WhatsApp will open with your application details. " +
+        "Attach your profile picture and payment receipt manually, " +
+        "then press Send. Your application has not been submitted " +
+        "until you send the message. Payment must be verified."
+    );
 
     window.open(whatsappURL, "_blank", "noopener,noreferrer");
 });
