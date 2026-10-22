@@ -1819,7 +1819,43 @@ renderCountries();
 renderAirlines();
 renderAircraft();
 attachImageFallbacks(document);
-
+<!-- WHATSAPP FLOATING BUTTON -->
+<span class="whatsapp-icon">☏</span>
+<span>Chat with us</span>
+</a>
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: #25D366;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.whatsapp-float:hover {
+    background: #128C7E;
+}
+.whatsapp-icon {
+    font-size: 26px;
+}
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 16px;
+    }
+}
+</style>
 </script>
 </body>
 </html>
