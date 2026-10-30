@@ -1,1861 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071a33">
-<meta name="description" content="Explore countries, discover tourist attractions, learn about cultures, explore hotels and airlines, and plan your next journey with God's Time Travel and Tours.">
-<title>God's Time Travel and Tours | Discover the World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root {
-  --navy:#071a33;
-  --blue:#123d70;
-  --gold:#d9b15b;
-  --cream:#f5f7fb;
-  --white:#fff;
-  --text:#243047;
-  --muted:#69778b;
-  --border:#e0e6ef;
-  --green:#18794e;
-  --radius:16px;
-  --shadow:0 10px 35px rgba(7,26,51,.09);
-}
-* {box-sizing:border-box}
-html {scroll-behavior:smooth;scroll-padding-top:90px}
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--cream);
-  color:var(--text);
-  line-height:1.65;
-}
-button,input,select,textarea {font:inherit}
-button {cursor:pointer}
-img {display:block;max-width:100%}
-a {color:inherit}
-.container {width:min(1200px,92%);margin:auto}
-.hidden {display:none!important}
-.muted {color:var(--muted)}
-.small {font-size:12px;color:var(--muted)}
-.eyebrow {
-  color:#b38b32;
-  text-transform:uppercase;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:2px;
-}
-h1,h2,h3,h4 {line-height:1.25}
-h2 {font-size:clamp(26px,4vw,38px);color:var(--navy);margin:8px 0 12px}
-h3 {color:var(--navy)}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible {
-  outline:3px solid var(--gold);
-  outline-offset:3px;
-}
-.btn {
-  border:0;
-  border-radius:9px;
-  padding:12px 18px;
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  font-weight:700;
-  text-decoration:none;
-  transition:transform .2s,opacity .2s;
-}
-.btn:hover {transform:translateY(-2px)}
-.btn-gold {background:var(--gold);color:var(--navy)}
-.btn-blue {background:var(--blue);color:white}
-.btn-white {background:white;color:var(--navy)}
-.btn-outline {border:1px solid var(--border);background:white;color:var(--navy)}
-button:disabled {opacity:.6;cursor:not-allowed}
+    <meta name="description" content="God's Time Travel And Tours offers flight booking assistance, visa guidance, passport information and travel planning services.">
 
-header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:var(--navy);
-  color:white;
-  box-shadow:0 4px 20px #0002;
-}
-.nav {
-  width:min(1250px,94%);
-  margin:auto;
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
-.brand {
-  color:white;
-  text-decoration:none;
-  font-size:17px;
-  font-weight:900;
-  line-height:1.3;
-}
-.brand span {display:block;color:var(--gold);font-size:12px;letter-spacing:2px}
-.nav-links {display:flex;align-items:center;gap:20px}
-.nav-links a {text-decoration:none;font-size:13px;color:#f3f5f9}
-.nav-links a:hover {color:var(--gold)}
-.menu-button {
-  display:none;
-  background:transparent;
-  color:white;
-  border:1px solid #ffffff50;
-  padding:8px 11px;
-  border-radius:8px;
-}
+    <title>God's Time Travel And Tours | Your Journey, Our Priority</title>
 
-.hero {
-  min-height:550px;
-  display:flex;
-  align-items:center;
-  color:white;
-  background:
-    linear-gradient(90deg,rgba(4,19,39,.94),rgba(4,19,39,.55)),
-    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=2000&q=85')
-    center/cover no-repeat;
-}
-.hero-content {max-width:850px;padding:85px 0}
-.hero h1 {
-  font-size:clamp(37px,6vw,70px);
-  letter-spacing:-1.5px;
-  line-height:1.06;
-  margin:15px 0;
-}
-.hero p {font-size:17px;max-width:650px;color:#e3e9f2}
-.hero-actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.hero-note {font-size:12px;color:#d4dce8;margin-top:20px}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.trust-strip {
-  background:white;
-  border-bottom:1px solid var(--border);
-}
-.trust-inner {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  padding:24px 0;
-}
-.trust-item {display:flex;align-items:center;gap:12px}
-.trust-icon {
-  width:43px;height:43px;
-  display:grid;place-items:center;
-  background:#edf2f9;border-radius:12px;
-  font-size:22px;flex-shrink:0;
-}
-.trust-item b {display:block;color:var(--navy);font-size:14px}
-.trust-item span {font-size:12px;color:var(--muted)}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.section {padding:65px 0}
-.section-head {
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:20px;
-  margin-bottom:25px;
-  flex-wrap:wrap;
-}
-.section-head p {margin:0;color:var(--muted);max-width:680px}
-.search-panel {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  padding:15px;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:13px;
-  margin:25px 0;
-}
-.search-panel input,.search-panel select {
-  min-width:0;
-  flex:1;
-  padding:13px;
-  border:1px solid var(--border);
-  border-radius:8px;
-  background:white;
-  color:var(--text);
-}
-.destination-grid {
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:20px;
-}
-.destination-card {
-  background:white;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 4px 18px #071a3308;
-  transition:transform .2s,box-shadow .2s;
-}
-.destination-card:hover {
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
-}
-.card-image {
-  width:100%;
-  height:190px;
-  object-fit:cover;
-  background:#dfe6ef;
-}
-.card-body {padding:17px}
-.card-region {
-  color:#987324;
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-.card-body h3 {margin:7px 0;font-size:19px}
-.card-body p {font-size:13px;color:var(--muted);margin:0 0 15px}
-.card-body .btn {width:100%;font-size:13px}
-.results-count {font-size:13px;color:var(--muted);margin-bottom:15px}
-.empty-state {
-  padding:35px;
-  background:white;
-  border-radius:12px;
-  text-align:center;
-  border:1px solid var(--border);
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #17243a;
+            line-height: 1.7;
+        }
 
-.feature-band {
-  background:var(--navy);
-  color:white;
-}
-.feature-band .section {padding:50px 0}
-.feature-band h2 {color:white}
-.feature-band p {color:#d5deea}
-.feature-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:25px;
-}
-.feature-card {
-  padding:23px;
-  border:1px solid #ffffff22;
-  border-radius:14px;
-  background:#ffffff08;
-}
-.feature-card .icon {font-size:28px}
-.feature-card h3 {color:var(--gold);margin:12px 0 6px}
-.feature-card p {font-size:13px;margin:0}
+        header {
+            background: #071c38;
+            color: white;
+            padding: 22px 15px;
+            text-align: center;
+        }
 
-.airline-grid,.aircraft-grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-}
-.info-card {
-  background:white;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  overflow:hidden;
-}
-.info-card img {width:100%;height:190px;object-fit:cover;background:#dfe6ef}
-.info-card .card-body p {font-size:13px}
-.tag {
-  display:inline-block;
-  padding:5px 9px;
-  border-radius:20px;
-  background:#edf2f9;
-  color:var(--blue);
-  font-size:11px;
-  font-weight:700;
-  margin:3px 3px 3px 0;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
 
-.detail-wrap {padding:35px 0}
-.back-button {margin-bottom:20px}
-.detail-panel {
-  background:white;
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:clamp(16px,3vw,32px);
-  box-shadow:var(--shadow);
-}
-.detail-top {
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:25px;
-  align-items:center;
-}
-.detail-top h1 {font-size:clamp(30px,5vw,49px);color:var(--navy);margin:8px 0}
-.detail-main-image {
-  width:100%;
-  height:340px;
-  object-fit:cover;
-  border-radius:13px;
-  background:#dfe6ef;
-}
-.detail-intro {color:var(--muted)}
-.detail-actions {display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.detail-stats {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin:25px 0;
-}
-.stat {
-  background:#f2f5fa;
-  padding:15px;
-  border-radius:10px;
-}
-.stat span {display:block;font-size:11px;color:var(--muted);margin-bottom:4px}
-.stat b {font-size:14px;color:var(--navy)}
-.detail-section {margin-top:35px}
-.detail-section h2 {font-size:25px}
-.detail-section>p {color:var(--muted)}
-.detail-gallery {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:13px;
-}
-.gallery-item {
-  border:0;
-  background:transparent;
-  padding:0;
-  text-align:left;
-  color:var(--text);
-}
-.gallery-item img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:10px;
-  background:#dfe6ef;
-  transition:opacity .2s;
-}
-.gallery-item:hover img {opacity:.85}
-.gallery-item span {display:block;font-size:12px;font-weight:700;margin-top:7px}
-.detail-columns {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px;
-}
-.detail-box {
-  padding:20px;
-  background:#f6f8fb;
-  border:1px solid var(--border);
-  border-radius:12px;
-}
-.detail-box h3 {margin-top:0}
-.detail-box p,.detail-box li {font-size:13px}
-.detail-box ul {padding-left:20px}
-.hotel-grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:13px;
-}
-.hotel-card {
-  padding:17px;
-  border:1px solid var(--border);
-  border-radius:11px;
-  background:white;
-}
-.hotel-card h3 {font-size:15px;margin:0 0 6px}
-.hotel-card p {font-size:12px;color:var(--muted);margin:0}
-.notice {
-  background:#fff7e5;
-  border:1px solid #f0dba9;
-  border-radius:10px;
-  padding:15px;
-  font-size:12px;
-  color:#6c531e;
-  margin-top:22px;
-}
-.audio-status {font-size:12px;color:var(--muted);margin-top:8px}
+        header p {
+            color: #d4e2f5;
+            font-size: 14px;
+            margin-top: 5px;
+        }
 
-.service-grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-.service-card {
-  background:white;
-  border:1px solid var(--border);
-  padding:23px;
-  border-radius:14px;
-}
-.service-card .icon {font-size:30px}
-.service-card h3 {margin:12px 0 6px}
-.service-card p {font-size:13px;color:var(--muted)}
+        nav {
+            background: #102d53;
+            padding: 13px 8px;
+            text-align: center;
+        }
 
-.contact-panel {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-  padding:30px;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:16px;
-}
-.contact-panel h3 {margin-top:0}
-.contact-link {display:block;text-decoration:none;margin:13px 0;font-weight:700}
-.contact-link:hover {color:#987324}
-.contact-note {font-size:12px;color:var(--muted)}
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-footer {
-  background:#041225;
-  color:white;
-  padding:35px 0 20px;
-  margin-top:30px;
-}
-.footer-inner {
-  display:flex;
-  justify-content:space-between;
-  gap:25px;
-  flex-wrap:wrap;
-}
-footer p,footer a {font-size:12px;color:#cbd5e1}
-footer a {text-decoration:none}
-footer a:hover {color:var(--gold)}
-.footer-bottom {
-  border-top:1px solid #ffffff20;
-  margin-top:25px;
-  padding-top:18px;
-  font-size:11px;
-  color:#aab7c9;
-}
-#lightbox {
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:500;
-  background:rgba(0,0,0,.93);
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-}
-#lightbox.open {display:flex}
-#lightbox img {max-height:82vh;max-width:95vw;border-radius:10px}
-#lightboxClose {
-  position:absolute;top:15px;right:18px;
-  border:0;border-radius:50%;
-  width:45px;height:45px;font-size:24px;
-  background:white;color:var(--navy);
-}
-#lightboxCaption {
-  position:absolute;
-  bottom:20px;
-  color:white;
-  text-align:center;
-  width:90%;
-  font-size:14px;
-}
-.toast {
-  position:fixed;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  background:var(--navy);
-  color:white;
-  padding:12px 18px;
-  border-radius:9px;
-  z-index:600;
-  box-shadow:var(--shadow);
-  max-width:90%;
-  font-size:13px;
-}
+        nav a:hover {
+            color: #ffc857;
+        }
 
-@media(max-width:950px) {
-  .destination-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
-  .detail-top {grid-template-columns:1fr}
-  .detail-main-image {height:330px}
-  .detail-stats {grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:700px) {
-  .nav {min-height:68px}
-  .menu-button {display:block}
-  .nav-links {
-    display:none;
-    position:absolute;
-    top:68px;left:0;right:0;
-    background:var(--navy);
-    padding:20px 5%;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    border-top:1px solid #ffffff22;
-  }
-  .nav-links.open {display:flex}
-  .nav-links a {padding:12px 0;border-bottom:1px solid #ffffff18}
-  .hero {min-height:470px}
-  .hero-content {padding:60px 0}
-  .hero h1 {font-size:42px}
-  .hero p {font-size:15px}
-  .trust-inner {grid-template-columns:1fr;gap:15px}
-  .section {padding:45px 0}
-  .destination-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .card-image {height:135px}
-  .card-body {padding:12px}
-  .card-body h3 {font-size:16px}
-  .card-body p {font-size:12px}
-  .card-body .btn {font-size:12px;padding:10px 6px}
-  .feature-grid,.airline-grid,.aircraft-grid,.service-grid {grid-template-columns:1fr}
-  .detail-gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-  .gallery-item img {height:135px}
-  .detail-columns,.contact-panel {grid-template-columns:1fr}
-  .hotel-grid {grid-template-columns:1fr}
-  .detail-main-image {height:230px}
-  .detail-panel {padding:15px}
-  .detail-stats {gap:8px}
-  .stat {padding:11px}
-  .stat b {font-size:12px}
-  .search-panel {padding:11px}
-  .search-panel input,.search-panel select {flex-basis:100%;width:100%}
-  .contact-panel {padding:20px}
-}
-@media(prefers-reduced-motion:reduce) {
-  html {scroll-behavior:auto}
-  *,*::before,*::after {transition:none!important}
-}
-</style>
+        .hero {
+            background: linear-gradient(135deg, #071c38, #087eaa);
+            color: white;
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .hero .welcome {
+            color: #ffd166;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 39px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            font-size: 17px;
+            color: #edf5ff;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffc857;
+            color: #10213a;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+            border: none;
+        }
+
+        .button:hover {
+            background: #ffdb88;
+        }
+
+        .button-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 22px;
+        }
+
+        h2 {
+            color: #0a2b50;
+            text-align: center;
+            font-size: 29px;
+            margin-bottom: 22px;
+        }
+
+        .intro {
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .intro p {
+            color: #536176;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 23px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(12, 39, 70, 0.07);
+            border-bottom: 4px solid #087eaa;
+        }
+
+        .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #0a4774;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #596579;
+            font-size: 15px;
+        }
+
+        .steps {
+            background: #e8f2fa;
+            max-width: none;
+        }
+
+        .steps-inner {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .step-list {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .step-list p {
+            margin: 13px 0;
+        }
+
+        .notice {
+            background: #fff7e5;
+            border-left: 5px solid #e8aa28;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+            color: #59451c;
+        }
+
+        .contact {
+            max-width: none;
+            background: #071c38;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-inner {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a:not(.button) {
+            color: #ffd166;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact .button {
+            margin-top: 22px;
+        }
+
+        footer {
+            background: #041226;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 24px 15px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 65px 18px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            section {
+                padding: 45px 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <div class="nav">
-    <a class="brand" href="#home">
-      GOD'S TIME
-      <span>TRAVEL & TOURS</span>
-    </a>
+    <header>
+        <div class="logo">✈ GOD'S TIME TRAVEL AND TOURS</div>
+        <p>Your Journey, Our Priority</p>
+    </header>
 
-    <button class="menu-button" id="menuButton" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#countries">Destinations</a>
-      <a href="#airlines">Airlines</a>
-      <a href="#aircraft">Aircraft</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#travel">Travel Guide</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </div>
-</header>
 
-<main>
+    <main>
 
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">Explore. Discover. Experience.</div>
-      <h1>Your Next Great Journey Starts Here.</h1>
-      <p>
-        Discover fascinating countries, beautiful tourist attractions,
-        cultural experiences, accommodation ideas and international
-        travel information—all in one place.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="#countries">Explore Destinations →</a>
-        <a class="btn btn-white" href="#services">Discover Our Services</a>
-      </div>
-      <div class="hero-note">Explore destinations freely. No enquiry form is required to view country information.</div>
-    </div>
-  </div>
-</section>
+        <div class="hero" id="home">
+            <p class="welcome">Explore the world with confidence</p>
 
-<div class="trust-strip">
-  <div class="container trust-inner">
-    <div class="trust-item">
-      <div class="trust-icon">🌍</div>
-      <div><b>Explore Worldwide</b><span>Discover destinations across continents</span></div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">🏛️</div>
-      <div><b>Learn Before You Travel</b><span>Culture, attractions and local information</span></div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">✈️</div>
-      <div><b>Plan Your Journey</b><span>Travel information and service assistance</span></div>
-    </div>
-  </div>
-</div>
+            <h1>Your Journey Begins Here</h1>
 
-<section class="section" id="countries">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Your world of possibilities</div>
-        <h2>Explore Countries Around the World</h2>
-        <p>Choose any destination to explore photographs, tourist attractions, culture, currency, accommodation ideas and practical travel information.</p>
-      </div>
-    </div>
+            <p>
+                Planning an international trip? Let God's Time Travel And
+                Tours help you navigate flight enquiries, visa requirements,
+                passport information and travel preparation.
+            </p>
 
-    <div class="search-panel">
-      <input id="countrySearch" type="search" placeholder="Search countries, cities or attractions..." aria-label="Search destinations">
-      <select id="regionFilter" aria-label="Filter destinations by region">
-        <option value="">All regions</option>
-        <option value="Africa">Africa</option>
-        <option value="Europe">Europe</option>
-        <option value="Asia">Asia</option>
-        <option value="North America">North America</option>
-        <option value="South America">South America</option>
-        <option value="Oceania">Oceania</option>
-      </select>
-      <button class="btn btn-blue" id="clearSearch" type="button">Clear Search</button>
-    </div>
+            <a class="button" href="#services">Explore Our Services</a>
 
-    <div id="resultsCount" class="results-count" aria-live="polite"></div>
-    <div class="destination-grid" id="countryGrid"></div>
-    <div class="empty-state hidden" id="emptyState">
-      <h3>No destinations found</h3>
-      <p>Try another country, city or region.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section hidden" id="countryDetailSection">
-  <div class="container detail-wrap">
-    <button class="btn btn-outline back-button" id="backToCountries" type="button">← Back to All Countries</button>
-    <div class="detail-panel" id="countryDetail" aria-live="polite"></div>
-  </div>
-</section>
-
-<section class="feature-band">
-  <div class="container section">
-    <div class="eyebrow">Travel with more knowledge</div>
-    <h2>Discover More Than a Destination</h2>
-    <p>Explore the places, people and experiences that make every journey unique.</p>
-
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="icon">🏞️</div>
-        <h3>Beautiful Places</h3>
-        <p>Explore natural landscapes, beaches, mountains, cities and famous landmarks.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🏨</div>
-        <h3>Accommodation Ideas</h3>
-        <p>Discover areas and types of accommodation to research when planning your stay.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🎧</div>
-        <h3>Listen and Learn</h3>
-        <p>Use the audio overview on destination pages to hear a summary of the country.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="airlines">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">The journey begins in the sky</div>
-        <h2>Explore International Airlines</h2>
-        <p>Learn about selected international airlines and the kinds of journeys they operate. Routes and services vary.</p>
-      </div>
-    </div>
-
-    <div class="airline-grid" id="airlineGrid"></div>
-  </div>
-</section>
-
-<section class="section" id="aircraft" style="background:#edf1f7">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Discover the passenger experience</div>
-        <h2>Aircraft and Cabin Experiences</h2>
-        <p>Learn about aircraft types and the different cabin experiences available on selected flights.</p>
-      </div>
-    </div>
-
-    <div class="aircraft-grid" id="aircraftGrid"></div>
-
-    <div class="detail-columns" style="margin-top:25px">
-      <div class="detail-box">
-        <h3>Economy Class</h3>
-        <p>Usually the more affordable cabin, with standard seating and services depending on the airline and ticket.</p>
-      </div>
-      <div class="detail-box">
-        <h3>Premium Economy</h3>
-        <p>Available on selected airlines and aircraft, sometimes offering more legroom and additional amenities.</p>
-      </div>
-      <div class="detail-box">
-        <h3>Business Class</h3>
-        <p>May offer larger seats, premium meals, lounge access when eligible and lie-flat seats on selected routes.</p>
-      </div>
-      <div class="detail-box">
-        <h3>First Class</h3>
-        <p>Offered by selected airlines, sometimes with private suites, premium dining and personalised services.</p>
-      </div>
-    </div>
-    <p class="small" style="margin-top:15px">Aircraft, cabin layouts, baggage allowances and onboard services vary by flight. Always confirm the details with the airline before booking.</p>
-  </div>
-</section>
-
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">How we can help</div>
-        <h2>Travel Services</h2>
-        <p>Explore the travel assistance you may need when preparing for an international journey.</p>
-      </div>
-    </div>
-
-    <div class="service-grid">
-      <article class="service-card">
-        <div class="icon">✈️</div>
-        <h3>Flight Booking Assistance</h3>
-        <p>Get assistance researching routes, flight options, travel dates and airline information.</p>
-      </article>
-      <article class="service-card">
-        <div class="icon">🛂</div>
-        <h3>Visa Information</h3>
-        <p>Learn where to find official visa requirements and prepare the information needed for an application.</p>
-      </article>
-      <article class="service-card">
-        <div class="icon">🛎️</div>
-        <h3>Hotel and Accommodation</h3>
-        <p>Explore accommodation options and identify areas to research for your intended destination.</p>
-      </article>
-      <article class="service-card">
-        <div class="icon">🗺️</div>
-        <h3>Tour Planning</h3>
-        <p>Discover attractions, cultural experiences, scenic destinations and places to include in an itinerary.</p>
-      </article>
-      <article class="service-card">
-        <div class="icon">📘</div>
-        <h3>Passport Information</h3>
-        <p>Find information about passport preparation and where to consult the relevant official authorities.</p>
-      </article>
-      <article class="service-card">
-        <div class="icon">🌐</div>
-        <h3>Destination Research</h3>
-        <p>Learn about countries, currencies, languages, local customs, weather and travel considerations.</p>
-      </article>
-    </div>
-
-    <div class="notice">
-      <b>Important:</b> Visa approval, passport issuance, immigration decisions, airline tickets and hotel reservations are controlled by the relevant authorities or providers. This website does not guarantee approvals, appointments, bookings or processing times. Always verify current requirements through official sources.
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact" style="background:#edf1f7">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Get in touch</div>
-        <h2>Contact God's Time Travel and Tours</h2>
-        <p>For travel assistance, you can contact us directly using the details below.</p>
-      </div>
-    </div>
-
-    <div class="contact-panel">
-      <div>
-        <h3>Let's Talk About Your Next Journey</h3>
-        <p class="muted">Tell us what kind of travel assistance you are looking for.</p>
-
-        <a class="contact-link" href="mailto:godstimetravelandtour12@gmail.com">✉️ godstimetravelandtour12@gmail.com</a>
-        <a class="contact-link" href="tel:+233241226239">☎️ +233 24 122 6239</a>
-        <p class="contact-note">Please confirm service availability, fees and requirements directly before making payments or submitting sensitive documents.</p>
-      </div>
-
-      <div class="detail-box">
-        <h3>Need to start planning?</h3>
-        <p>Send an email with your intended destination, travel dates and the type of assistance you need.</p>
-        <a class="btn btn-blue" href="mailto:godstimetravelandtour12@gmail.com?subject=Travel%20Enquiry">Send a Travel Enquiry →</a>
-        <p class="small" style="margin-top:15px">You do not need to submit an enquiry to explore destinations or use the country information features.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div>
-        <a class="brand" href="#home">GOD'S TIME <span>TRAVEL & TOURS</span></a>
-        <p>Discover the world, one destination at a time.</p>
-      </div>
-      <div>
-        <b>Explore</b>
-        <p><a href="#countries">Countries and Destinations</a></p>
-        <p><a href="#airlines">International Airlines</a></p>
-        <p><a href="#aircraft">Aircraft Information</a></p>
-      </div>
-      <div>
-        <b>Contact</b>
-        <p><a href="mailto:godstimetravelandtour12@gmail.com">Email Us</a></p>
-        <p><a href="tel:+233241226239">Call Us</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © <span id="year"></span> God's Time Travel and Tours. All rights reserved.
-      Destination information is for general guidance and should be verified before travel.
-    </div>
-  </div>
-</footer>
-
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button id="lightboxClose" aria-label="Close image">×</button>
-  <img id="lightboxImage" src="" alt="">
-  <div id="lightboxCaption"></div>
-</div>
-
-<div id="toast" class="toast hidden" role="status"></div>
-
-<script>
-"use strict";
-
-/*
-  GOD'S TIME TRAVEL AND TOURS
-  Standalone website: HTML, CSS and JavaScript in one file.
-
-  Country information is supplied in the local data below.
-  Images are hosted by Unsplash and therefore require an internet connection.
-  Audio uses the browser's built-in speech synthesis when available.
-*/
-
-const photo = (id, width=1000) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=80`;
-
-const countries = [
-{
- name:"Ghana",region:"Africa",capital:"Accra",currency:"Ghanaian cedi (GHS)",
- languages:"English; Akan, Ewe, Ga and other local languages",
- flag:"🇬🇭",population:"About 34 million",
- description:"A welcoming West African country known for its rich cultural heritage, historic forts, vibrant markets, beaches and warm hospitality.",
- climate:"Tropical climate with wet and dry seasons. Weather differs by region.",
- culture:"Ghana is known for traditional festivals, music, dance, kente cloth, local crafts and diverse regional cuisines.",
- attractions:["Cape Coast Castle","Kakum National Park","Mole National Park","Kwame Nkrumah Memorial Park","Labadi Beach"],
- cities:["Accra","Kumasi","Cape Coast","Tamale"],
- food:["Jollof rice","Banku and tilapia","Waakye","Fufu and soup"],
- tips:["Use licensed transport and agree on fares where appropriate.","Keep personal documents secure.","Check local weather and travel conditions before visiting parks."],
- image:photo("photo-1516026672322-bc52d61a55d5"),
- gallery:[
-  ["Accra city and coastline",photo("photo-1504609773096-104ff2c73ba4")],
-  ["West African natural landscape",photo("photo-1516026672322-bc52d61a55d5")],
-  ["Tropical beach",photo("photo-1500375592092-40eb2168fd21")],
-  ["Waterfall and nature",photo("photo-1433086966358-54859d0ed716")],
-  ["Forest landscape",photo("photo-1448375240586-882707db888b")],
-  ["Coastal scenery",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["City hotels","Consider central Accra for business, restaurants and transport."],
-  ["Beach resorts","Research accommodation near coastal areas and confirm beach access."],
-  ["Nature lodges","Compare licensed lodges near parks before booking."]
- ]
-},
-{
- name:"Nigeria",region:"Africa",capital:"Abuja",currency:"Nigerian naira (NGN)",
- languages:"English; Hausa, Yoruba, Igbo and many other languages",
- flag:"🇳🇬",population:"Over 200 million",
- description:"A large and culturally diverse West African nation with energetic cities, music, film, markets, beaches and natural attractions.",
- climate:"Generally tropical, with regional differences and wet and dry seasons.",
- culture:"Nigerian culture includes diverse ethnic traditions, music, fashion, literature and distinctive regional cuisines.",
- attractions:["Zuma Rock","Lekki Conservation Centre","Olumo Rock","Yankari National Park","Nike Art Gallery"],
- cities:["Lagos","Abuja","Kano","Port Harcourt"],
- food:["Jollof rice","Egusi soup","Suya","Pounded yam"],
- tips:["Check current travel advice for your destination.","Use trusted transport and accommodation providers.","Keep valuables secure in crowded places."],
- image:photo("photo-1517935706615-2717063c2225"),
- gallery:[
-  ["Modern city views",photo("photo-1517935706615-2717063c2225")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Tropical beach",photo("photo-1500375592092-40eb2168fd21")],
-  ["Nature and greenery",photo("photo-1448375240586-882707db888b")],
-  ["Rock formations",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Coastal landscape",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["Business hotels","Explore established hotels in major city business districts."],
-  ["Beach accommodation","Research coastal accommodation and check transport options."],
-  ["Nature retreats","Check location, safety guidance and access before booking."]
- ]
-},
-{
- name:"South Africa",region:"Africa",capital:"Pretoria (administrative)",currency:"South African rand (ZAR)",
- languages:"Multiple official languages, including English, isiZulu and Afrikaans",
- flag:"🇿🇦",population:"Over 60 million",
- description:"A country celebrated for wildlife, dramatic coastlines, mountains, wine regions, diverse cultures and vibrant cities.",
- climate:"Varies from Mediterranean conditions in parts of the southwest to subtropical and semi-arid regions.",
- culture:"A multicultural society with rich music, food, art, sporting traditions and varied regional heritage.",
- attractions:["Table Mountain","Kruger National Park","Cape Point","Robben Island","Garden Route"],
- cities:["Cape Town","Johannesburg","Durban","Pretoria"],
- food:["Braai","Bunny chow","Bobotie","Biltong"],
- tips:["Follow wildlife park rules.","Research road conditions and transport options.","Check seasonal weather when planning outdoor activities."],
- image:photo("photo-1516026672322-bc52d61a55d5"),
- gallery:[
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Ocean coastline",photo("photo-1500375592092-40eb2168fd21")],
-  ["Wild nature",photo("photo-1472396961693-142e6e269027")],
-  ["Scenic roads",photo("photo-1464219789935-c2d9d9aba644")],
-  ["Forest views",photo("photo-1448375240586-882707db888b")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")]
- ],
- hotels:[
-  ["City hotels","Compare locations in Cape Town, Johannesburg and other cities."],
-  ["Safari lodges","Check park location, transport and included activities."],
-  ["Coastal stays","Research seasonal conditions and access to beaches."]
- ]
-},
-{
- name:"Kenya",region:"Africa",capital:"Nairobi",currency:"Kenyan shilling (KES)",
- languages:"Swahili and English",
- flag:"🇰🇪",population:"Over 50 million",
- description:"Known for wildlife safaris, savannah landscapes, the Great Rift Valley, mountain scenery and Indian Ocean beaches.",
- climate:"Climate varies by altitude and region, with generally warmer lowlands and cooler highlands.",
- culture:"Kenyan culture includes many communities, traditional crafts, music, dance and diverse cuisine.",
- attractions:["Maasai Mara","Amboseli National Park","Mount Kenya","Diani Beach","Nairobi National Park"],
- cities:["Nairobi","Mombasa","Nakuru","Kisumu"],
- food:["Nyama choma","Ugali","Sukuma wiki","Pilau"],
- tips:["Book reputable safari operators.","Follow park guidance around wildlife.","Check entry and health requirements before travelling."],
- image:photo("photo-1516026672322-bc52d61a55d5"),
- gallery:[
-  ["African savannah",photo("photo-1472396961693-142e6e269027")],
-  ["Mountain landscape",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Tropical beach",photo("photo-1500375592092-40eb2168fd21")],
-  ["Wildlife habitat",photo("photo-1549366021-9f761d450615")],
-  ["Forest landscape",photo("photo-1448375240586-882707db888b")],
-  ["Ocean scenery",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["Safari lodges","Compare lodge locations and park access."],
-  ["City hotels","Look at Nairobi accommodation close to your planned activities."],
-  ["Beach resorts","Explore coastal stays and confirm transport arrangements."]
- ]
-},
-{
- name:"Egypt",region:"Africa",capital:"Cairo",currency:"Egyptian pound (EGP)",
- languages:"Arabic; English is used in many tourism settings",
- flag:"🇪🇬",population:"Over 100 million",
- description:"Home to ancient monuments, desert landscapes, the Nile River and historic cities that connect thousands of years of history.",
- climate:"Mostly arid, with hot summers and cooler winters in many areas.",
- culture:"Egyptian culture reflects ancient heritage, Arabic language, music, cuisine and long-standing traditions.",
- attractions:["Pyramids of Giza","Egyptian Museum","Luxor temples","Abu Simbel","Nile River"],
- cities:["Cairo","Alexandria","Luxor","Aswan"],
- food:["Koshari","Ful medames","Taameya","Molokhia"],
- tips:["Use authorised guides for major sites.","Dress appropriately when visiting religious sites.","Check opening hours and entry rules before travelling."],
- image:photo("photo-1539650116574-75c0c6d73f6e"),
- gallery:[
-  ["Historic monuments",photo("photo-1539650116574-75c0c6d73f6e")],
-  ["Desert scenery",photo("photo-1509316785289-025f5b846b35")],
-  ["Ancient architecture",photo("photo-1568322445389-f64ac2515020")],
-  ["Historic city",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["River views",photo("photo-1437482078695-73f5ca6c96e5")],
-  ["Desert mountains",photo("photo-1464822759023-fed622ff2c3b")]
- ],
- hotels:[
-  ["Historic city hotels","Research locations near museums and main attractions."],
-  ["Nile-side accommodation","Check river access and the exact location."],
-  ["Resort stays","Compare facilities, transport and seasonal prices."]
- ]
-},
-{
- name:"United Kingdom",region:"Europe",capital:"London",currency:"Pound sterling (GBP)",
- languages:"English; Welsh, Scottish Gaelic and other regional languages",
- flag:"🇬🇧",population:"About 68 million",
- description:"Explore historic castles, world-famous museums, theatre, countryside, coastal towns and diverse modern cities.",
- climate:"Temperate maritime climate with changeable weather throughout the year.",
- culture:"Known for historic institutions, literature, music, sport, regional traditions and diverse communities.",
- attractions:["Big Ben","Tower of London","Edinburgh Castle","Stonehenge","Lake District"],
- cities:["London","Edinburgh","Manchester","Birmingham"],
- food:["Fish and chips","Sunday roast","Shepherd's pie","Afternoon tea"],
- tips:["Check public transport schedules.","Bring clothing for changing weather.","Check attraction opening times before visiting."],
- image:photo("photo-1513635269975-59663e0ac1ad"),
- gallery:[
-  ["London landmarks",photo("photo-1513635269975-59663e0ac1ad")],
-  ["Historic architecture",photo("photo-1518709268805-4e9042af9f23")],
-  ["Green countryside",photo("photo-1472396961693-142e6e269027")],
-  ["Historic city streets",photo("photo-1511818966892-d7d671e672a2")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Coastal views",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["Central city hotels","Choose a location close to public transport and attractions."],
-  ["Countryside stays","Research rural accommodation and transport availability."],
-  ["Budget accommodation","Compare cancellation rules, facilities and location."]
- ]
-},
-{
- name:"France",region:"Europe",capital:"Paris",currency:"Euro (EUR)",
- languages:"French",
- flag:"🇫🇷",population:"About 68 million",
- description:"Discover celebrated art, architecture, cuisine, romantic city streets, countryside, mountain resorts and Mediterranean coastlines.",
- climate:"Varies by region, from oceanic in the west to Mediterranean in the south and alpine in mountainous areas.",
- culture:"Famous for art, fashion, cuisine, literature, architecture and regional traditions.",
- attractions:["Eiffel Tower","Louvre Museum","Palace of Versailles","Mont Saint-Michel","French Riviera"],
- cities:["Paris","Lyon","Nice","Marseille"],
- food:["Croissants","Ratatouille","Crêpes","Ratatouille"],
- tips:["Learn basic French greetings.","Check museum booking requirements.","Use official transport and attraction websites."],
- image:photo("photo-1502602898657-3e91760cbb34"),
- gallery:[
-  ["Paris city views",photo("photo-1502602898657-3e91760cbb34")],
-  ["Historic architecture",photo("photo-1511818966892-d7d671e672a2")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Coastal views",photo("photo-1473116763249-2faaef81ccda")],
-  ["Countryside landscapes",photo("photo-1472396961693-142e6e269027")],
-  ["City streets",photo("photo-1480714378408-67cf0d13bc1b")]
- ],
- hotels:[
-  ["Paris hotels","Compare transport access, neighbourhoods and cancellation terms."],
-  ["Countryside stays","Research regional accommodation and travel distances."],
-  ["Coastal resorts","Check seasonal availability and beach access."]
- ]
-},
-{
- name:"Italy",region:"Europe",capital:"Rome",currency:"Euro (EUR)",
- languages:"Italian",
- flag:"🇮🇹",population:"About 59 million",
- description:"A destination rich in ancient history, Renaissance art, architecture, distinctive regional food and Mediterranean coastlines.",
- climate:"Mediterranean in much of the country, with colder alpine conditions in the north.",
- culture:"Italy is renowned for historic cities, art, design, regional food, music and family traditions.",
- attractions:["Colosseum","Venice canals","Leaning Tower of Pisa","Florence Cathedral","Amalfi Coast"],
- cities:["Rome","Milan","Venice","Florence"],
- food:["Pizza","Pasta","Risotto","Gelato"],
- tips:["Book popular attractions in advance.","Check local transport and ticket rules.","Dress appropriately when visiting religious sites."],
- image:photo("photo-1516483638261-f4dbaf036963"),
- gallery:[
-  ["Italian coastal scenery",photo("photo-1516483638261-f4dbaf036963")],
-  ["Historic architecture",photo("photo-1511818966892-d7d671e672a2")],
-  ["Mountain landscapes",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Canals and waterways",photo("photo-1519608487953-e999c86e7455")],
-  ["Countryside views",photo("photo-1472396961693-142e6e269027")],
-  ["Historic city streets",photo("photo-1480714378408-67cf0d13bc1b")]
- ],
- hotels:[
-  ["Historic city hotels","Choose locations based on walking distance and transit."],
-  ["Coastal accommodation","Research seasonal access and local transport."],
-  ["Countryside stays","Compare regional transport and nearby attractions."]
- ]
-},
-{
- name:"Spain",region:"Europe",capital:"Madrid",currency:"Euro (EUR)",
- languages:"Spanish; regional languages include Catalan, Galician and Basque",
- flag:"🇪🇸",population:"About 48 million",
- description:"Discover lively cities, historic palaces, Mediterranean beaches, mountain villages, festivals and world-famous food.",
- climate:"Varied, including Mediterranean coastal climates and hotter, drier inland summers.",
- culture:"Spanish culture includes regional festivals, architecture, music, dance, art and distinctive culinary traditions.",
- attractions:["Sagrada Família","Alhambra","Park Güell","Prado Museum","Seville Cathedral"],
- cities:["Madrid","Barcelona","Seville","Valencia"],
- food:["Paella","Tortilla española","Gazpacho","Churros"],
- tips:["Check regional transport options.","Respect local customs and quiet hours.","Reserve popular attractions when necessary."],
- image:photo("photo-1539037116277-4db20889f2d4"),
- gallery:[
-  ["Historic city views",photo("photo-1539037116277-4db20889f2d4")],
-  ["Architecture and streets",photo("photo-1511818966892-d7d671e672a2")],
-  ["Mediterranean coast",photo("photo-1500375592092-40eb2168fd21")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Historic buildings",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Countryside",photo("photo-1472396961693-142e6e269027")]
- ],
- hotels:[
-  ["City hotels","Compare central locations and access to public transport."],
-  ["Beach accommodation","Check beach access and seasonal availability."],
-  ["Rural stays","Research transport connections to nearby towns."]
- ]
-},
-{
- name:"Germany",region:"Europe",capital:"Berlin",currency:"Euro (EUR)",
- languages:"German",
- flag:"🇩🇪",population:"About 84 million",
- description:"Known for historic landmarks, modern cities, forests, castles, Christmas markets and efficient transport networks.",
- climate:"Temperate seasonal climate with regional differences.",
- culture:"German culture includes music, engineering, literature, historic architecture and regional festivals.",
- attractions:["Brandenburg Gate","Neuschwanstein Castle","Cologne Cathedral","Black Forest","Museum Island"],
- cities:["Berlin","Munich","Hamburg","Frankfurt"],
- food:["Pretzels","Bratwurst","Sauerbraten","Apple strudel"],
- tips:["Check local public transport passes.","Learn basic German greetings.","Confirm museum schedules and seasonal events."],
- image:photo("photo-1467269204594-9661b134dd2b"),
- gallery:[
-  ["Historic city architecture",photo("photo-1467269204594-9661b134dd2b")],
-  ["Mountain views",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Forest scenery",photo("photo-1448375240586-882707db888b")],
-  ["Historic buildings",photo("photo-1511818966892-d7d671e672a2")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Countryside",photo("photo-1472396961693-142e6e269027")]
- ],
- hotels:[
-  ["City hotels","Compare access to rail stations and business districts."],
-  ["Countryside accommodation","Research access to castles, parks and trails."],
-  ["Budget stays","Check facilities, location and booking conditions."]
- ]
-},
-{
- name:"United States",region:"North America",capital:"Washington, D.C.",currency:"United States dollar (USD)",
- languages:"English is the most widely used language; many other languages are spoken",
- flag:"🇺🇸",population:"Over 330 million",
- description:"A vast country with major cities, national parks, beaches, entertainment, cultural attractions and landscapes ranging from deserts to mountains.",
- climate:"Extremely varied across regions and seasons.",
- culture:"A diverse society with regional traditions, music, sport, film, technology and varied cuisines.",
- attractions:["Grand Canyon","Statue of Liberty","Yellowstone National Park","Times Square","Golden Gate Bridge"],
- cities:["New York City","Los Angeles","Chicago","San Francisco"],
- food:["Hamburgers","Barbecue","Regional pizza","Apple pie"],
- tips:["Check entry requirements before booking travel.","Consider distances between destinations.","Review local transport, weather and safety guidance."],
- image:photo("photo-1501594907352-04cda38ebc29"),
- gallery:[
-  ["American city skyline",photo("photo-1501594907352-04cda38ebc29")],
-  ["National park scenery",photo("photo-1472396961693-142e6e269027")],
-  ["Mountain landscape",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Coastal scenery",photo("photo-1500375592092-40eb2168fd21")],
-  ["Urban architecture",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Forest landscape",photo("photo-1448375240586-882707db888b")]
- ],
- hotels:[
-  ["City hotels","Compare neighbourhoods, transport and total nightly costs."],
-  ["National park lodges","Check seasonal availability and park access."],
-  ["Coastal resorts","Research beach access, weather and local transport."]
- ]
-},
-{
- name:"Canada",region:"North America",capital:"Ottawa",currency:"Canadian dollar (CAD)",
- languages:"English and French are official languages",
- flag:"🇨🇦",population:"About 40 million",
- description:"Explore dramatic mountains, lakes, forests, cosmopolitan cities and winter experiences across a vast landscape.",
- climate:"Ranges from cold northern conditions to milder coastal and southern climates.",
- culture:"Canada has diverse communities, Indigenous cultures, regional traditions and a vibrant arts scene.",
- attractions:["Banff National Park","Niagara Falls","CN Tower","Old Québec","Jasper National Park"],
- cities:["Toronto","Vancouver","Montreal","Ottawa"],
- food:["Poutine","Butter tarts","Tourtière","Maple treats"],
- tips:["Pack for the season and region.","Check distances between cities.","Review park conditions and seasonal access."],
- image:photo("photo-1503614472-8c93d56cd938"),
- gallery:[
-  ["Canadian mountain lakes",photo("photo-1503614472-8c93d56cd938")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Forest landscape",photo("photo-1448375240586-882707db888b")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Waterfall scenery",photo("photo-1433086966358-54859d0ed716")],
-  ["Lake views",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["City accommodation","Research central locations and transit access."],
-  ["Mountain lodges","Check seasonal road access and weather."],
-  ["Lake retreats","Confirm facilities and transport arrangements."]
- ]
-},
-{
- name:"Brazil",region:"South America",capital:"Brasília",currency:"Brazilian real (BRL)",
- languages:"Portuguese",
- flag:"🇧🇷",population:"Over 200 million",
- description:"A country known for the Amazon, beaches, energetic cities, diverse wildlife, music, festivals and rich cultural traditions.",
- climate:"Varies widely from equatorial rainforest to subtropical southern regions.",
- culture:"Brazilian culture includes samba, football, regional cuisine, festivals and a mix of cultural influences.",
- attractions:["Christ the Redeemer","Iguazu Falls","Amazon Rainforest","Copacabana Beach","Pelourinho"],
- cities:["Rio de Janeiro","São Paulo","Brasília","Salvador"],
- food:["Feijoada","Pão de queijo","Moqueca","Brigadeiro"],
- tips:["Check local transport and safety advice.","Use reputable guides for rainforest excursions.","Prepare for the climate of your destination."],
- image:photo("photo-1483729558449-99ef09a8c325"),
- gallery:[
-  ["Brazilian coastline",photo("photo-1483729558449-99ef09a8c325")],
-  ["Tropical beach",photo("photo-1500375592092-40eb2168fd21")],
-  ["Waterfall landscape",photo("photo-1433086966358-54859d0ed716")],
-  ["Rainforest",photo("photo-1448375240586-882707db888b")],
-  ["Mountain views",photo("photo-1464822759023-fed622ff2c3b")],
-  ["City scenery",photo("photo-1480714378408-67cf0d13bc1b")]
- ],
- hotels:[
-  ["City hotels","Compare location, transport and neighbourhood facilities."],
-  ["Beach resorts","Check beach access and seasonal prices."],
-  ["Eco-lodges","Research reputable operators and environmental practices."]
- ]
-},
-{
- name:"Japan",region:"Asia",capital:"Tokyo",currency:"Japanese yen (JPY)",
- languages:"Japanese",
- flag:"🇯🇵",population:"Over 120 million",
- description:"Experience historic temples, advanced cities, mountain scenery, seasonal cherry blossoms and distinctive cuisine.",
- climate:"Four distinct seasons in much of the country, with regional differences.",
- culture:"Japanese culture blends traditional arts, festivals, cuisine, design and modern popular culture.",
- attractions:["Mount Fuji","Fushimi Inari Shrine","Tokyo Skytree","Arashiyama Bamboo Grove","Hiroshima Peace Memorial"],
- cities:["Tokyo","Kyoto","Osaka","Sapporo"],
- food:["Sushi","Ramen","Tempura","Okonomiyaki"],
- tips:["Learn basic etiquette for public transport.","Check seasonal weather and blossom forecasts.","Follow local rules at temples and shrines."],
- image:photo("photo-1493976040374-85c8e12f0c0e"),
- gallery:[
-  ["Japanese historic streets",photo("photo-1493976040374-85c8e12f0c0e")],
-  ["Mountain landscapes",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Temple architecture",photo("photo-1511818966892-d7d671e672a2")],
-  ["Forest scenery",photo("photo-1448375240586-882707db888b")],
-  ["Modern city views",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Coastal scenery",photo("photo-1500375592092-40eb2168fd21")]
- ],
- hotels:[
-  ["City hotels","Compare access to railway stations and local attractions."],
-  ["Traditional inns","Research room styles, meals and house rules."],
-  ["Mountain stays","Check seasonal access and weather conditions."]
- ]
-},
-{
- name:"China",region:"Asia",capital:"Beijing",currency:"Renminbi (CNY)",
- languages:"Mandarin Chinese is the official national language; many regional languages are spoken",
- flag:"🇨🇳",population:"Over 1 billion",
- description:"A vast country with ancient history, imperial architecture, dramatic landscapes, modern cities and diverse regional cuisines.",
- climate:"Ranges from cold northern winters to subtropical southern climates.",
- culture:"Chinese heritage includes historic philosophy, art, calligraphy, festivals, regional cuisines and traditional crafts.",
- attractions:["Great Wall of China","Forbidden City","Terracotta Army","Zhangjiajie National Forest Park","West Lake"],
- cities:["Beijing","Shanghai","Xi'an","Chengdu"],
- food:["Dumplings","Peking duck","Hot pot","Dim sum"],
- tips:["Check entry requirements and local rules.","Plan journeys carefully due to long distances.","Check access to websites and payment services before travel."],
- image:photo("photo-1508804185872-d7badad00f7d"),
- gallery:[
-  ["Historic Chinese landmarks",photo("photo-1508804185872-d7badad00f7d")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Historic architecture",photo("photo-1511818966892-d7d671e672a2")],
-  ["Forest landscapes",photo("photo-1448375240586-882707db888b")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Natural scenery",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["City hotels","Research transit access and proximity to attractions."],
-  ["Historic area stays","Check visitor access rules and location."],
-  ["Nature retreats","Confirm transportation and seasonal conditions."]
- ]
-},
-{
- name:"United Arab Emirates",region:"Asia",capital:"Abu Dhabi",currency:"UAE dirham (AED)",
- languages:"Arabic; English is widely used in business and tourism",
- flag:"🇦🇪",population:"About 10 million",
- description:"Discover modern skylines, desert experiences, luxury shopping, beaches, cultural attractions and traditional markets.",
- climate:"Desert climate with very hot summers and generally milder winters.",
- culture:"Emirati culture reflects Arab heritage, hospitality, traditional crafts, cuisine and contemporary international influences.",
- attractions:["Burj Khalifa","Sheikh Zayed Grand Mosque","Dubai Marina","Louvre Abu Dhabi","Desert dunes"],
- cities:["Dubai","Abu Dhabi","Sharjah","Al Ain"],
- food:["Machboos","Luqaimat","Shawarma","Harees"],
- tips:["Check local laws and customs before travelling.","Plan outdoor activities around seasonal heat.","Confirm dress and photography rules at religious sites."],
- image:photo("photo-1512453979798-5ea266f8880c"),
- gallery:[
-  ["Modern Dubai skyline",photo("photo-1512453979798-5ea266f8880c")],
-  ["Desert landscapes",photo("photo-1509316785289-025f5b846b35")],
-  ["Modern architecture",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Beach scenery",photo("photo-1500375592092-40eb2168fd21")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["City at night",photo("photo-1519608487953-e999c86e7455")]
- ],
- hotels:[
-  ["Luxury city hotels","Compare location, facilities and total costs."],
-  ["Beach resorts","Check private or public beach access."],
-  ["Desert camps","Research licensed operators and included activities."]
- ]
-},
-{
- name:"Australia",region:"Oceania",capital:"Canberra",currency:"Australian dollar (AUD)",
- languages:"English is the most widely used language; many other languages are spoken",
- flag:"🇦🇺",population:"About 27 million",
- description:"Explore spectacular coastlines, unique wildlife, modern cities, vast outback landscapes and the Great Barrier Reef.",
- climate:"Varies from tropical north to temperate southern regions and arid inland areas.",
- culture:"Australian culture includes Indigenous heritage, outdoor recreation, arts, sport and multicultural communities.",
- attractions:["Great Barrier Reef","Sydney Opera House","Uluru","Great Ocean Road","Blue Mountains"],
- cities:["Sydney","Melbourne","Brisbane","Perth"],
- food:["Meat pies","Lamingtons","Barramundi","Pavlova"],
- tips:["Protect yourself from the sun.","Check wildlife and ocean safety guidance.","Plan carefully for long driving distances."],
- image:photo("photo-1506973035872-a4ec16b8e8d9"),
- gallery:[
-  ["Sydney Harbour views",photo("photo-1506973035872-a4ec16b8e8d9")],
-  ["Ocean coastline",photo("photo-1500375592092-40eb2168fd21")],
-  ["Mountain landscapes",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Forest scenery",photo("photo-1448375240586-882707db888b")],
-  ["Desert landscape",photo("photo-1509316785289-025f5b846b35")],
-  ["Waterfall scenery",photo("photo-1433086966358-54859d0ed716")]
- ],
- hotels:[
-  ["City hotels","Compare locations near transit and attractions."],
-  ["Coastal stays","Check swimming conditions and seasonal weather."],
-  ["Nature lodges","Research driving distances and local facilities."]
- ]
-},
-{
- name:"India",region:"Asia",capital:"New Delhi",currency:"Indian rupee (INR)",
- languages:"Hindi and English are widely used for official purposes; many regional languages are spoken",
- flag:"🇮🇳",population:"Over 1 billion",
- description:"A country of historic monuments, spiritual sites, mountain landscapes, colourful festivals and remarkable regional diversity.",
- climate:"Varies from Himalayan alpine conditions to tropical southern regions.",
- culture:"India has a rich mix of religions, languages, cuisines, arts, architecture and festivals.",
- attractions:["Taj Mahal","Jaipur's Amber Fort","Kerala backwaters","Varanasi ghats","Himalayan landscapes"],
- cities:["New Delhi","Mumbai","Jaipur","Bengaluru"],
- food:["Biryani","Dosa","Butter chicken","Samosas"],
- tips:["Check local customs and dress expectations.","Prepare for regional weather and travel times.","Use reputable transport and tour operators."],
- image:photo("photo-1564507592333-c60657eea523"),
- gallery:[
-  ["Historic Indian architecture",photo("photo-1564507592333-c60657eea523")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Historic city views",photo("photo-1511818966892-d7d671e672a2")],
-  ["Tropical greenery",photo("photo-1448375240586-882707db888b")],
-  ["Coastal scenery",photo("photo-1500375592092-40eb2168fd21")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")]
- ],
- hotels:[
-  ["City hotels","Compare locations, amenities and transport."],
-  ["Heritage hotels","Check historical features and facilities."],
-  ["Nature stays","Research access, weather and reputable operators."]
- ]
-},
-{
- name:"Turkey",region:"Europe",capital:"Ankara",currency:"Turkish lira (TRY)",
- languages:"Turkish",
- flag:"🇹🇷",population:"Over 80 million",
- description:"A meeting point of continents, with historic architecture, lively bazaars, coastal resorts and the remarkable landscapes of Cappadocia.",
- climate:"Varies by region, including Mediterranean coastal conditions and colder inland winters.",
- culture:"Turkish culture includes historic architecture, hospitality, traditional crafts, music and diverse regional food.",
- attractions:["Hagia Sophia","Cappadocia","Pamukkale","Blue Mosque","Ephesus"],
- cities:["Istanbul","Ankara","Antalya","Izmir"],
- food:["Kebabs","Baklava","Menemen","Turkish delight"],
- tips:["Check current transport and attraction information.","Respect customs at religious sites.","Research seasonal weather in each region."],
- image:photo("photo-1524231757912-21f4fe3a7200"),
- gallery:[
-  ["Istanbul city views",photo("photo-1524231757912-21f4fe3a7200")],
-  ["Mountain landscapes",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Coastal scenery",photo("photo-1500375592092-40eb2168fd21")],
-  ["Historic architecture",photo("photo-1511818966892-d7d671e672a2")],
-  ["Natural landscapes",photo("photo-1473116763249-2faaef81ccda")],
-  ["City streets",photo("photo-1480714378408-67cf0d13bc1b")]
- ],
- hotels:[
-  ["Historic city hotels","Research locations near historic sites and transport."],
-  ["Coastal resorts","Compare beach access and seasonal availability."],
-  ["Unique landscape stays","Check location and transport for regional attractions."]
- ]
-},
-{
- name:"Singapore",region:"Asia",capital:"Singapore",currency:"Singapore dollar (SGD)",
- languages:"English, Malay, Mandarin Chinese and Tamil are official languages",
- flag:"🇸🇬",population:"About 6 million",
- description:"A modern island city known for gardens, impressive architecture, cultural neighbourhoods, excellent food and efficient transport.",
- climate:"Equatorial tropical climate, generally warm and humid throughout the year.",
- culture:"Singapore is multicultural, with Chinese, Malay, Indian and many other communities and traditions.",
- attractions:["Gardens by the Bay","Marina Bay Sands","Sentosa Island","Singapore Botanic Gardens","Chinatown"],
- cities:["Singapore"],
- food:["Hainanese chicken rice","Laksa","Chilli crab","Satay"],
- tips:["Follow public-space rules.","Carry water in hot weather.","Check transport cards and attraction bookings."],
- image:photo("photo-1525625293386-3f8f99389edd"),
- gallery:[
-  ["Singapore skyline",photo("photo-1525625293386-3f8f99389edd")],
-  ["Modern architecture",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Garden landscapes",photo("photo-1448375240586-882707db888b")],
-  ["Coastal scenery",photo("photo-1500375592092-40eb2168fd21")],
-  ["City at night",photo("photo-1519608487953-e999c86e7455")],
-  ["Waterfront views",photo("photo-1473116763249-2faaef81ccda")]
- ],
- hotels:[
-  ["Central hotels","Compare transport links and neighbourhood facilities."],
-  ["Resort accommodation","Research island access and included amenities."],
-  ["Budget stays","Check room size, location and booking conditions."]
- ]
-},
-{
- name:"Thailand",region:"Asia",capital:"Bangkok",currency:"Thai baht (THB)",
- languages:"Thai",
- flag:"🇹🇭",population:"About 70 million",
- description:"Known for tropical islands, ornate temples, street food, bustling markets, tropical forests and warm hospitality.",
- climate:"Tropical climate with hot, rainy and relatively cooler periods.",
- culture:"Thai culture includes Buddhist heritage, traditional arts, festivals, regional cuisine and hospitality.",
- attractions:["Grand Palace","Phi Phi Islands","Chiang Mai temples","Ayutthaya Historical Park","Phuket beaches"],
- cities:["Bangkok","Chiang Mai","Phuket","Pattaya"],
- food:["Pad Thai","Tom yum","Green curry","Mango sticky rice"],
- tips:["Respect temple customs.","Check seasonal monsoon conditions.","Use licensed transport and excursion providers."],
- image:photo("photo-1508009603885-50cf7c579365"),
- gallery:[
-  ["Thai temple architecture",photo("photo-1508009603885-50cf7c579365")],
-  ["Tropical beaches",photo("photo-1500375592092-40eb2168fd21")],
-  ["Mountain scenery",photo("photo-1464822759023-fed622ff2c3b")],
-  ["Forest landscape",photo("photo-1448375240586-882707db888b")],
-  ["City skyline",photo("photo-1480714378408-67cf0d13bc1b")],
-  ["Waterfall scenery",photo("photo-1433086966358-54859d0ed716")]
- ],
- hotels:[
-  ["City hotels","Compare transport, attractions and neighbourhoods."],
-  ["Island resorts","Check seasonal weather and boat transfers."],
-  ["Nature lodges","Research tour operators and park access."]
- ]
-}
-];
-
-/* Fallback images are used when an external image fails to load. */
-const fallbackImage =
-  "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=75";
-
-function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g, char => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#39;"
-  })[char]);
-}
-
-function safeImage(url) {
-  return escapeHTML(url || fallbackImage);
-}
-
-function attachImageFallbacks(root=document) {
-  root.querySelectorAll("img").forEach(img => {
-    img.addEventListener("error", function () {
-      if (this.dataset.fallbackUsed) return;
-      this.dataset.fallbackUsed = "yes";
-      this.src = fallbackImage;
-    }, {once:false});
-  });
-}
-
-const countryGrid = document.getElementById("countryGrid");
-const countrySearch = document.getElementById("countrySearch");
-const regionFilter = document.getElementById("regionFilter");
-const resultsCount = document.getElementById("resultsCount");
-const emptyState = document.getElementById("emptyState");
-const countryDetailSection = document.getElementById("countryDetailSection");
-const countryDetail = document.getElementById("countryDetail");
-
-function renderCountries() {
-  const query = countrySearch.value.trim().toLowerCase();
-  const region = regionFilter.value;
-
-  const filtered = countries.filter(country => {
-    const searchable = [
-      country.name,
-      country.region,
-      country.capital,
-      country.description,
-      ...(country.attractions || []),
-      ...(country.cities || [])
-    ].join(" ").toLowerCase();
-
-    return searchable.includes(query) && (!region || country.region === region);
-  });
-
-  resultsCount.textContent =
-    `Showing ${filtered.length} of ${countries.length} destinations`;
-
-  emptyState.classList.toggle("hidden", filtered.length !== 0);
-
-  countryGrid.innerHTML = filtered.map(country => `
-    <article class="destination-card">
-      <img
-        class="card-image"
-        src="${safeImage(country.image)}"
-        alt="${escapeHTML(country.name)} destination"
-        loading="lazy">
-      <div class="card-body">
-        <div class="card-region">${escapeHTML(country.region)}</div>
-        <h3>${country.flag} ${escapeHTML(country.name)}</h3>
-        <p>${escapeHTML(country.description.slice(0,112))}...</p>
-        <button class="btn btn-blue country-open"
-          type="button"
-          data-country="${escapeHTML(country.name)}">
-          Explore Country →
-        </button>
-      </div>
-    </article>
-  `).join("");
-
-  attachImageFallbacks(countryGrid);
-}
-
-countrySearch.addEventListener("input", renderCountries);
-regionFilter.addEventListener("change", renderCountries);
-
-document.getElementById("clearSearch").addEventListener("click", () => {
-  countrySearch.value = "";
-  regionFilter.value = "";
-  renderCountries();
-});
-
-countryGrid.addEventListener("click", event => {
-  const button = event.target.closest("[data-country]");
-  if (!button) return;
-  openCountry(button.dataset.country);
-});
-
-function openCountry(name) {
-  const country = countries.find(c => c.name === name);
-  if (!country) return;
-
-  stopAudio();
-
-  const gallery = country.gallery.map((item,index) => `
-    <button class="gallery-item"
-      type="button"
-      data-image="${safeImage(item[1])}"
-      data-caption="${escapeHTML(item[0])}">
-      <img src="${safeImage(item[1])}"
-        alt="${escapeHTML(item[0])}"
-        loading="lazy">
-      <span>${escapeHTML(item[0])}</span>
-    </button>
-  `).join("");
-
-  const attractions = country.attractions.map(item =>
-    `<li>${escapeHTML(item)}</li>`).join("");
-
-  const cities = country.cities.map(item =>
-    `<span class="tag">${escapeHTML(item)}</span>`).join("");
-
-  const food = country.food.map(item =>
-    `<li>${escapeHTML(item)}</li>`).join("");
-
-  const tips = country.tips.map(item =>
-    `<li>${escapeHTML(item)}</li>`).join("");
-
-  const hotels = country.hotels.map(item => `
-    <article class="hotel-card">
-      <h3>🏨 ${escapeHTML(item[0])}</h3>
-      <p>${escapeHTML(item[1])}</p>
-    </article>
-  `).join("");
-
-  countryDetail.innerHTML = `
-    <div class="detail-top">
-      <div>
-        <div class="eyebrow">${escapeHTML(country.region)} DESTINATION GUIDE</div>
-        <h1>${country.flag} ${escapeHTML(country.name)}</h1>
-        <p class="detail-intro">${escapeHTML(country.description)}</p>
-        <div style="margin-top:15px">${cities}</div>
-        <div class="detail-actions">
-          <button class="btn btn-blue" type="button" id="playAudio">🔊 Listen to Overview</button>
-          <button class="btn btn-outline" type="button" id="stopAudio">■ Stop Audio</button>
+            <a class="button button-outline"
+               href="https://wa.me/233241226239">
+                Chat With Us
+            </a>
         </div>
-        <div class="audio-status" id="audioStatus" aria-live="polite">
-          Use your device's speech feature to listen to the overview.
-        </div>
-      </div>
-      <img class="detail-main-image"
-        src="${safeImage(country.image)}"
-        alt="Featured destination in ${escapeHTML(country.name)}">
-    </div>
 
-    <div class="detail-stats">
-      <div class="stat"><span>CAPITAL</span><b>${escapeHTML(country.capital)}</b></div>
-      <div class="stat"><span>CURRENCY</span><b>${escapeHTML(country.currency)}</b></div>
-      <div class="stat"><span>REGION</span><b>${escapeHTML(country.region)}</b></div>
-      <div class="stat"><span>POPULATION</span><b>${escapeHTML(country.population)}</b></div>
-    </div>
+        <section id="about">
+            <h2>Welcome to God's Time Travel And Tours</h2>
 
-    <section class="detail-section">
-      <h2>📸 Explore Beautiful Places</h2>
-      <p>Browse photographs of landscapes, city scenes and natural environments associated with travel experiences. Tap a photograph to enlarge it.</p>
-      <div class="detail-gallery">${gallery}</div>
-    </section>
+            <div class="intro">
+                <p>
+                    We aim to make travel planning simpler by helping
+                    travellers understand their options and prepare for
+                    their journeys. Whether you are travelling for tourism,
+                    education, business or a family visit, we are here to
+                    provide travel information and assistance.
+                </p>
 
-    <section class="detail-section">
-      <h2>🏛️ Tourist Attractions</h2>
-      <p>Some popular places to research when planning a visit to ${escapeHTML(country.name)}.</p>
-      <div class="detail-box"><ul>${attractions}</ul></div>
-    </section>
+                <p style="margin-top: 15px;">
+                    Our goal is to offer friendly guidance and help you
+                    understand the steps involved in preparing for travel.
+                </p>
+            </div>
+        </section>
 
-    <section class="detail-section">
-      <h2>🌎 People, Culture and Lifestyle</h2>
-      <div class="detail-columns">
-        <div class="detail-box">
-          <h3>Culture and Traditions</h3>
-          <p>${escapeHTML(country.culture)}</p>
-          <h3>Languages</h3>
-          <p>${escapeHTML(country.languages)}</p>
-        </div>
-        <div class="detail-box">
-          <h3>Weather and Climate</h3>
-          <p>${escapeHTML(country.climate)}</p>
-          <h3>Local Cuisine</h3>
-          <ul>${food}</ul>
-        </div>
-      </div>
-    </section>
+        <section id="services">
+            <h2>Our Services</h2>
 
-    <section class="detail-section">
-      <h2>🏨 Accommodation Ideas</h2>
-      <p>These are accommodation categories and planning suggestions, not confirmed hotel bookings or endorsements.</p>
-      <div class="hotel-grid">${hotels}</div>
-    </section>
+            <p style="text-align:center; color:#596579;">
+                Discover how we can assist you with your travel plans.
+            </p>
 
-    <section class="detail-section">
-      <h2>🧳 Practical Travel Tips</h2>
-      <div class="detail-box"><ul>${tips}</ul></div>
-    </section>
+            <div class="services">
 
-    <div class="notice">
-      <b>Before you travel:</b> Currency, visa rules, entry requirements, prices, weather and local conditions can change. Verify current information with official government, immigration, tourism and travel-provider sources before making arrangements.
-      Photographs on this page are illustrative images and may not depict the exact named attraction.
-    </div>
+                <div class="card">
+                    <div class="icon">✈️</div>
 
-    <div class="detail-actions">
-      <button class="btn btn-blue" type="button" id="detailBack">← Back to Countries</button>
-      <a class="btn btn-outline"
-        href="mailto:godstimetravelandtour12@gmail.com?subject=${encodeURIComponent("Travel enquiry: " + country.name)}">
-        Ask About Travel Assistance
-      </a>
-    </div>
-  `;
+                    <h3>Flight Booking</h3>
 
-  countryDetailSection.classList.remove("hidden");
+                    <p>
+                        Get assistance with flight enquiries, available
+                        routes, travel dates, fare information and booking
+                        arrangements.
+                    </p>
+                </div>
 
-  document.getElementById("detailBack").addEventListener("click", closeCountry);
-  document.getElementById("playAudio").addEventListener("click", () => playCountryAudio(country));
-  document.getElementById("stopAudio").addEventListener("click", stopAudio);
+                <div class="card">
+                    <div class="icon">🌍</div>
 
-  countryDetail.querySelector(".detail-gallery").addEventListener("click", event => {
-    const button = event.target.closest("[data-image]");
-    if (!button) return;
-    openLightbox(button.dataset.image, button.dataset.caption);
-  });
+                    <h3>Visa Assistance</h3>
 
-  attachImageFallbacks(countryDetail);
+                    <p>
+                        Get guidance on visa application requirements,
+                        supporting documents, application procedures and
+                        official embassy information.
+                    </p>
+                </div>
 
-  countryDetailSection.scrollIntoView({behavior:"smooth",block:"start"});
-}
+                <div class="card">
+                    <div class="icon">🛂</div>
 
-function closeCountry() {
-  stopAudio();
-  countryDetailSection.classList.add("hidden");
-  document.getElementById("countries").scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-  });
-}
+                    <h3>Passport Information</h3>
 
-document.getElementById("backToCountries").addEventListener("click", closeCountry);
+                    <p>
+                        Learn about passport application requirements,
+                        relevant documentation and official passport
+                        application procedures.
+                    </p>
+                </div>
 
-let currentUtterance = null;
+                <div class="card">
+                    <div class="icon">🧳</div>
 
-function playCountryAudio(country) {
-  const status = document.getElementById("audioStatus");
+                    <h3>Travel Planning</h3>
 
-  if (!("speechSynthesis" in window)) {
-    status.textContent = "Audio reading is not supported by this browser. Try the latest version of Safari or Chrome.";
-    return;
-  }
+                    <p>
+                        Prepare for your journey with information about
+                        destinations, travel documents and other
+                        pre-departure requirements.
+                    </p>
+                </div>
 
-  stopAudio();
+            </div>
+        </section>
 
-  const text = `${country.name}. Capital city: ${country.capital}. ` +
-    `Currency: ${country.currency}. ` +
-    `${country.description} ` +
-    `Languages: ${country.languages}. ` +
-    `Climate: ${country.climate}. ` +
-    `Popular attractions include ${country.attractions.join(", ")}. ` +
-    `Popular foods include ${country.food.join(", ")}. ` +
-    `Remember to verify current travel requirements before travelling.`;
+        <section class="steps" id="travel">
+            <div class="steps-inner">
 
-  currentUtterance = new SpeechSynthesisUtterance(text);
-  currentUtterance.lang = "en-US";
-  currentUtterance.rate = 0.92;
-  currentUtterance.pitch = 1;
+                <h2>How to Get Started</h2>
 
-  currentUtterance.onstart = () => {
-    const currentStatus = document.getElementById("audioStatus");
-    if (currentStatus) currentStatus.textContent = "🔊 Audio overview is playing...";
-  };
+                <div class="step-list">
 
-  currentUtterance.onend = () => {
-    const currentStatus = document.getElementById("audioStatus");
-    if (currentStatus) currentStatus.textContent = "Audio overview finished.";
-    currentUtterance = null;
-  };
+                    <p>
+                        <strong>Step 1:</strong>
+                        Contact us with your destination and intended
+                        travel dates.
+                    </p>
 
-  currentUtterance.onerror = () => {
-    const currentStatus = document.getElementById("audioStatus");
-    if (currentStatus) currentStatus.textContent = "Audio could not start. Check your device volume and try again.";
-    currentUtterance = null;
-  };
+                    <p>
+                        <strong>Step 2:</strong>
+                        Tell us which service you need, such as flight
+                        booking assistance or visa guidance.
+                    </p>
 
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(currentUtterance);
-}
+                    <p>
+                        <strong>Step 3:</strong>
+                        We will discuss the relevant requirements and
+                        possible next steps with you.
+                    </p>
 
-function stopAudio() {
-  if ("speechSynthesis" in window) {
-    window.speechSynthesis.cancel();
-  }
-  currentUtterance = null;
+                    <p>
+                        <strong>Step 4:</strong>
+                        Verify all official requirements and confirm
+                        arrangements before making payments.
+                    </p>
 
-  const status = document.getElementById("audioStatus");
-  if (status) status.textContent = "Audio stopped.";
-}
+                </div>
 
-const airlines = [
-  {
-    name:"Emirates",
-    base:"Dubai, United Arab Emirates",
-    description:"An international airline known for long-haul services and a range of cabin products on selected aircraft.",
-    image:photo("photo-1436491865332-7a61a109cc05"),
-    tags:["International","Long-haul","Multiple cabins"]
-  },
-  {
-    name:"Qatar Airways",
-    base:"Doha, Qatar",
-    description:"An international airline operating a network of routes across several regions.",
-    image:photo("photo-1436491865332-7a61a109cc05"),
-    tags:["International","Connecting flights","Multiple cabins"]
-  },
-  {
-    name:"British Airways",
-    base:"United Kingdom",
-    description:"A major UK airline operating domestic and international services.",
-    image:photo("photo-1436491865332-7a61a109cc05"),
-    tags:["European routes","International","Multiple cabins"]
-  },
-  {
-    name:"KLM",
-    base:"Netherlands",
-    description:"A Dutch airline with European and international routes.",
-    image:photo("photo-1436491865332-7a61a109cc05"),
-    tags:["European routes","International","Connecting flights"]
-  },
-  {
-    name:"Ethiopian Airlines",
-    base:"Addis Ababa, Ethiopia",
-    description:"An African airline serving destinations across Africa and other international regions.",
-    image:photo("photo-1436491865332-7a61a109cc05"),
-    tags:["African routes","International","Connecting flights"]
-  },
-  {
-    name:"Turkish Airlines",
-    base:"Istanbul, Türkiye",
-    description:"An international airline connecting destinations across Europe, Asia, Africa and other regions.",
-    image:photo("photo-1436491865332-7a61a109cc05"),
-    tags:["International","Connecting flights","Multiple cabins"]
-  }
-];
+                <div class="notice">
+                    <strong>Important travel information:</strong>
+                    Visa approvals and passport decisions are made by
+                    the relevant government authorities. Always verify
+                    requirements through official sources.
+                </div>
 
-function renderAirlines() {
-  document.getElementById("airlineGrid").innerHTML = airlines.map(airline => `
-    <article class="info-card">
-      <img src="${safeImage(airline.image)}" alt="Commercial aircraft" loading="lazy">
-      <div class="card-body">
-        <h3>${escapeHTML(airline.name)}</h3>
-        <p><b>Base:</b> ${escapeHTML(airline.base)}</p>
-        <p>${escapeHTML(airline.description)}</p>
-        <div>${airline.tags.map(tag=>`<span class="tag">${escapeHTML(tag)}</span>`).join("")}</div>
-      </div>
-    </article>
-  `).join("");
+            </div>
+        </section>
 
-  attachImageFallbacks(document.getElementById("airlineGrid"));
-}
+        <section>
+            <h2>Ready to Plan Your Next Trip?</h2>
 
-const aircraft = [
-  {
-    name:"Airbus A320 Family",
-    category:"Narrow-body aircraft",
-    description:"A family of aircraft commonly used for short- and medium-haul routes, depending on the airline.",
-    image:photo("photo-1436491865332-7a61a109cc05")
-  },
-  {
-    name:"Boeing 787 Dreamliner",
-    category:"Wide-body aircraft",
-    description:"A long-haul aircraft family designed for international passenger operations.",
-    image:photo("photo-1436491865332-7a61a109cc05")
-  },
-  {
-    name:"Airbus A350",
-    category:"Wide-body aircraft",
-    description:"A modern long-haul aircraft family used by selected airlines on international routes.",
-    image:photo("photo-1436491865332-7a61a109cc05")
-  }
-];
+            <div class="intro">
+                <p>
+                    Tell us about your travel plans. Contact God's Time
+                    Travel And Tours to discuss the assistance you need.
+                </p>
 
-function renderAircraft() {
-  document.getElementById("aircraftGrid").innerHTML = aircraft.map(item => `
-    <article class="info-card">
-      <img src="${safeImage(item.image)}" alt="Commercial passenger aircraft" loading="lazy">
-      <div class="card-body">
-        <span class="tag">${escapeHTML(item.category)}</span>
-        <h3>${escapeHTML(item.name)}</h3>
-        <p>${escapeHTML(item.description)}</p>
-      </div>
-    </article>
-  `).join("");
+                <a class="button"
+                   href="https://wa.me/233241226239">
+                    Contact Us on WhatsApp
+                </a>
+            </div>
+        </section>
 
-  attachImageFallbacks(document.getElementById("aircraftGrid"));
-}
+        <section class="contact" id="contact">
+            <div class="contact-inner">
 
-const lightbox = document.getElementById("lightbox");
+                <h2>Contact Us</h2>
 
-function openLightbox(src, caption) {
-  document.getElementById("lightboxImage").src = src;
-  document.getElementById("lightboxImage").alt = caption;
-  document.getElementById("lightboxCaption").textContent = caption;
-  lightbox.classList.add("open");
-  document.body.style.overflow = "hidden";
-}
+                <p>
+                    Have a question about your next journey?
+                    We would be happy to hear from you.
+                </p>
 
-function closeLightbox() {
-  lightbox.classList.remove("open");
-  document.body.style.overflow = "";
-  document.getElementById("lightboxImage").src = "";
-}
+                <p>
+                    📱 <strong>WhatsApp / Phone:</strong>
+                    <a href="https://wa.me/233241226239">
+                        024 122 6239
+                    </a>
+                </p>
 
-document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+                <p>
+                    📧 <strong>Email:</strong>
+                    <a href="mailto:godstimetravelandtour@gmail.com">
+                        godstimetravelandtour@gmail.com
+                    </a>
+                </p>
 
-lightbox.addEventListener("click", event => {
-  if (event.target === lightbox) closeLightbox();
-});
+                <a class="button"
+                   href="https://wa.me/233241226239">
+                    Message Us Now
+                </a>
 
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeLightbox();
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.remove("open");
-    document.getElementById("menuButton").setAttribute("aria-expanded","false");
-  }
-});
+            </div>
+        </section>
 
-const menuButton = document.getElementById("menuButton");
-const navLinks = document.getElementById("navLinks");
+    </main>
 
-menuButton.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded",String(isOpen));
-});
+    <footer>
+        <p>
+            &copy; 2026 God's Time Travel And Tours.
+            All rights reserved.
+        </p>
 
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuButton.setAttribute("aria-expanded","false");
-  });
-});
+        <p>
+            Travel responsibly and verify official travel requirements.
+        </p>
+    </footer>
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* Initial render */
-renderCountries();
-renderAirlines();
-renderAircraft();
-attachImageFallbacks(document);
-<!-- WHATSAPP FLOATING BUTTON -->
-<span class="whatsapp-icon">☏</span>
-<span>Chat with us</span>
-</a>
-<style>
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 20px;
-    background: #25D366;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-.whatsapp-float:hover {
-    background: #128C7E;
-}
-.whatsapp-icon {
-    font-size: 26px;
-}
-@media (max-width: 480px) {
-    .whatsapp-float {
-        bottom: 15px;
-        right: 15px;
-        padding: 12px 16px;
-    }
-}
-</style>
-</script>
 </body>
 </html>
