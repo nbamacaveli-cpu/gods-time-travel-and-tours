@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>BIGBOYPLAY COLLECTIONS | Official Store</title>
+<style>
+:root{--black:#080808;--panel:#141414;--gold:#d6ad55;--gold2:#f1d58e;--muted:#aaa;--white:#fff;--line:#292929}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:900;letter-spacing:.20em;line-height:1.25;color:var(--gold2);font-size:clamp(15px,3vw,22px);text-decoration:none}
+.brand span{display:block;font-size:.68em;letter-spacing:.34em;color:#fff;margin-top:4px}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav a{color:#eee;text-decoration:none;font-size:13px}
+nav a:hover{color:var(--gold2)}
+.btn{border:1px solid var(--gold);background:var(--gold);color:#111;padding:11px 16px;border-radius:4px;font-weight:700}
+.btn.secondary{background:transparent;color:var(--gold2)}
+.btn.small{padding:8px 11px;font-size:12px}
+.hero{min-height:440px;display:flex;align-items:center;background:linear-gradient(90deg,#080808 5%,#080808e8 46%,#08080840),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-inner{max-width:1200px;width:100%;margin:auto;padding:70px 22px}
+.eyebrow{color:var(--gold2);letter-spacing:.25em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(34px,7vw,68px);line-height:1.04;max-width:700px;margin:16px 0}
+h1 em{font-style:normal;color:var(--gold2)}
+.hero p{color:#ddd;max-width:540px;line-height:1.7}
+.wrap{max-width:1200px;margin:auto;padding:48px 20px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}
+h2{margin:0;font-size:27px;letter-spacing:.04em}
+.sub{color:var(--muted);font-size:14px;line-height:1.6}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+input,textarea,select{background:#0e0e0e;border:1px solid #383838;color:white;padding:12px;border-radius:4px;width:100%;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--gold)}
+.toolbar input{max-width:360px}
+.toolbar select{max-width:210px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.brand-strip{display:flex;gap:10px;overflow-x:auto;padding:5px 0 16px;scrollbar-width:thin}
+.brand-chip{flex:0 0 auto;border:1px solid #51452d;background:#15120c;color:var(--gold2);padding:10px 16px;border-radius:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.brand-chip:hover,.brand-chip.active{background:var(--gold);color:#111}
+.brand-section{margin:28px 0 38px}
+.brand-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #3b3324;padding-bottom:12px;margin-bottom:16px}
+.brand-heading h3{margin:0;color:var(--gold2);font-size:20px;letter-spacing:.16em;text-transform:uppercase}
+.product{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.product img{width:100%;height:230px;object-fit:cover;background:#222;display:block}
+.product-body{padding:15px}
+.product h3{margin:0 0 8px;font-size:16px}
+.product p{color:#aaa;font-size:13px;line-height:1.5;min-height:38px}
+.price{color:var(--gold2);font-size:18px;font-weight:800;margin:12px 0}
+.product-actions{display:flex;gap:8px}
+.product-actions button{flex:1}
+.empty{border:1px dashed #444;padding:35px;text-align:center;color:#aaa;grid-column:1/-1}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.benefit{padding:20px;border:1px solid var(--line);background:#101010}
+.benefit b{color:var(--gold2);display:block;margin-bottom:8px}
+footer{border-top:1px solid var(--line);padding:30px 20px;color:#999;text-align:center;font-size:13px}
+.overlay{position:fixed;inset:0;background:#000b;z-index:30;display:none;overflow:auto;padding:20px}
+.overlay.show{display:block}
+.modal{max-width:760px;margin:30px auto;background:#111;border:1px solid #49402c;border-radius:7px;padding:22px}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.close{background:none;border:0;color:#fff;font-size:26px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.full{grid-column:1/-1}
+label{display:block;color:#ccc;font-size:12px;margin-bottom:6px}
+.field{margin-bottom:13px}
+.admin-list{display:grid;gap:10px;margin-top:20px}
+.admin-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;background:#1a1a1a;border:1px solid #333}
+.admin-item img{width:55px;height:55px;object-fit:cover}
+.admin-item .actions{display:flex;gap:6px;flex-wrap:wrap}
+.cart-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #333;padding:12px 0}
+.cart-total{font-size:20px;color:var(--gold2);font-weight:bold;text-align:right;margin:18px 0}
+.contact-float{position:fixed;right:15px;bottom:16px;z-index:15;display:flex;flex-direction:column;gap:9px}
+.contact-float a{padding:12px 15px;border-radius:30px;text-decoration:none;font-size:13px;font-weight:bold;box-shadow:0 5px 18px #0008}
+.whatsapp{background:#20c767;color:#07180d}
+.email{background:var(--gold);color:#111}
+.notice{font-size:12px;color:#aaa;line-height:1.5;margin-top:14px}
+@media(max-width:900px){
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nav{align-items:flex-start;flex-direction:column}
+nav{gap:13px}
+}
+@media(max-width:560px){
+.grid{grid-template-columns:1fr 1fr;gap:10px}
+.product img{height:155px}
+.product-body{padding:10px}
+.product h3{font-size:14px}
+.product p{font-size:12px}
+.product-actions{flex-direction:column}
+.wrap{padding:36px 14px}
+.hero-inner{padding:60px 18px}
+.benefits{grid-template-columns:1fr}
+.form-grid{grid-template-columns:1fr}
+.full{grid-column:auto}
+.admin-item{align-items:flex-start}
+.admin-item .actions{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="nav">
+  <a class="brand" href="#">BIGBOYPLAY<span>COLLECTIONS</span></a>
+  <nav>
+   <a href="#home">Home</a>
+   <a href="#shop">Shop</a>
+   <a href="#about">Why Us</a>
+   <a href="#contact">Contact</a>
+   <button class="btn small secondary" onclick="openCart()">Cart (<span id="cartCount">0</span>)</button>
+   <button class="btn small" onclick="openAdmin()">Admin</button>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div class="eyebrow">The official online store</div>
+  <h1>STYLE. QUALITY.<br><em>CONFIDENCE.</em></h1>
+  <p>Discover your next favourite look at BIGBOYPLAY COLLECTIONS. Explore our latest arrivals and shop with confidence.</p>
+  <a class="btn" href="#shop" style="display:inline-block;text-decoration:none">SHOP COLLECTION</a>
+ </div>
+</section>
+
+<section class="wrap" id="shop">
+ <div class="section-head">
+  <div>
+   <div class="eyebrow">Find your style</div>
+   <h2>SHOP OUR COLLECTION</h2>
+   <div class="sub">Browse the latest products and new arrivals.</div>
+  </div>
+ </div>
+
+ <div class="brand-strip" id="brandStrip" aria-label="Shop by brand"></div>
+
+ <div class="toolbar">
+  <input id="search" placeholder="Search products or brands..." oninput="renderProducts()">
+  <select id="brandFilter" onchange="renderProducts()">
+   <option value="">All brands</option>
+  </select>
+  <select id="category" onchange="renderProducts()">
+   <option value="">All categories</option>
+   <option>Clothing</option>
+   <option>Shoes</option>
+   <option>Bags</option>
+   <option>Accessories</option>
+   <option>Other</option>
+  </select>
+ </div>
+
+ <div id="productsByBrand"></div>
+</section>
+
+<section class="wrap" id="about">
+ <div class="section-head">
+  <div>
+   <div class="eyebrow">The BIGBOYPLAY standard</div>
+   <h2>SHOP WITH CONFIDENCE</h2>
+  </div>
+ </div>
+ <div class="benefits">
+  <div class="benefit"><b>Fresh collections</b><span class="sub">Discover new products and styles as they are added to our store.</span></div>
+  <div class="benefit"><b>Customer support</b><span class="sub">Contact our team directly for product questions and order enquiries.</span></div>
+  <div class="benefit"><b>Ghana-wide service</b><span class="sub">Get in touch to arrange delivery to your location in Ghana.</span></div>
+ </div>
+</section>
+
+<section class="wrap" id="contact">
+ <div class="eyebrow">We are here to help</div>
+ <h2>CONTACT BIGBOYPLAY COLLECTIONS</h2>
+ <p class="sub">Use the WhatsApp or email buttons to contact us privately.</p>
+</section>
+</main>
+
+<footer>© <span id="year"></span> BIGBOYPLAY COLLECTIONS. All rights reserved.</footer>
+
+<div class="contact-float">
+ <a class="whatsapp" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp Us</a>
+ <a class="email" id="emailLink" href="#">Email Us</a>
+</div>
+
+<!-- SHOPPING CART -->
+<div class="overlay" id="cartOverlay">
+ <div class="modal">
+  <div class="modal-head">
+   <h2>Your Shopping Cart</h2>
+   <button class="close" onclick="closeModal('cartOverlay')">×</button>
+  </div>
+  <div id="cartItems"></div>
+  <div class="cart-total" id="cartTotal">Total: GH₵0.00</div>
+  <div class="field">
+   <label>Your name</label>
+   <input id="buyerName" placeholder="Full name">
+  </div>
+  <div class="field">
+   <label>Delivery location</label>
+   <input id="buyerLocation" placeholder="Town / area in Ghana">
+  </div>
+  <button class="btn" onclick="sendOrder()">Send order via WhatsApp</button>
+  <p class="notice">This demo sends the order details to your WhatsApp. It does not process payments or create a confirmed delivery booking.</p>
+ </div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div class="overlay" id="adminOverlay">
+ <div class="modal">
+  <div class="modal-head">
+   <div>
+    <div class="eyebrow">Store management</div>
+    <h2>ADMIN DASHBOARD</h2>
+   </div>
+   <button class="close" onclick="closeModal('adminOverlay')">×</button>
+  </div>
+
+  <div id="adminLogin">
+   <p class="sub">Enter your demo admin password to manage products on this device.</p>
+   <div class="field">
+    <label>Admin password</label>
+    <input type="password" id="adminPassword" placeholder="Enter demo password">
+   </div>
+   <button class="btn" onclick="adminLogin()">Open dashboard</button>
+   <p class="notice">Demo password: <b>BBPC2026</b>. Change this before testing with anyone else. This browser-only demo is not secure enough for a live business website.</p>
+  </div>
+
+  <div id="adminPanel" style="display:none">
+   <div class="section-head">
+    <div>
+     <h2>Manage products</h2>
+     <div class="sub">Add, edit or remove products from your storefront.</div>
+    </div>
+    <button class="btn small secondary" onclick="adminLogout()">Log out</button>
+   </div>
+
+   <form id="productForm" onsubmit="saveProduct(event)">
+    <input type="hidden" id="editId">
+    <div class="form-grid">
+     <div class="field">
+      <label>Product name</label>
+      <input id="pName" required placeholder="e.g. Classic polo shirt">
+     </div>
+     <div class="field">
+      <label>Brand name</label>
+      <input id="pBrand" required placeholder="e.g. Nike, Adidas, Zara">
+     </div>
+     <div class="field">
+      <label>Price (GH₵)</label>
+      <input id="pPrice" type="number" min="0" step=".01" required placeholder="150">
+     </div>
+     <div class="field">
+      <label>Category</label>
+      <select id="pCategory">
+       <option>Clothing</option>
+       <option>Shoes</option>
+       <option>Bags</option>
+       <option>Accessories</option>
+       <option>Other</option>
+      </select>
+     </div>
+     <div class="field">
+      <label>Stock quantity</label>
+      <input id="pStock" type="number" min="0" value="1">
+     </div>
+     <div class="field full">
+      <label>Product photo URL</label>
+      <input id="pImage" placeholder="Paste an image URL (https://...)">
+     </div>
+     <div class="field full">
+      <label>Description</label>
+      <textarea id="pDescription" rows="3" placeholder="Describe the product"></textarea>
+     </div>
+    </div>
+    <button class="btn" type="submit">Save product</button>
+    <button class="btn secondary" type="button" onclick="resetProductForm()">Clear</button>
+   </form>
+
+   <div class="admin-list" id="adminProducts"></div>
+   <div class="notice">Products are saved only in this browser using local storage. For a real multi-device store, secure admin access, customer accounts, order database, payment gateway and automatic notifications, this must be connected to a hosted backend.</div>
+  </div>
+ </div>
+</div>
+
+<script>
+// BUSINESS CONTACT SETTINGS:
+// Replace these with your real business contact details.
+const BUSINESS_WHATSAPP = "233XXXXXXXXX";
+const BUSINESS_EMAIL = "yourbusiness@email.com";
+
+// DEMO ONLY: This password is visible in the website source.
+// It is NOT secure for a live business website.
+const DEMO_ADMIN_PASSWORD = "BBPC2026";
+
+const defaultProducts = [
+ {
+  id:1,
+  name:"Everyday Streetwear",
+  brand:"Nike",
+  price:180,
+  category:"Clothing",
+  stock:8,
+  image:"https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80",
+  description:"A clean everyday look for your collection."
+ },
+ {
+  id:2,
+  name:"Classic Sneakers",
+  brand:"Adidas",
+  price:320,
+  category:"Shoes",
+  stock:5,
+  image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+  description:"A versatile pair for everyday wear."
+ },
+ {
+  id:3,
+  name:"Everyday Bag",
+  brand:"Puma",
+  price:220,
+  category:"Bags",
+  stock:6,
+  image:"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=80",
+  description:"A practical accessory for your daily essentials."
+ },
+ {
+  id:4,
+  name:"Style Accessories",
+  brand:"Other Brands",
+  price:90,
+  category:"Accessories",
+  stock:10,
+  image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=80",
+  description:"Add the finishing touch to your outfit."
+ }
+];
+
+let products = JSON.parse(localStorage.getItem("bbpc_products") || "null") || defaultProducts;
+products = products.map(p=>({...p,brand:(p.brand||"Unbranded")}));
+let cart = [];
+
+const money = n => "GH₵" + Number(n).toFixed(2);
+
+function save(){
+ localStorage.setItem("bbpc_products",JSON.stringify(products));
+}
+
+function escapeHTML(s){
+ return String(s??"").replace(/[&<>"']/g,c=>({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
+ }[c]));
+}
+
+function renderProducts(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const cat=document.getElementById("category").value;
+ const filter=document.getElementById("brandFilter");
+ const previous=filter.value;
+
+ const brands=[...new Set(products.map(p=>(p.brand||"Unbranded").trim()||"Unbranded"))].sort((a,b)=>a.localeCompare(b));
+
+ filter.innerHTML='<option value="">All brands</option>'+brands.map(b=>`<option value="${escapeHTML(b)}">${escapeHTML(b)}</option>`).join("");
+ filter.value=brands.includes(previous)?previous:"";
+
+ const selectedBrand=filter.value;
+
+ const found=products.filter(p=>{
+  const b=(p.brand||"Unbranded").trim()||"Unbranded";
+  return (p.name+" "+p.description+" "+b).toLowerCase().includes(q)
+   &&(!cat||p.category===cat)
+   &&(!selectedBrand||b===selectedBrand);
+ });
+
+ document.getElementById("brandStrip").innerHTML=brands.map(b=>`
+  <button class="brand-chip ${selectedBrand===b?'active':''}" onclick="chooseBrand('${encodeURIComponent(b)}')">${escapeHTML(b)}</button>
+ `).join("");
+
+ const grouped={};
+ found.forEach(p=>{
+  const b=(p.brand||"Unbranded").trim()||"Unbranded";
+  (grouped[b] ||= []).push(p);
+ });
+
+ const names=Object.keys(grouped).sort((a,b)=>a.localeCompare(b));
+
+ document.getElementById("productsByBrand").innerHTML=names.length?names.map(b=>`
+  <section class="brand-section">
+   <div class="brand-heading">
+    <h3>${escapeHTML(b)}</h3>
+    <span class="sub">${grouped[b].length} product${grouped[b].length===1?"":"s"}</span>
+   </div>
+   <div class="grid">
+    ${grouped[b].map(p=>`
+     <article class="product">
+      <img src="${escapeHTML(p.image||"")}" alt="${escapeHTML(p.name)}" onerror="this.src='https://placehold.co/600x600/171717/d6ad55?text=BIGBOYPLAY'">
+      <div class="product-body">
+       <div class="eyebrow" style="font-size:10px;letter-spacing:.15em">${escapeHTML(p.brand||"Unbranded")}</div>
+       <h3>${escapeHTML(p.name)}</h3>
+       <p>${escapeHTML(p.description)}</p>
+       <div class="sub">${escapeHTML(p.category)} · ${p.stock} in stock</div>
+       <div class="price">${money(p.price)}</div>
+       <div class="product-actions">
+        <button class="btn small" onclick="addToCart(${p.id})" ${p.stock<1?"disabled":""}>Add to cart</button>
+        <button class="btn small secondary" onclick="askAbout('${encodeURIComponent(p.name)}')">Enquire</button>
+       </div>
+      </div>
+     </article>
+    `).join("")}
+   </div>
+  </section>
+ `).join(""):'<div class="empty">No products found. Try another brand or search.</div>';
+}
+
+function chooseBrand(encoded){
+ document.getElementById("brandFilter").value=decodeURIComponent(encoded);
+ renderProducts();
+ document.getElementById("shop").scrollIntoView({behavior:"smooth"});
+}
+
+function addToCart(id){
+ const p=products.find(x=>x.id===id);
+ if(!p||p.stock<1)return;
+ cart.push(id);
+ document.getElementById("cartCount").textContent=cart.length;
+}
+
+function openCart(){
+ renderCart();
+ document.getElementById("cartOverlay").classList.add("show");
+}
+
+function renderCart(){
+ let counts={};
+ cart.forEach(id=>counts[id]=(counts[id]||0)+1);
+ let items=Object.entries(counts);
+
+ document.getElementById("cartItems").innerHTML=items.length?items.map(([id,n])=>{
+  let p=products.find(x=>x.id==id);
+  return p?`<div class="cart-row"><span>${escapeHTML(p.name)} × ${n}</span><b>${money(p.price*n)}</b></div>`:"";
+ }).join(""):"<p class='sub'>Your cart is empty.</p>";
+
+ document.getElementById("cartTotal").textContent="Total: "+money(
+  cart.reduce((s,id)=>s+(products.find(p=>p.id===id)?.price||0),0)
+ );
+}
+
+function sendOrder(){
+ if(!cart.length){
+  alert("Your cart is empty.");
+  return;
+ }
+
+ let name=document.getElementById("buyerName").value.trim();
+ let loc=document.getElementById("buyerLocation").value.trim();
+
+ if(!name||!loc){
+  alert("Please enter your name and delivery location.");
+  return;
+ }
+
+ let lines=cart.map(id=>{
+  let p=products.find(x=>x.id===id);
+  return p?`${p.name} - ${money(p.price)}`:"";
+ }).filter(Boolean);
+
+ let total=cart.reduce((s,id)=>s+(products.find(p=>p.id===id)?.price||0),0);
+
+ let msg=`Hello BIGBOYPLAY COLLECTIONS, I would like to place an order.%0AName: ${encodeURIComponent(name)}%0ALocation: ${encodeURIComponent(loc)}%0AItems:%0A${encodeURIComponent(lines.join("\n"))}%0ATotal: ${encodeURIComponent(money(total))}`;
+
+ window.open(`https://wa.me/${BUSINESS_WHATSAPP}?text=${msg}`,"_blank");
+}
+
+function askAbout(encoded){
+ let name=decodeURIComponent(encoded);
+ window.open(`https://wa.me/${BUSINESS_WHATSAPP}?text=${encodeURIComponent("Hello, I would like to enquire about "+name+".")}`,"_blank");
+}
+
+function openAdmin(){
+ document.getElementById("adminOverlay").classList.add("show");
+}
+
+function closeModal(id){
+ document.getElementById(id).classList.remove("show");
+}
+
+function adminLogin(){
+ if(document.getElementById("adminPassword").value!==DEMO_ADMIN_PASSWORD){
+  alert("Incorrect demo password.");
+  return;
+ }
+
+ document.getElementById("adminLogin").style.display="none";
+ document.getElementById("adminPanel").style.display="block";
+ renderAdmin();
+}
+
+function adminLogout(){
+ document.getElementById("adminLogin").style.display="block";
+ document.getElementById("adminPanel").style.display="none";
+ document.getElementById("adminPassword").value="";
+}
+
+function renderAdmin(){
+ document.getElementById("adminProducts").innerHTML=products.map(p=>`
+  <div class="admin-item">
+   <img src="${escapeHTML(p.image)}" alt="">
+   <div style="flex:1">
+    <b>${escapeHTML(p.name)}</b>
+    <div class="sub">${escapeHTML(p.brand||"Unbranded")} · ${money(p.price)} · Stock: ${p.stock}</div>
+   </div>
+   <div class="actions">
+    <button class="btn small secondary" onclick="editProduct(${p.id})">Edit</button>
+    <button class="btn small" onclick="deleteProduct(${p.id})">Delete</button>
+   </div>
+  </div>
+ `).join("")||"<p class='sub'>No products added yet.</p>";
+}
+
+function saveProduct(e){
+ e.preventDefault();
+
+ let id=Number(document.getElementById("editId").value);
+
+ let p={
+  id:id||Date.now(),
+  name:document.getElementById("pName").value.trim(),
+  brand:document.getElementById("pBrand").value.trim(),
+  price:Number(document.getElementById("pPrice").value),
+  category:document.getElementById("pCategory").value,
+  stock:Number(document.getElementById("pStock").value),
+  image:document.getElementById("pImage").value.trim()||"https://placehold.co/600x600/171717/d6ad55?text=BIGBOYPLAY",
+  description:document.getElementById("pDescription").value.trim()
+ };
+
+ if(id){
+  products=products.map(x=>x.id===id?p:x);
+ }else{
+  products.unshift(p);
+ }
+
+ save();
+ resetProductForm();
+ renderAdmin();
+ renderProducts();
+}
+
+function editProduct(id){
+ let p=products.find(x=>x.id===id);
+ if(!p)return;
+
+ document.getElementById("editId").value=p.id;
+ document.getElementById("pName").value=p.name;
+ document.getElementById("pBrand").value=p.brand||"";
+ document.getElementById("pPrice").value=p.price;
+ document.getElementById("pCategory").value=p.category;
+ document.getElementById("pStock").value=p.stock;
+ document.getElementById("pImage").value=p.image;
+ document.getElementById("pDescription").value=p.description;
+
+ document.getElementById("productForm").scrollIntoView({behavior:"smooth"});
+}
+
+function deleteProduct(id){
+ if(confirm("Delete this product?")){
+  products=products.filter(p=>p.id!==id);
+  save();
+  renderAdmin();
+  renderProducts();
+ }
+}
+
+function resetProductForm(){
+ document.getElementById("productForm").reset();
+ document.getElementById("editId").value="";
+ document.getElementById("pStock").value=1;
+}
+
+document.getElementById("waLink").href=`https://wa.me/${BUSINESS_WHATSAPP}`;
+document.getElementById("emailLink").href=`mailto:${BUSINESS_EMAIL}`;
+document.getElementById("year").textContent=new Date().getFullYear();
+
+renderProducts();
+</script>
+</body>
+</html>
